@@ -1,0 +1,15 @@
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\bin\Debug\CarDealership.exe.config
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\bin\Debug\CarDealership.exe
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\bin\Debug\CarDealership.pdb
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.Login.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.CarDealership.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.Properties.Resources.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.GenerateResource.Cache
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.exe
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.pdb
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.csprojResolveAssemblyReference.cache
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.Add.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.Find.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.AddEmployee.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.AddInventory.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.AddCustomer.resources
