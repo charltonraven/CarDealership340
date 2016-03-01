@@ -33,17 +33,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtEmpNum = new System.Windows.Forms.TextBox();
             this.txtEmpFName = new System.Windows.Forms.TextBox();
             this.txtEmpLName = new System.Windows.Forms.TextBox();
             this.txtEmpDOB = new System.Windows.Forms.TextBox();
-            this.txtEmpAddress = new System.Windows.Forms.TextBox();
-            this.txtEmpCity = new System.Windows.Forms.TextBox();
-            this.ddEmpStates = new System.Windows.Forms.DomainUpDown();
             this.btnEmpAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.txtEmpAddress = new System.Windows.Forms.TextBox();
+            this.txtEmpCity = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -76,38 +74,29 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(98, 239);
+            this.label4.Location = new System.Drawing.Point(70, 239);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "DOB";
+            this.label4.Text = "Hire Date";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(83, 289);
+            this.label5.Location = new System.Drawing.Point(71, 289);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Address";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(320, 342);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "State";
+            this.label5.Text = "Salary";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(98, 342);
+            this.label7.Location = new System.Drawing.Point(70, 335);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 13);
+            this.label7.Size = new System.Drawing.Size(44, 13);
             this.label7.TabIndex = 6;
-            this.label7.Text = "City";
+            this.label7.Text = "Position";
             // 
             // txtEmpNum
             // 
@@ -138,80 +127,6 @@
             this.txtEmpDOB.Size = new System.Drawing.Size(163, 20);
             this.txtEmpDOB.TabIndex = 10;
             // 
-            // txtEmpAddress
-            // 
-            this.txtEmpAddress.Location = new System.Drawing.Point(134, 289);
-            this.txtEmpAddress.Name = "txtEmpAddress";
-            this.txtEmpAddress.Size = new System.Drawing.Size(163, 20);
-            this.txtEmpAddress.TabIndex = 11;
-            // 
-            // txtEmpCity
-            // 
-            this.txtEmpCity.Location = new System.Drawing.Point(134, 335);
-            this.txtEmpCity.Name = "txtEmpCity";
-            this.txtEmpCity.Size = new System.Drawing.Size(163, 20);
-            this.txtEmpCity.TabIndex = 13;
-            // 
-            // ddEmpStates
-            // 
-            this.ddEmpStates.AllowDrop = true;
-            this.ddEmpStates.Items.Add("AL");
-            this.ddEmpStates.Items.Add("AK");
-            this.ddEmpStates.Items.Add("AZ");
-            this.ddEmpStates.Items.Add("AR");
-            this.ddEmpStates.Items.Add("CA");
-            this.ddEmpStates.Items.Add("CO");
-            this.ddEmpStates.Items.Add("CT");
-            this.ddEmpStates.Items.Add("DE");
-            this.ddEmpStates.Items.Add("DC");
-            this.ddEmpStates.Items.Add("FL");
-            this.ddEmpStates.Items.Add("GA");
-            this.ddEmpStates.Items.Add("HI");
-            this.ddEmpStates.Items.Add("ID");
-            this.ddEmpStates.Items.Add("IL");
-            this.ddEmpStates.Items.Add("IN");
-            this.ddEmpStates.Items.Add("IA");
-            this.ddEmpStates.Items.Add("KS");
-            this.ddEmpStates.Items.Add("KY");
-            this.ddEmpStates.Items.Add("LA");
-            this.ddEmpStates.Items.Add("ME");
-            this.ddEmpStates.Items.Add("MD");
-            this.ddEmpStates.Items.Add("MA");
-            this.ddEmpStates.Items.Add("MI");
-            this.ddEmpStates.Items.Add("MN");
-            this.ddEmpStates.Items.Add("MS");
-            this.ddEmpStates.Items.Add("MO");
-            this.ddEmpStates.Items.Add("MT");
-            this.ddEmpStates.Items.Add("NE");
-            this.ddEmpStates.Items.Add("NV");
-            this.ddEmpStates.Items.Add("NH");
-            this.ddEmpStates.Items.Add("NJ");
-            this.ddEmpStates.Items.Add("NM");
-            this.ddEmpStates.Items.Add("NY");
-            this.ddEmpStates.Items.Add("NC");
-            this.ddEmpStates.Items.Add("ND");
-            this.ddEmpStates.Items.Add("OH");
-            this.ddEmpStates.Items.Add("OK");
-            this.ddEmpStates.Items.Add("OR");
-            this.ddEmpStates.Items.Add("PA");
-            this.ddEmpStates.Items.Add("RI");
-            this.ddEmpStates.Items.Add("SC");
-            this.ddEmpStates.Items.Add("SD");
-            this.ddEmpStates.Items.Add("TN");
-            this.ddEmpStates.Items.Add("TX");
-            this.ddEmpStates.Items.Add("UT");
-            this.ddEmpStates.Items.Add("VT");
-            this.ddEmpStates.Items.Add("VA");
-            this.ddEmpStates.Items.Add("WA");
-            this.ddEmpStates.Items.Add("WV");
-            this.ddEmpStates.Items.Add("WI");
-            this.ddEmpStates.Items.Add("WY");
-            this.ddEmpStates.Location = new System.Drawing.Point(358, 335);
-            this.ddEmpStates.Name = "ddEmpStates";
-            this.ddEmpStates.Size = new System.Drawing.Size(40, 20);
-            this.ddEmpStates.TabIndex = 14;
-            this.ddEmpStates.UseWaitCursor = true;
-            // 
             // btnEmpAdd
             // 
             this.btnEmpAdd.Location = new System.Drawing.Point(73, 370);
@@ -231,6 +146,20 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // txtEmpAddress
+            // 
+            this.txtEmpAddress.Location = new System.Drawing.Point(134, 289);
+            this.txtEmpAddress.Name = "txtEmpAddress";
+            this.txtEmpAddress.Size = new System.Drawing.Size(66, 20);
+            this.txtEmpAddress.TabIndex = 11;
+            // 
+            // txtEmpCity
+            // 
+            this.txtEmpCity.Location = new System.Drawing.Point(134, 335);
+            this.txtEmpCity.Name = "txtEmpCity";
+            this.txtEmpCity.Size = new System.Drawing.Size(163, 20);
+            this.txtEmpCity.TabIndex = 13;
+            // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,7 +167,6 @@
             this.ClientSize = new System.Drawing.Size(466, 405);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEmpAdd);
-            this.Controls.Add(this.ddEmpStates);
             this.Controls.Add(this.txtEmpCity);
             this.Controls.Add(this.txtEmpAddress);
             this.Controls.Add(this.txtEmpDOB);
@@ -246,7 +174,6 @@
             this.Controls.Add(this.txtEmpFName);
             this.Controls.Add(this.txtEmpNum);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -267,16 +194,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtEmpNum;
         private System.Windows.Forms.TextBox txtEmpFName;
         private System.Windows.Forms.TextBox txtEmpLName;
         private System.Windows.Forms.TextBox txtEmpDOB;
-        private System.Windows.Forms.TextBox txtEmpAddress;
-        private System.Windows.Forms.TextBox txtEmpCity;
-        private System.Windows.Forms.DomainUpDown ddEmpStates;
         private System.Windows.Forms.Button btnEmpAdd;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox txtEmpAddress;
+        private System.Windows.Forms.TextBox txtEmpCity;
     }
 }

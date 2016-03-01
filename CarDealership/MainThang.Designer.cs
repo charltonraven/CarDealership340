@@ -62,7 +62,7 @@
             this.templatesToolStripMenuItem});
             this.CarMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.CarMenuStrip.Name = "CarMenuStrip";
-            this.CarMenuStrip.Size = new System.Drawing.Size(675, 29);
+            this.CarMenuStrip.Size = new System.Drawing.Size(693, 29);
             this.CarMenuStrip.TabIndex = 0;
             this.CarMenuStrip.Text = "menuStrip1";
             // 
@@ -228,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 308);
+            this.ClientSize = new System.Drawing.Size(693, 318);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.CarMenuStrip);
             this.MainMenuStrip = this.CarMenuStrip;
