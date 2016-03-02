@@ -1,6 +1,6 @@
 ﻿namespace CarDealership
 {
-    partial class AddInventory
+    partial class FindInventory
     {
         /// <summary>
         /// Required designer variable.
@@ -33,18 +33,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtVehicleID = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnVehAdd = new System.Windows.Forms.Button();
             this.btnVehCancel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.ddVehicleMake = new System.Windows.Forms.DomainUpDown();
-            this.ddVehicleModel = new System.Windows.Forms.DomainUpDown();
-            this.ddVehicleYear = new System.Windows.Forms.DomainUpDown();
-            this.txtVehicleColor = new System.Windows.Forms.TextBox();
-            this.ddVehicleCondition = new System.Windows.Forms.DomainUpDown();
+            this.ddMake = new System.Windows.Forms.DomainUpDown();
+            this.ddModel = new System.Windows.Forms.DomainUpDown();
+            this.ddYear = new System.Windows.Forms.DomainUpDown();
+            this.txtColor = new System.Windows.Forms.TextBox();
+            this.ddCondition = new System.Windows.Forms.DomainUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
-            this.cbNewCustomer = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -92,12 +91,12 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Year";
             // 
-            // txtVehicleID
+            // textBox1
             // 
-            this.txtVehicleID.Location = new System.Drawing.Point(118, 46);
-            this.txtVehicleID.Name = "txtVehicleID";
-            this.txtVehicleID.Size = new System.Drawing.Size(66, 20);
-            this.txtVehicleID.TabIndex = 7;
+            this.textBox1.Location = new System.Drawing.Point(118, 46);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(66, 20);
+            this.textBox1.TabIndex = 7;
             // 
             // btnVehAdd
             // 
@@ -127,83 +126,83 @@
             this.label3.TabIndex = 17;
             this.label3.Text = " Color";
             // 
-            // ddVehicleMake
+            // ddMake
             // 
-            this.ddVehicleMake.Items.Add("Audi");
-            this.ddVehicleMake.Items.Add("Chevrolet");
-            this.ddVehicleMake.Items.Add("Ford");
-            this.ddVehicleMake.Items.Add("Bugatti");
-            this.ddVehicleMake.Items.Add("BMW");
-            this.ddVehicleMake.Items.Add("GMC");
-            this.ddVehicleMake.Items.Add("Toyota");
-            this.ddVehicleMake.Items.Add("Chrysler");
-            this.ddVehicleMake.Items.Add("Dodge");
-            this.ddVehicleMake.Items.Add("BuickKia");
-            this.ddVehicleMake.Items.Add("Land Rover");
-            this.ddVehicleMake.Items.Add("Honda");
-            this.ddVehicleMake.Location = new System.Drawing.Point(118, 133);
-            this.ddVehicleMake.Name = "ddVehicleMake";
-            this.ddVehicleMake.Size = new System.Drawing.Size(120, 20);
-            this.ddVehicleMake.TabIndex = 18;
+            this.ddMake.Items.Add("Audi");
+            this.ddMake.Items.Add("Chevrolet");
+            this.ddMake.Items.Add("Ford");
+            this.ddMake.Items.Add("Bugatti");
+            this.ddMake.Items.Add("BMW");
+            this.ddMake.Items.Add("GMC");
+            this.ddMake.Items.Add("Toyota");
+            this.ddMake.Items.Add("Chrysler");
+            this.ddMake.Items.Add("Dodge");
+            this.ddMake.Items.Add("BuickKia");
+            this.ddMake.Items.Add("Land Rover");
+            this.ddMake.Items.Add("Honda");
+            this.ddMake.Location = new System.Drawing.Point(118, 133);
+            this.ddMake.Name = "ddMake";
+            this.ddMake.Size = new System.Drawing.Size(120, 20);
+            this.ddMake.TabIndex = 18;
             // 
-            // ddVehicleModel
+            // ddModel
             // 
-            this.ddVehicleModel.Items.Add("Blah");
-            this.ddVehicleModel.Items.Add("Blah");
-            this.ddVehicleModel.Items.Add("Blah");
-            this.ddVehicleModel.Items.Add("Blah");
-            this.ddVehicleModel.Items.Add("Blah");
-            this.ddVehicleModel.Items.Add("Blah");
-            this.ddVehicleModel.Items.Add("What !");
-            this.ddVehicleModel.Items.Add("Blah");
-            this.ddVehicleModel.Items.Add("Blah");
-            this.ddVehicleModel.Items.Add("Blah");
-            this.ddVehicleModel.Items.Add("Blah");
-            this.ddVehicleModel.Location = new System.Drawing.Point(118, 186);
-            this.ddVehicleModel.Name = "ddVehicleModel";
-            this.ddVehicleModel.Size = new System.Drawing.Size(120, 20);
-            this.ddVehicleModel.TabIndex = 19;
+            this.ddModel.Items.Add("Blah");
+            this.ddModel.Items.Add("Blah");
+            this.ddModel.Items.Add("Blah");
+            this.ddModel.Items.Add("Blah");
+            this.ddModel.Items.Add("Blah");
+            this.ddModel.Items.Add("Blah");
+            this.ddModel.Items.Add("What !");
+            this.ddModel.Items.Add("Blah");
+            this.ddModel.Items.Add("Blah");
+            this.ddModel.Items.Add("Blah");
+            this.ddModel.Items.Add("Blah");
+            this.ddModel.Location = new System.Drawing.Point(118, 186);
+            this.ddModel.Name = "ddModel";
+            this.ddModel.Size = new System.Drawing.Size(120, 20);
+            this.ddModel.TabIndex = 19;
             // 
-            // ddVehicleYear
+            // ddYear
             // 
-            this.ddVehicleYear.Location = new System.Drawing.Point(118, 83);
-            this.ddVehicleYear.Name = "ddVehicleYear";
-            this.ddVehicleYear.Size = new System.Drawing.Size(120, 20);
-            this.ddVehicleYear.TabIndex = 20;
+            this.ddYear.Location = new System.Drawing.Point(118, 83);
+            this.ddYear.Name = "ddYear";
+            this.ddYear.Size = new System.Drawing.Size(120, 20);
+            this.ddYear.TabIndex = 20;
             // 
-            // txtVehicleColor
+            // txtColor
             // 
-            this.txtVehicleColor.Location = new System.Drawing.Point(118, 282);
-            this.txtVehicleColor.Name = "txtVehicleColor";
-            this.txtVehicleColor.Size = new System.Drawing.Size(120, 20);
-            this.txtVehicleColor.TabIndex = 21;
+            this.txtColor.Location = new System.Drawing.Point(118, 282);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(120, 20);
+            this.txtColor.TabIndex = 21;
             // 
-            // ddVehicleCondition
+            // ddCondition
             // 
-            this.ddVehicleCondition.AllowDrop = true;
-            this.ddVehicleCondition.Items.Add("2017");
-            this.ddVehicleCondition.Items.Add("2016");
-            this.ddVehicleCondition.Items.Add("2015");
-            this.ddVehicleCondition.Items.Add("2014");
-            this.ddVehicleCondition.Items.Add("2013");
-            this.ddVehicleCondition.Items.Add("2012");
-            this.ddVehicleCondition.Items.Add("2011");
-            this.ddVehicleCondition.Items.Add("2010");
-            this.ddVehicleCondition.Items.Add("2009");
-            this.ddVehicleCondition.Items.Add("2008");
-            this.ddVehicleCondition.Items.Add("2007");
-            this.ddVehicleCondition.Items.Add("2006");
-            this.ddVehicleCondition.Items.Add("2005");
-            this.ddVehicleCondition.Items.Add("2004");
-            this.ddVehicleCondition.Items.Add("2003");
-            this.ddVehicleCondition.Items.Add("2002");
-            this.ddVehicleCondition.Items.Add("2001");
-            this.ddVehicleCondition.Items.Add("2000");
-            this.ddVehicleCondition.Items.Add("1999");
-            this.ddVehicleCondition.Location = new System.Drawing.Point(118, 236);
-            this.ddVehicleCondition.Name = "ddVehicleCondition";
-            this.ddVehicleCondition.Size = new System.Drawing.Size(120, 20);
-            this.ddVehicleCondition.TabIndex = 22;
+            this.ddCondition.AllowDrop = true;
+            this.ddCondition.Items.Add("2017");
+            this.ddCondition.Items.Add("2016");
+            this.ddCondition.Items.Add("2015");
+            this.ddCondition.Items.Add("2014");
+            this.ddCondition.Items.Add("2013");
+            this.ddCondition.Items.Add("2012");
+            this.ddCondition.Items.Add("2011");
+            this.ddCondition.Items.Add("2010");
+            this.ddCondition.Items.Add("2009");
+            this.ddCondition.Items.Add("2008");
+            this.ddCondition.Items.Add("2007");
+            this.ddCondition.Items.Add("2006");
+            this.ddCondition.Items.Add("2005");
+            this.ddCondition.Items.Add("2004");
+            this.ddCondition.Items.Add("2003");
+            this.ddCondition.Items.Add("2002");
+            this.ddCondition.Items.Add("2001");
+            this.ddCondition.Items.Add("2000");
+            this.ddCondition.Items.Add("1999");
+            this.ddCondition.Location = new System.Drawing.Point(118, 236);
+            this.ddCondition.Name = "ddCondition";
+            this.ddCondition.Size = new System.Drawing.Size(120, 20);
+            this.ddCondition.TabIndex = 22;
             // 
             // label6
             // 
@@ -221,39 +220,28 @@
             this.txtCustomerID.Size = new System.Drawing.Size(120, 20);
             this.txtCustomerID.TabIndex = 24;
             // 
-            // cbNewCustomer
-            // 
-            this.cbNewCustomer.AutoSize = true;
-            this.cbNewCustomer.Location = new System.Drawing.Point(254, 328);
-            this.cbNewCustomer.Name = "cbNewCustomer";
-            this.cbNewCustomer.Size = new System.Drawing.Size(95, 17);
-            this.cbNewCustomer.TabIndex = 25;
-            this.cbNewCustomer.Text = "New Customer";
-            this.cbNewCustomer.UseVisualStyleBackColor = true;
-            // 
-            // AddInventory
+            // FindInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 405);
-            this.Controls.Add(this.cbNewCustomer);
             this.Controls.Add(this.txtCustomerID);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.ddVehicleCondition);
-            this.Controls.Add(this.txtVehicleColor);
-            this.Controls.Add(this.ddVehicleYear);
-            this.Controls.Add(this.ddVehicleModel);
-            this.Controls.Add(this.ddVehicleMake);
+            this.Controls.Add(this.ddCondition);
+            this.Controls.Add(this.txtColor);
+            this.Controls.Add(this.ddYear);
+            this.Controls.Add(this.ddModel);
+            this.Controls.Add(this.ddMake);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnVehCancel);
             this.Controls.Add(this.btnVehAdd);
-            this.Controls.Add(this.txtVehicleID);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AddInventory";
+            this.Name = "FindInventory";
             this.Text = "Add Vehicle";
             this.TopMost = true;
             this.ResumeLayout(false);
@@ -268,17 +256,16 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtVehicleID;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnVehAdd;
         private System.Windows.Forms.Button btnVehCancel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DomainUpDown ddVehicleMake;
-        private System.Windows.Forms.DomainUpDown ddVehicleModel;
-        private System.Windows.Forms.DomainUpDown ddVehicleYear;
-        private System.Windows.Forms.TextBox txtVehicleColor;
-        private System.Windows.Forms.DomainUpDown ddVehicleCondition;
+        private System.Windows.Forms.DomainUpDown ddMake;
+        private System.Windows.Forms.DomainUpDown ddModel;
+        private System.Windows.Forms.DomainUpDown ddYear;
+        private System.Windows.Forms.TextBox txtColor;
+        private System.Windows.Forms.DomainUpDown ddCondition;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCustomerID;
-        private System.Windows.Forms.CheckBox cbNewCustomer;
     }
 }

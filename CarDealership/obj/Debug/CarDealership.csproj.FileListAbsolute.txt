@@ -8,8 +8,7 @@ C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealershi
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.exe
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.pdb
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.csprojResolveAssemblyReference.cache
-C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.Add.resources
-C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.Find.resources
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.AddEmployee.resources
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.AddInventory.resources
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.AddCustomer.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.FindCustomer.resources

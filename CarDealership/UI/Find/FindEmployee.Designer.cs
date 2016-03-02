@@ -1,6 +1,6 @@
 ﻿namespace CarDealership
 {
-    partial class AddEmployee
+    partial class FindEmployee1
     {
         /// <summary>
         /// Required designer variable.
@@ -37,11 +37,11 @@
             this.txtEmpNum = new System.Windows.Forms.TextBox();
             this.txtEmpFName = new System.Windows.Forms.TextBox();
             this.txtEmpLName = new System.Windows.Forms.TextBox();
-            this.txtEmpHireDate = new System.Windows.Forms.TextBox();
+            this.txtEmpDOB = new System.Windows.Forms.TextBox();
             this.btnEmpAdd = new System.Windows.Forms.Button();
-            this.btnEmpCancel = new System.Windows.Forms.Button();
-            this.txtSalary = new System.Windows.Forms.TextBox();
-            this.txtPosition = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.txtEmpAddress = new System.Windows.Forms.TextBox();
+            this.txtEmpCity = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -120,12 +120,12 @@
             this.txtEmpLName.TabIndex = 9;
             this.txtEmpLName.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // txtEmpHireDate
+            // txtEmpDOB
             // 
-            this.txtEmpHireDate.Location = new System.Drawing.Point(134, 239);
-            this.txtEmpHireDate.Name = "txtEmpHireDate";
-            this.txtEmpHireDate.Size = new System.Drawing.Size(163, 20);
-            this.txtEmpHireDate.TabIndex = 10;
+            this.txtEmpDOB.Location = new System.Drawing.Point(134, 239);
+            this.txtEmpDOB.Name = "txtEmpDOB";
+            this.txtEmpDOB.Size = new System.Drawing.Size(163, 20);
+            this.txtEmpDOB.TabIndex = 10;
             // 
             // btnEmpAdd
             // 
@@ -136,40 +136,40 @@
             this.btnEmpAdd.Text = "Add";
             this.btnEmpAdd.UseVisualStyleBackColor = true;
             // 
-            // btnEmpCancel
+            // btnCancel
             // 
-            this.btnEmpCancel.Location = new System.Drawing.Point(262, 370);
-            this.btnEmpCancel.Name = "btnEmpCancel";
-            this.btnEmpCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnEmpCancel.TabIndex = 16;
-            this.btnEmpCancel.Text = "Cancel";
-            this.btnEmpCancel.UseVisualStyleBackColor = true;
-            this.btnEmpCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Location = new System.Drawing.Point(262, 370);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 16;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txtSalary
+            // txtEmpAddress
             // 
-            this.txtSalary.Location = new System.Drawing.Point(134, 289);
-            this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(66, 20);
-            this.txtSalary.TabIndex = 11;
+            this.txtEmpAddress.Location = new System.Drawing.Point(134, 289);
+            this.txtEmpAddress.Name = "txtEmpAddress";
+            this.txtEmpAddress.Size = new System.Drawing.Size(66, 20);
+            this.txtEmpAddress.TabIndex = 11;
             // 
-            // txtPosition
+            // txtEmpCity
             // 
-            this.txtPosition.Location = new System.Drawing.Point(134, 335);
-            this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(163, 20);
-            this.txtPosition.TabIndex = 13;
+            this.txtEmpCity.Location = new System.Drawing.Point(134, 335);
+            this.txtEmpCity.Name = "txtEmpCity";
+            this.txtEmpCity.Size = new System.Drawing.Size(163, 20);
+            this.txtEmpCity.TabIndex = 13;
             // 
-            // AddEmployee
+            // FindEmployee1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 405);
-            this.Controls.Add(this.btnEmpCancel);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEmpAdd);
-            this.Controls.Add(this.txtPosition);
-            this.Controls.Add(this.txtSalary);
-            this.Controls.Add(this.txtEmpHireDate);
+            this.Controls.Add(this.txtEmpCity);
+            this.Controls.Add(this.txtEmpAddress);
+            this.Controls.Add(this.txtEmpDOB);
             this.Controls.Add(this.txtEmpLName);
             this.Controls.Add(this.txtEmpFName);
             this.Controls.Add(this.txtEmpNum);
@@ -179,7 +179,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AddEmployee";
+            this.Name = "FindEmployee1";
             this.Text = "Add Employee";
             this.TopMost = true;
             this.ResumeLayout(false);
@@ -198,10 +198,10 @@
         private System.Windows.Forms.TextBox txtEmpNum;
         private System.Windows.Forms.TextBox txtEmpFName;
         private System.Windows.Forms.TextBox txtEmpLName;
-        private System.Windows.Forms.TextBox txtEmpHireDate;
+        private System.Windows.Forms.TextBox txtEmpDOB;
         private System.Windows.Forms.Button btnEmpAdd;
-        private System.Windows.Forms.Button btnEmpCancel;
-        private System.Windows.Forms.TextBox txtSalary;
-        private System.Windows.Forms.TextBox txtPosition;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox txtEmpAddress;
+        private System.Windows.Forms.TextBox txtEmpCity;
     }
 }

@@ -86,6 +86,42 @@
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Sales.cs" />
+    <Compile Include="UI\Edit\EditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Edit\EditCustomer.Designer.cs">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Edit\EditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Edit\EditEmployee.Designer.cs">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Edit\EditInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Edit\EditInventory.Designer.cs">
+      <DependentUpon>EditInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Find\FindCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Find\FindCustomer.Designer.cs">
+      <DependentUpon>FindCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Find\FindEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Find\FindEmployee.Designer.cs">
+      <DependentUpon>FindEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Find\FindInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Find\FindInventory.Designer.cs">
+      <DependentUpon>FindInventory.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="UI\Add\AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +146,24 @@
     <EmbeddedResource Include="UI\Add\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Edit\EditCustomer.resx">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Edit\EditEmployee.resx">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Edit\EditInventory.resx">
+      <DependentUpon>EditInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Find\FindCustomer.resx">
+      <DependentUpon>FindCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Find\FindEmployee.resx">
+      <DependentUpon>FindEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Find\FindInventory.resx">
+      <DependentUpon>FindInventory.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -126,10 +180,7 @@
   <ItemGroup>
     <Content Include="car_dealerships_logos_4_Blm_icon.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Find\" />
-    <Folder Include="UI\Search\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

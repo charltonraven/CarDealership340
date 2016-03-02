@@ -57,8 +57,7 @@ namespace CarDealership
 
         private void findToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            Find find = new Find();
-            find.Show();
+          
         }
 
         private void findCustomerToolStripMenuItem_Click(object sender, EventArgs e)
