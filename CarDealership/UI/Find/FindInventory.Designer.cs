@@ -242,7 +242,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FindInventory";
-            this.Text = "Add Vehicle";
+            this.Text = "Find Customer";
             this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -253,7 +253,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CustomerTemplate1";
-            this.Text = "Add Customer";
+            this.Text = "Edit Customer";
             this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();

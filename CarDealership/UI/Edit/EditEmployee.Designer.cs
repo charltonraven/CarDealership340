@@ -38,10 +38,11 @@
             this.txtEmpFName = new System.Windows.Forms.TextBox();
             this.txtEmpLName = new System.Windows.Forms.TextBox();
             this.txtEmpDOB = new System.Windows.Forms.TextBox();
-            this.btnEmpAdd = new System.Windows.Forms.Button();
+            this.btnEmpCommit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtEmpAddress = new System.Windows.Forms.TextBox();
             this.txtEmpCity = new System.Windows.Forms.TextBox();
+            this.btnCusDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -127,18 +128,18 @@
             this.txtEmpDOB.Size = new System.Drawing.Size(163, 20);
             this.txtEmpDOB.TabIndex = 10;
             // 
-            // btnEmpAdd
+            // btnEmpCommit
             // 
-            this.btnEmpAdd.Location = new System.Drawing.Point(73, 370);
-            this.btnEmpAdd.Name = "btnEmpAdd";
-            this.btnEmpAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnEmpAdd.TabIndex = 15;
-            this.btnEmpAdd.Text = "Add";
-            this.btnEmpAdd.UseVisualStyleBackColor = true;
+            this.btnEmpCommit.Location = new System.Drawing.Point(39, 370);
+            this.btnEmpCommit.Name = "btnEmpCommit";
+            this.btnEmpCommit.Size = new System.Drawing.Size(75, 23);
+            this.btnEmpCommit.TabIndex = 15;
+            this.btnEmpCommit.Text = "Commit";
+            this.btnEmpCommit.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(262, 370);
+            this.btnCancel.Location = new System.Drawing.Point(192, 370);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 16;
@@ -160,13 +161,23 @@
             this.txtEmpCity.Size = new System.Drawing.Size(163, 20);
             this.txtEmpCity.TabIndex = 13;
             // 
+            // btnCusDelete
+            // 
+            this.btnCusDelete.Location = new System.Drawing.Point(347, 370);
+            this.btnCusDelete.Name = "btnCusDelete";
+            this.btnCusDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnCusDelete.TabIndex = 17;
+            this.btnCusDelete.Text = "Delete";
+            this.btnCusDelete.UseVisualStyleBackColor = true;
+            // 
             // EditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 405);
+            this.Controls.Add(this.btnCusDelete);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnEmpAdd);
+            this.Controls.Add(this.btnEmpCommit);
             this.Controls.Add(this.txtEmpCity);
             this.Controls.Add(this.txtEmpAddress);
             this.Controls.Add(this.txtEmpDOB);
@@ -180,7 +191,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "EditEmployee";
-            this.Text = "Add Employee";
+            this.Text = "Edit Employee";
             this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,9 +210,10 @@
         private System.Windows.Forms.TextBox txtEmpFName;
         private System.Windows.Forms.TextBox txtEmpLName;
         private System.Windows.Forms.TextBox txtEmpDOB;
-        private System.Windows.Forms.Button btnEmpAdd;
+        private System.Windows.Forms.Button btnEmpCommit;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtEmpAddress;
         private System.Windows.Forms.TextBox txtEmpCity;
+        private System.Windows.Forms.Button btnCusDelete;
     }
 }

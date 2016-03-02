@@ -253,7 +253,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FindCustomer";
-            this.Text = "Add Customer";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.Text = "Find Customer";
             this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();

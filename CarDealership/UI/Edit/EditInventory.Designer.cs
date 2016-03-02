@@ -34,7 +34,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnVehAdd = new System.Windows.Forms.Button();
+            this.btnVehCommit = new System.Windows.Forms.Button();
             this.btnVehCancel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.ddMake = new System.Windows.Forms.DomainUpDown();
@@ -44,6 +44,8 @@
             this.ddCondition = new System.Windows.Forms.DomainUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
+            this.cbSold = new System.Windows.Forms.CheckBox();
+            this.cbOnLot = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -98,18 +100,18 @@
             this.textBox1.Size = new System.Drawing.Size(66, 20);
             this.textBox1.TabIndex = 7;
             // 
-            // btnVehAdd
+            // btnVehCommit
             // 
-            this.btnVehAdd.Location = new System.Drawing.Point(47, 370);
-            this.btnVehAdd.Name = "btnVehAdd";
-            this.btnVehAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnVehAdd.TabIndex = 15;
-            this.btnVehAdd.Text = "Add";
-            this.btnVehAdd.UseVisualStyleBackColor = true;
+            this.btnVehCommit.Location = new System.Drawing.Point(29, 370);
+            this.btnVehCommit.Name = "btnVehCommit";
+            this.btnVehCommit.Size = new System.Drawing.Size(75, 23);
+            this.btnVehCommit.TabIndex = 15;
+            this.btnVehCommit.Text = "Commit";
+            this.btnVehCommit.UseVisualStyleBackColor = true;
             // 
             // btnVehCancel
             // 
-            this.btnVehCancel.Location = new System.Drawing.Point(242, 370);
+            this.btnVehCancel.Location = new System.Drawing.Point(237, 370);
             this.btnVehCancel.Name = "btnVehCancel";
             this.btnVehCancel.Size = new System.Drawing.Size(75, 23);
             this.btnVehCancel.TabIndex = 16;
@@ -220,11 +222,33 @@
             this.txtCustomerID.Size = new System.Drawing.Size(120, 20);
             this.txtCustomerID.TabIndex = 24;
             // 
+            // cbSold
+            // 
+            this.cbSold.AutoSize = true;
+            this.cbSold.Location = new System.Drawing.Point(291, 116);
+            this.cbSold.Name = "cbSold";
+            this.cbSold.Size = new System.Drawing.Size(47, 17);
+            this.cbSold.TabIndex = 25;
+            this.cbSold.Text = "Sold";
+            this.cbSold.UseVisualStyleBackColor = true;
+            // 
+            // cbOnLot
+            // 
+            this.cbOnLot.AutoSize = true;
+            this.cbOnLot.Location = new System.Drawing.Point(291, 188);
+            this.cbOnLot.Name = "cbOnLot";
+            this.cbOnLot.Size = new System.Drawing.Size(58, 17);
+            this.cbOnLot.TabIndex = 26;
+            this.cbOnLot.Text = "On Lot";
+            this.cbOnLot.UseVisualStyleBackColor = true;
+            // 
             // EditInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 405);
+            this.Controls.Add(this.cbOnLot);
+            this.Controls.Add(this.cbSold);
             this.Controls.Add(this.txtCustomerID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ddCondition);
@@ -234,7 +258,7 @@
             this.Controls.Add(this.ddMake);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnVehCancel);
-            this.Controls.Add(this.btnVehAdd);
+            this.Controls.Add(this.btnVehCommit);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -242,7 +266,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "EditInventory";
-            this.Text = "Add Vehicle";
+            this.Text = "Edit Vehicle";
             this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -257,7 +281,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnVehAdd;
+        private System.Windows.Forms.Button btnVehCommit;
         private System.Windows.Forms.Button btnVehCancel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DomainUpDown ddMake;
@@ -267,5 +291,7 @@
         private System.Windows.Forms.DomainUpDown ddCondition;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCustomerID;
+        private System.Windows.Forms.CheckBox cbSold;
+        private System.Windows.Forms.CheckBox cbOnLot;
     }
 }
