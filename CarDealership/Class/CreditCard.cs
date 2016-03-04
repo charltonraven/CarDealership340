@@ -10,7 +10,7 @@ namespace CarDealership
     {
         public char CardID;
         public char CardNumber;
-        public char NameonCard;
+        public char NameOnCard;
         public char CVC;
         public char ExpirationDate;
         public char PIN;
@@ -18,12 +18,12 @@ namespace CarDealership
 
 
 
-        public CreditCard(char CardID, char CardNumber, char NameonCard,char CVC, char ExpirationDate,
+        public CreditCard(char CardID, char CardNumber, char NameOnCard,char CVC, char ExpirationDate,
             char PIN)
         {
             this.CardID = CardID;
             this.CardNumber = CardNumber;
-            this.NameonCard = NameonCard;
+            this.NameOnCard = NameOnCard;
             this.CVC = CVC;
             this.ExpirationDate = ExpirationDate;
             this.PIN = PIN;

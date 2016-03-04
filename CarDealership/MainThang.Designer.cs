@@ -43,15 +43,15 @@
             this.onLotToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.offLotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchasedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.displayToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.templatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.allToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ddTables = new System.Windows.Forms.DataGridView();
             this.CarMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ddTables)).BeginInit();
             this.SuspendLayout();
             // 
             // CarMenuStrip
@@ -140,7 +140,7 @@
             this.purchaseVehicleToolStripMenuItem,
             this.displayToolStripMenuItem1});
             this.vehicleStrip.Name = "vehicleStrip";
-            this.vehicleStrip.Size = new System.Drawing.Size(152, 26);
+            this.vehicleStrip.Size = new System.Drawing.Size(148, 26);
             this.vehicleStrip.Text = "Vehicle";
             // 
             // purchaseVehicleToolStripMenuItem
@@ -171,6 +171,12 @@
             this.purchasedToolStripMenuItem.Name = "purchasedToolStripMenuItem";
             this.purchasedToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.purchasedToolStripMenuItem.Text = "Purchased";
+            // 
+            // allToolStripMenuItem
+            // 
+            this.allToolStripMenuItem.Name = "allToolStripMenuItem";
+            this.allToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.allToolStripMenuItem.Text = "All";
             // 
             // displayToolStripMenuItem1
             // 
@@ -209,27 +215,21 @@
             this.findInventoryToolStripMenuItem.Text = "Find Inventory";
             this.findInventoryToolStripMenuItem.Click += new System.EventHandler(this.findInventoryToolStripMenuItem_Click);
             // 
-            // dataGridView1
+            // ddTables
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 32);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(651, 264);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // allToolStripMenuItem
-            // 
-            this.allToolStripMenuItem.Name = "allToolStripMenuItem";
-            this.allToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.allToolStripMenuItem.Text = "All";
+            this.ddTables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ddTables.Location = new System.Drawing.Point(12, 32);
+            this.ddTables.Name = "ddTables";
+            this.ddTables.Size = new System.Drawing.Size(651, 264);
+            this.ddTables.TabIndex = 1;
+            this.ddTables.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // CarDealership
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 318);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ddTables);
             this.Controls.Add(this.CarMenuStrip);
             this.MainMenuStrip = this.CarMenuStrip;
             this.Name = "CarDealership";
@@ -237,7 +237,7 @@
             this.Load += new System.EventHandler(this.CarDealership_Load);
             this.CarMenuStrip.ResumeLayout(false);
             this.CarMenuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ddTables)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,7 +246,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip CarMenuStrip;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ddTables;
         private System.Windows.Forms.ToolStripMenuItem fileMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem editStrip;
         private System.Windows.Forms.ToolStripMenuItem findStrip;

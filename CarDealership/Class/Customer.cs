@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CarDealership;
 
 namespace CarDealership
 {
@@ -17,8 +18,7 @@ namespace CarDealership
         public char CusCity;
         public char CusState;
         public char CusZipCode;
-
-   
+           
 
 
      public Customer(char CustomerID, char CusFirstName, char CusLastName, DateTime CusDOB, char CusPhone,
