@@ -218,9 +218,9 @@
             // ddTables
             // 
             this.ddTables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ddTables.Location = new System.Drawing.Point(12, 32);
+            this.ddTables.Location = new System.Drawing.Point(12, 86);
             this.ddTables.Name = "ddTables";
-            this.ddTables.Size = new System.Drawing.Size(651, 264);
+            this.ddTables.Size = new System.Drawing.Size(341, 210);
             this.ddTables.TabIndex = 1;
             this.ddTables.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

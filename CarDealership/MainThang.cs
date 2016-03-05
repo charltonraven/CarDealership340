@@ -19,6 +19,7 @@ namespace CarDealership
 
             InitializeComponent();
             
+            
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -33,11 +34,15 @@ namespace CarDealership
 
         private void CarDealership_Load(object sender, EventArgs e)
         {
-           
-            if (Login.Username == "Sales")
+            if (Login.Position == "Sales")
             {
+
                 employeeStrip.Visible = false;
+                MessageBox.Show("Great It works !---You are Sales");
             }
+            else
+                MessageBox.Show("Great It works !---You are Manager");
+                
         }
 
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)

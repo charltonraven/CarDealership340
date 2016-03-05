@@ -20,18 +20,7 @@ namespace CarDealership
             Application.Run(new Login());
 
 
-            String myConString = "SERVER=localhost;Database=carDealership;uid=root;Password=Raven47946$;";
-            try
-            {
-                MySqlConnection conn = new MySqlConnection();
-                conn.ConnectionString = myConString;
-                conn.Open();
-            }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
-            {
-                MessageBox.Show("FAILED BITCH");
-            }
-
+         
             
 
 
