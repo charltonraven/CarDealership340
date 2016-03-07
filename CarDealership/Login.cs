@@ -14,20 +14,19 @@ using System.Threading;
 namespace CarDealership
 {
     public partial class Login : Form
-       
     {
-       public  String myConString = "SERVER=localhost;Port=3306;Database=carDealership;uid=root;Password=Raven47946$;";
+        public String myConString = "SERVER=localhost;Port=3306;Database=carDealership;uid=root;Password=Raven47946$;";
         public static String Username;
         public static String Password;
-        public static String Position="";
+        public static String Position = "";
 
-        
+
         public Login()
         {
-            
+
             InitializeComponent();
-           
-            
+
+
 
         }
 
@@ -37,16 +36,16 @@ namespace CarDealership
             try
             {
                 MySqlConnection conn = new MySqlConnection(myConString);
-              //  conn.ConnectionString = myConString;
+                //  conn.ConnectionString = myConString;
                 conn.Open();
                 try
                 {
                     String SelectCommand = "Select * from Employee where employeeID='" + txtID.Text + "' And password='" + txtPassword.Text + "'";
                     MySqlDataReader MyReader;
-                    MySqlCommand Match = new MySqlCommand(SelectCommand,conn);
+                    MySqlCommand Match = new MySqlCommand(SelectCommand, conn);
                     MyReader = Match.ExecuteReader();
                     int count = 0;
-                    while (MyReader.Read())
+                    while (MyReader.Read()&& count !=3)
                     {
                         count++;
                     }
@@ -59,20 +58,15 @@ namespace CarDealership
                         count = 0;
                         while (MyReader.Read())
                         {
-                           Login.Position= MyReader.GetString(0);
-                            
-                            
-                           
+                            Login.Position = MyReader.GetString(0);
                         }
-                        
-                       
-                            
-                        
-                       
+                        this.Hide();
+                        CarDealership OpenMain = new CarDealership();
+                        OpenMain.Show();
 
                     }
-                    else if (count > 1)
-                        MessageBox.Show("Duplicate Username and Password....Access...Access Denied");
+                    else if (count == 0)
+                        MessageBox.Show("Incorrect Password Bruh !");
                 }
                 catch (Exception ex)
                 {
@@ -93,26 +87,10 @@ namespace CarDealership
                 }
             }
 
-           
 
-            CarDealership OpenMain = new CarDealership();
-            OpenMain.Show();
+          
 
-
-            
-            
-
-            
             //try catch for something else
-
-           
-
-                 
-                
-      
-
-            
-
 
         }
 

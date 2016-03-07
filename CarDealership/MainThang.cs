@@ -34,14 +34,18 @@ namespace CarDealership
 
         private void CarDealership_Load(object sender, EventArgs e)
         {
+
+            TabControl tabTest = new TabControl();
+          
+           // lblPosition.Text= Login.Position.;
             if (Login.Position == "Sales")
             {
 
                 employeeStrip.Visible = false;
-                MessageBox.Show("Great It works !---You are Sales");
+                tabEmployee.Hide();
+
             }
-            else
-                MessageBox.Show("Great It works !---You are Manager");
+           
                 
         }
 
