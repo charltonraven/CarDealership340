@@ -44,6 +44,7 @@
             this.txtState = new System.Windows.Forms.DomainUpDown();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.ddVehicle = new System.Windows.Forms.DomainUpDown();
             this.SuspendLayout();
             // 
             // label1
@@ -231,11 +232,20 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // ddVehicle
+            // 
+            this.ddVehicle.Location = new System.Drawing.Point(331, 130);
+            this.ddVehicle.Name = "ddVehicle";
+            this.ddVehicle.Size = new System.Drawing.Size(120, 20);
+            this.ddVehicle.TabIndex = 17;
+            this.ddVehicle.Text = "domainUpDown1";
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 405);
+            this.ClientSize = new System.Drawing.Size(463, 436);
+            this.Controls.Add(this.ddVehicle);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtState);
@@ -278,5 +288,6 @@
         private System.Windows.Forms.DomainUpDown txtState;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.DomainUpDown ddVehicle;
     }
 }

@@ -15,6 +15,9 @@ namespace CarDealership.Objects
         public String VehicleModel;
         public String VehicleCondition;
         public String VehicleColor;
+        public String OnLot;
+        public String Amount;
+        public String CustomerID;
 
 
 

@@ -49,11 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cardealershipDataSetTestAgain.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cardealershipDataSetTestAgain.xsd</DependentUpon>
-    </Compile>
     <Compile Include="UI\Add\AddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,17 +165,6 @@
     <EmbeddedResource Include="UI\Find\FindInventory.resx">
       <DependentUpon>FindInventory.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="cardealershipDataSetTestAgain.xsc">
-      <DependentUpon>cardealershipDataSetTestAgain.xsd</DependentUpon>
-    </None>
-    <None Include="cardealershipDataSetTestAgain.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cardealershipDataSetTestAgain.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="cardealershipDataSetTestAgain.xss">
-      <DependentUpon>cardealershipDataSetTestAgain.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

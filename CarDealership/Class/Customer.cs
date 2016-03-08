@@ -18,11 +18,13 @@ namespace CarDealership
         public char CusCity;
         public char CusState;
         public char CusZipCode;
+        bool CarWashCoupon = false;
+
            
 
 
      public Customer(char CustomerID, char CusFirstName, char CusLastName, DateTime CusDOB, char CusPhone,
-         char CusAddress, char CusCity, char CusState, char CusZipCode)
+         char CusAddress, char CusCity, char CusState, char CusZipCode, double SaleAmount)
      {
          this.CustomerID = CustomerID;
          this.CusFirstName = CusFirstName;
@@ -33,19 +35,15 @@ namespace CarDealership
          this.CusCity = CusCity;
          this.CusState = CusState;
          this.CusZipCode = CusZipCode;
+         double Sale
+
 
      }
 
+     public void CalculateCusSales()
+     {
 
-
-
-
-
-
-
-
-
-
+     }
 
     }
 }

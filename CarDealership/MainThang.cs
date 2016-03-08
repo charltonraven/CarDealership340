@@ -18,8 +18,8 @@ namespace CarDealership
         {
 
             InitializeComponent();
-            
-            
+
+
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -34,19 +34,22 @@ namespace CarDealership
 
         private void CarDealership_Load(object sender, EventArgs e)
         {
+            tabTables.SelectTab(tabEmployee);
 
-            TabControl tabTest = new TabControl();
-          
-           // lblPosition.Text= Login.Position.;
+            // lblPosition.Text= Login.Position.;
             if (Login.Position == "Sales")
             {
 
-                employeeStrip.Visible = false;
-                tabEmployee.Hide();
+
+                TabPage DeleteEmployeeTab = tabTables.SelectedTab;
+                tabTables.TabPages.Remove(DeleteEmployeeTab);
+
+
 
             }
-           
-                
+            lblPosition.Text = Login.Position;
+
+
         }
 
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,12 +69,12 @@ namespace CarDealership
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void findToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void findCustomerToolStripMenuItem_Click(object sender, EventArgs e)

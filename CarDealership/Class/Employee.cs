@@ -14,6 +14,7 @@ namespace CarDealership
         public DateTime HireDate;
         public char Salary;
         public char Position;
+        
 
 
 

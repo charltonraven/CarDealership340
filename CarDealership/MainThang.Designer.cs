@@ -52,7 +52,6 @@
             this.findInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabTables = new System.Windows.Forms.TabControl();
             this.tabCustomer = new System.Windows.Forms.TabPage();
-            this.dgCustomer = new System.Windows.Forms.DataGridView();
             this.tabInventory = new System.Windows.Forms.TabPage();
             this.dgInventory = new System.Windows.Forms.DataGridView();
             this.tabEmployee = new System.Windows.Forms.TabPage();
@@ -61,10 +60,9 @@
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblPosition = new System.Windows.Forms.Label();
+          //  this.customerTableAdapter1 = new CarDealership.cardealershipDataSetTestAgainTableAdapters.customerTableAdapter();
             this.CarMenuStrip.SuspendLayout();
             this.tabTables.SuspendLayout();
-            this.tabCustomer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCustomer)).BeginInit();
             this.tabInventory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgInventory)).BeginInit();
             this.tabEmployee.SuspendLayout();
@@ -147,13 +145,13 @@
             // customerStrip
             // 
             this.customerStrip.Name = "customerStrip";
-            this.customerStrip.Size = new System.Drawing.Size(152, 26);
+            this.customerStrip.Size = new System.Drawing.Size(148, 26);
             this.customerStrip.Text = "Customer";
             // 
             // employeeStrip
             // 
             this.employeeStrip.Name = "employeeStrip";
-            this.employeeStrip.Size = new System.Drawing.Size(152, 26);
+            this.employeeStrip.Size = new System.Drawing.Size(148, 26);
             this.employeeStrip.Text = "Employee";
             // 
             // vehicleStrip
@@ -162,7 +160,7 @@
             this.purchaseVehicleToolStripMenuItem,
             this.displayToolStripMenuItem1});
             this.vehicleStrip.Name = "vehicleStrip";
-            this.vehicleStrip.Size = new System.Drawing.Size(152, 26);
+            this.vehicleStrip.Size = new System.Drawing.Size(148, 26);
             this.vehicleStrip.Text = "Vehicle";
             // 
             // purchaseVehicleToolStripMenuItem
@@ -252,7 +250,6 @@
             // tabCustomer
             // 
             this.tabCustomer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabCustomer.Controls.Add(this.dgCustomer);
             this.tabCustomer.Location = new System.Drawing.Point(4, 29);
             this.tabCustomer.Name = "tabCustomer";
             this.tabCustomer.Padding = new System.Windows.Forms.Padding(3);
@@ -260,14 +257,6 @@
             this.tabCustomer.TabIndex = 0;
             this.tabCustomer.Text = "Customer";
             this.tabCustomer.UseVisualStyleBackColor = true;
-            // 
-            // dgCustomer
-            // 
-            this.dgCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCustomer.Location = new System.Drawing.Point(-2, 1);
-            this.dgCustomer.Name = "dgCustomer";
-            this.dgCustomer.Size = new System.Drawing.Size(644, 218);
-            this.dgCustomer.TabIndex = 0;
             // 
             // tabInventory
             // 
@@ -284,9 +273,9 @@
             // dgInventory
             // 
             this.dgInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgInventory.Location = new System.Drawing.Point(1, -2);
+            this.dgInventory.Location = new System.Drawing.Point(-2, -2);
             this.dgInventory.Name = "dgInventory";
-            this.dgInventory.Size = new System.Drawing.Size(644, 224);
+            this.dgInventory.Size = new System.Drawing.Size(647, 224);
             this.dgInventory.TabIndex = 0;
             // 
             // tabEmployee
@@ -305,7 +294,7 @@
             this.dgEmployee.AutoGenerateColumns = false;
             this.dgEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgEmployee.DataSource = this.employeeBindingSource;
-            this.dgEmployee.Location = new System.Drawing.Point(1, 1);
+            this.dgEmployee.Location = new System.Drawing.Point(-2, -2);
             this.dgEmployee.Name = "dgEmployee";
             this.dgEmployee.Size = new System.Drawing.Size(639, 216);
             this.dgEmployee.TabIndex = 0;
@@ -317,6 +306,10 @@
             this.lblPosition.Name = "lblPosition";
             this.lblPosition.Size = new System.Drawing.Size(0, 13);
             this.lblPosition.TabIndex = 2;
+            // 
+            // customerTableAdapter1
+            // 
+        //    this.customerTableAdapter1.ClearBeforeFill = true;
             // 
             // CarDealership
             // 
@@ -333,8 +326,6 @@
             this.CarMenuStrip.ResumeLayout(false);
             this.CarMenuStrip.PerformLayout();
             this.tabTables.ResumeLayout(false);
-            this.tabCustomer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgCustomer)).EndInit();
             this.tabInventory.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgInventory)).EndInit();
             this.tabEmployee.ResumeLayout(false);
@@ -374,16 +365,15 @@
         private System.Windows.Forms.TabPage tabCustomer;
         private System.Windows.Forms.TabPage tabInventory;
         private System.Windows.Forms.TabPage tabEmployee;
-        private System.Windows.Forms.DataGridView dgCustomer;
         private System.Windows.Forms.DataGridView dgInventory;
         private System.Windows.Forms.DataGridView dgEmployee;
-        private cardealershipDataSetTestAgain cardealershipDataSetTestAgain;
+       // private cardealershipDataSetTestAgain cardealershipDataSetTestAgain;
         private System.Windows.Forms.BindingSource customerBindingSource;
-        private cardealershipDataSetTestAgainTableAdapters.customerTableAdapter customerTableAdapter;
+       // private cardealershipDataSetTestAgainTableAdapters.customerTableAdapter customerTableAdapter;
         private System.Windows.Forms.BindingSource vehicleBindingSource;
-        private cardealershipDataSetTestAgainTableAdapters.vehicleTableAdapter vehicleTableAdapter;
+       // private cardealershipDataSetTestAgainTableAdapters.vehicleTableAdapter vehicleTableAdapter;
         private System.Windows.Forms.BindingSource employeeBindingSource;
-        private cardealershipDataSetTestAgainTableAdapters.employeeTableAdapter employeeTableAdapter;
+      //  private cardealershipDataSetTestAgainTableAdapters.employeeTableAdapter employeeTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeFNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeLNameDataGridViewTextBoxColumn;
@@ -392,6 +382,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn positionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label lblPosition;
+       // private cardealershipDataSetTestAgainTableAdapters.customerTableAdapter customerTableAdapter1;
 
     }
 }

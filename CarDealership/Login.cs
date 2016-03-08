@@ -32,6 +32,7 @@ namespace CarDealership
 
         private void Login_Click(object sender, EventArgs e)
         {
+            int i = 1;
             //Try Catch for checking the connections of the database
             try
             {
@@ -40,19 +41,22 @@ namespace CarDealership
                 conn.Open();
                 try
                 {
-                    String SelectCommand = "Select * from Employee where employeeID='" + txtID.Text + "' And password='" + txtPassword.Text + "'";
+                    //discuss BINARY KEYWORD PLEASE
+                    String SelectCommand = "Select * from Employee where BINARY employeeID='" + txtID.Text + "' And BINARY password='" + txtPassword.Text + "'";
                     MySqlDataReader MyReader;
                     MySqlCommand Match = new MySqlCommand(SelectCommand, conn);
                     MyReader = Match.ExecuteReader();
                     int count = 0;
-                    while (MyReader.Read()&& count !=3)
+
+                    while (MyReader.Read())
                     {
+
                         count++;
                     }
                     if (count == 1)
                     {
                         MyReader.Close();
-                        String Position = "Select Position from Employee where employeeID='" + txtID.Text + "';";
+                        String Position = "Select Position from Employee where  employeeID='" + txtID.Text + "';";
                         MySqlCommand PositionWindow = new MySqlCommand(Position, conn);
                         MyReader = PositionWindow.ExecuteReader();
                         count = 0;
@@ -66,7 +70,13 @@ namespace CarDealership
 
                     }
                     else if (count == 0)
-                        MessageBox.Show("Incorrect Password Bruh !");
+                    {
+
+                        MessageBox.Show("Incorrect Password, Try Again !");
+                        txtID.Text = "";
+                        txtPassword.Text = "";
+                        i++;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -87,10 +97,13 @@ namespace CarDealership
                 }
             }
 
+            if (i == 3)
+            {
+                MessageBox.Show("You ran out of tries");
+            }
 
-          
 
-            //try catch for something else
+
 
         }
 
