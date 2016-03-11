@@ -5,10 +5,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
 namespace CarDealership
 {
     static class Program
     {
+
+
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -19,12 +23,12 @@ namespace CarDealership
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
 
-
-         
             
 
 
-            
+
+
+
         }
     }
 }

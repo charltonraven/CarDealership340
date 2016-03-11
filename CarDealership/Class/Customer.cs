@@ -35,14 +35,18 @@ namespace CarDealership
          this.CusCity = CusCity;
          this.CusState = CusState;
          this.CusZipCode = CusZipCode;
-         double Sale
+         CheckSaleCoupon(SaleAmount);
 
 
      }
 
-     public void CalculateCusSales()
+     public void CheckSaleCoupon(double amount)
      {
+         if (amount > 50000)
+         {
+             CarWashCoupon = true;
 
+         }
      }
 
     }

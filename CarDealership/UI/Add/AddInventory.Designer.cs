@@ -107,6 +107,7 @@
             this.btnVehAdd.TabIndex = 15;
             this.btnVehAdd.Text = "Add";
             this.btnVehAdd.UseVisualStyleBackColor = true;
+            this.btnVehAdd.Click += new System.EventHandler(this.btnVehAdd_Click);
             // 
             // btnVehCancel
             // 

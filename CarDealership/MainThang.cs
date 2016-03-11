@@ -16,9 +16,10 @@ namespace CarDealership
     {
         public CarDealership()
         {
+            
 
             InitializeComponent();
-
+           
 
         }
 
@@ -43,6 +44,11 @@ namespace CarDealership
 
                 TabPage DeleteEmployeeTab = tabTables.SelectedTab;
                 tabTables.TabPages.Remove(DeleteEmployeeTab);
+
+                //  if(conn.State==ConnectionState.Open){
+                //    MessageBox.Show("Connection YAY !");
+                //}
+                
 
 
 
@@ -108,6 +114,29 @@ namespace CarDealership
         private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
         {
 
+        }
+
+        private void CarMenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void addCustomerTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddCustomer CustomerWindow = new AddCustomer();
+            CustomerWindow.Show();
+        }
+
+        private void addEmployeeTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddEmployee newEmployee = new AddEmployee();
+            newEmployee.Show();
+        }
+
+        private void addInventoryTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddInventory OpenInventory = new AddInventory();
+            OpenInventory.Show();
         }
     }
 }

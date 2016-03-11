@@ -50,6 +50,9 @@
             this.findCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCustomerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addEmployeeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addInventoryTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabTables = new System.Windows.Forms.TabControl();
             this.tabCustomer = new System.Windows.Forms.TabPage();
             this.tabInventory = new System.Windows.Forms.TabPage();
@@ -60,7 +63,6 @@
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblPosition = new System.Windows.Forms.Label();
-          //  this.customerTableAdapter1 = new CarDealership.cardealershipDataSetTestAgainTableAdapters.customerTableAdapter();
             this.CarMenuStrip.SuspendLayout();
             this.tabTables.SuspendLayout();
             this.tabInventory.SuspendLayout();
@@ -85,6 +87,7 @@
             this.CarMenuStrip.Size = new System.Drawing.Size(693, 29);
             this.CarMenuStrip.TabIndex = 0;
             this.CarMenuStrip.Text = "MainMenuBar";
+            this.CarMenuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.CarMenuStrip_ItemClicked);
             // 
             // fileMenuStrip
             // 
@@ -209,7 +212,10 @@
             this.templatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.findCustomerToolStripMenuItem,
             this.findEmployeeToolStripMenuItem,
-            this.findInventoryToolStripMenuItem});
+            this.findInventoryToolStripMenuItem,
+            this.addCustomerTestToolStripMenuItem,
+            this.addEmployeeTestToolStripMenuItem,
+            this.addInventoryTestToolStripMenuItem});
             this.templatesToolStripMenuItem.Name = "templatesToolStripMenuItem";
             this.templatesToolStripMenuItem.Size = new System.Drawing.Size(73, 25);
             this.templatesToolStripMenuItem.Text = "Templates";
@@ -217,23 +223,44 @@
             // findCustomerToolStripMenuItem
             // 
             this.findCustomerToolStripMenuItem.Name = "findCustomerToolStripMenuItem";
-            this.findCustomerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.findCustomerToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.findCustomerToolStripMenuItem.Text = "Find Customer";
             this.findCustomerToolStripMenuItem.Click += new System.EventHandler(this.findCustomerToolStripMenuItem_Click);
             // 
             // findEmployeeToolStripMenuItem
             // 
             this.findEmployeeToolStripMenuItem.Name = "findEmployeeToolStripMenuItem";
-            this.findEmployeeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.findEmployeeToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.findEmployeeToolStripMenuItem.Text = "Find Employee";
             this.findEmployeeToolStripMenuItem.Click += new System.EventHandler(this.findEmployeeToolStripMenuItem_Click);
             // 
             // findInventoryToolStripMenuItem
             // 
             this.findInventoryToolStripMenuItem.Name = "findInventoryToolStripMenuItem";
-            this.findInventoryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.findInventoryToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.findInventoryToolStripMenuItem.Text = "Find Inventory";
             this.findInventoryToolStripMenuItem.Click += new System.EventHandler(this.findInventoryToolStripMenuItem_Click);
+            // 
+            // addCustomerTestToolStripMenuItem
+            // 
+            this.addCustomerTestToolStripMenuItem.Name = "addCustomerTestToolStripMenuItem";
+            this.addCustomerTestToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.addCustomerTestToolStripMenuItem.Text = "Add Customer Test";
+            this.addCustomerTestToolStripMenuItem.Click += new System.EventHandler(this.addCustomerTestToolStripMenuItem_Click);
+            // 
+            // addEmployeeTestToolStripMenuItem
+            // 
+            this.addEmployeeTestToolStripMenuItem.Name = "addEmployeeTestToolStripMenuItem";
+            this.addEmployeeTestToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.addEmployeeTestToolStripMenuItem.Text = "Add Employee Test";
+            this.addEmployeeTestToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeTestToolStripMenuItem_Click);
+            // 
+            // addInventoryTestToolStripMenuItem
+            // 
+            this.addInventoryTestToolStripMenuItem.Name = "addInventoryTestToolStripMenuItem";
+            this.addInventoryTestToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.addInventoryTestToolStripMenuItem.Text = "Add Inventory Test";
+            this.addInventoryTestToolStripMenuItem.Click += new System.EventHandler(this.addInventoryTestToolStripMenuItem_Click);
             // 
             // tabTables
             // 
@@ -307,10 +334,6 @@
             this.lblPosition.Size = new System.Drawing.Size(0, 13);
             this.lblPosition.TabIndex = 2;
             // 
-            // customerTableAdapter1
-            // 
-        //    this.customerTableAdapter1.ClearBeforeFill = true;
-            // 
             // CarDealership
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,10 +401,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeFNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeLNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeHireDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn positionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+       // private System.Windows.Forms.DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn;
+      //  private System.Windows.Forms.DataGridViewTextBoxColumn positionDataGridViewTextBoxColumn;
+       // private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label lblPosition;
+        private System.Windows.Forms.ToolStripMenuItem addCustomerTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addEmployeeTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addInventoryTestToolStripMenuItem;
        // private cardealershipDataSetTestAgainTableAdapters.customerTableAdapter customerTableAdapter1;
 
     }

@@ -19,6 +19,7 @@ namespace CarDealership
         public static String Username;
         public static String Password;
         public static String Position = "";
+        
 
 
         public Login()
@@ -39,9 +40,10 @@ namespace CarDealership
                 MySqlConnection conn = new MySqlConnection(myConString);
                 //  conn.ConnectionString = myConString;
                 conn.Open();
+              
                 try
                 {
-                    //discuss BINARY KEYWORD PLEASE
+                    //Using the BINARY keyword with the password makes it case sensitive when (by default) mysql is not case sensitive.
                     String SelectCommand = "Select * from Employee where BINARY employeeID='" + txtID.Text + "' And BINARY password='" + txtPassword.Text + "'";
                     MySqlDataReader MyReader;
                     MySqlCommand Match = new MySqlCommand(SelectCommand, conn);
@@ -101,7 +103,9 @@ namespace CarDealership
             {
                 MessageBox.Show("You ran out of tries");
             }
+            
 
+            
 
 
 
