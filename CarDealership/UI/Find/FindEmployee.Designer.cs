@@ -1,6 +1,6 @@
 ﻿namespace CarDealership
 {
-    partial class FindEmployee1
+    partial class FindEmployee
     {
         /// <summary>
         /// Required designer variable.
@@ -131,9 +131,9 @@
             // 
             this.btnEmpAdd.Location = new System.Drawing.Point(73, 370);
             this.btnEmpAdd.Name = "btnEmpAdd";
-            this.btnEmpAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnEmpAdd.Size = new System.Drawing.Size(113, 23);
             this.btnEmpAdd.TabIndex = 15;
-            this.btnEmpAdd.Text = "Add";
+            this.btnEmpAdd.Text = "Commit Changes";
             this.btnEmpAdd.UseVisualStyleBackColor = true;
             // 
             // btnCancel
@@ -142,7 +142,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 16;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Close";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -160,7 +160,7 @@
             this.txtEmpCity.Size = new System.Drawing.Size(163, 20);
             this.txtEmpCity.TabIndex = 13;
             // 
-            // FindEmployee1
+            // FindEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,8 +179,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FindEmployee1";
-            this.Text = "Find Customer";
+            this.Name = "FindEmployee";
+            this.Text = "Find Employee";
             this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CarDealership
 {
-    public partial class CustomerTemplate1 : Form
+    public partial class editCustomer : Form
     {
-        public CustomerTemplate1()
+        public editCustomer()
         {
             InitializeComponent();
         }
@@ -25,6 +25,11 @@ namespace CarDealership
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void CustomerTemplate1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

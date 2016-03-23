@@ -204,6 +204,7 @@
             this.Name = "AddEmployee";
             this.Text = "Add Employee";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.AddEmployee_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

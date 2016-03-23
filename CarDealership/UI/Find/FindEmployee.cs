@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CarDealership
 {
-    public partial class FindEmployee1 : Form
+    public partial class FindEmployee : Form
     {
-        public FindEmployee1()
+        public FindEmployee()
         {
             InitializeComponent();
         }

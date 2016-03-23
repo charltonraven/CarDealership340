@@ -42,9 +42,10 @@
             this.ddVehicleYear = new System.Windows.Forms.DomainUpDown();
             this.txtVehicleColor = new System.Windows.Forms.TextBox();
             this.ddVehicleCondition = new System.Windows.Forms.DomainUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtCustomerID = new System.Windows.Forms.TextBox();
-            this.cbNewCustomer = new System.Windows.Forms.CheckBox();
+            this.cbTradeIn = new System.Windows.Forms.CheckBox();
+            this.rbCustID = new System.Windows.Forms.RadioButton();
+            this.rbNewCustomBool = new System.Windows.Forms.RadioButton();
+            this.txtCustID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -101,7 +102,7 @@
             // 
             // btnVehAdd
             // 
-            this.btnVehAdd.Location = new System.Drawing.Point(47, 370);
+            this.btnVehAdd.Location = new System.Drawing.Point(29, 429);
             this.btnVehAdd.Name = "btnVehAdd";
             this.btnVehAdd.Size = new System.Drawing.Size(75, 23);
             this.btnVehAdd.TabIndex = 15;
@@ -111,7 +112,7 @@
             // 
             // btnVehCancel
             // 
-            this.btnVehCancel.Location = new System.Drawing.Point(242, 370);
+            this.btnVehCancel.Location = new System.Drawing.Point(276, 429);
             this.btnVehCancel.Name = "btnVehCancel";
             this.btnVehCancel.Size = new System.Drawing.Size(75, 23);
             this.btnVehCancel.TabIndex = 16;
@@ -206,40 +207,57 @@
             this.ddVehicleCondition.Size = new System.Drawing.Size(120, 20);
             this.ddVehicleCondition.TabIndex = 22;
             // 
-            // label6
+            // cbTradeIn
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 328);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "CustomerID";
+            this.cbTradeIn.AutoSize = true;
+            this.cbTradeIn.Location = new System.Drawing.Point(47, 320);
+            this.cbTradeIn.Name = "cbTradeIn";
+            this.cbTradeIn.Size = new System.Drawing.Size(66, 17);
+            this.cbTradeIn.TabIndex = 25;
+            this.cbTradeIn.Text = "Trade In";
+            this.cbTradeIn.UseVisualStyleBackColor = true;
+            this.cbTradeIn.CheckedChanged += new System.EventHandler(this.cbTradeIn_CheckedChanged);
             // 
-            // txtCustomerID
+            // rbCustID
             // 
-            this.txtCustomerID.Location = new System.Drawing.Point(118, 325);
-            this.txtCustomerID.Name = "txtCustomerID";
-            this.txtCustomerID.Size = new System.Drawing.Size(120, 20);
-            this.txtCustomerID.TabIndex = 24;
+            this.rbCustID.AutoSize = true;
+            this.rbCustID.Location = new System.Drawing.Point(45, 362);
+            this.rbCustID.Name = "rbCustID";
+            this.rbCustID.Size = new System.Drawing.Size(63, 17);
+            this.rbCustID.TabIndex = 28;
+            this.rbCustID.TabStop = true;
+            this.rbCustID.Text = "Cust. ID";
+            this.rbCustID.UseVisualStyleBackColor = true;
+            this.rbCustID.CheckedChanged += new System.EventHandler(this.rbCustID_CheckedChanged);
             // 
-            // cbNewCustomer
+            // rbNewCustomBool
             // 
-            this.cbNewCustomer.AutoSize = true;
-            this.cbNewCustomer.Location = new System.Drawing.Point(254, 328);
-            this.cbNewCustomer.Name = "cbNewCustomer";
-            this.cbNewCustomer.Size = new System.Drawing.Size(95, 17);
-            this.cbNewCustomer.TabIndex = 25;
-            this.cbNewCustomer.Text = "New Customer";
-            this.cbNewCustomer.UseVisualStyleBackColor = true;
+            this.rbNewCustomBool.AutoSize = true;
+            this.rbNewCustomBool.Location = new System.Drawing.Point(228, 362);
+            this.rbNewCustomBool.Name = "rbNewCustomBool";
+            this.rbNewCustomBool.Size = new System.Drawing.Size(94, 17);
+            this.rbNewCustomBool.TabIndex = 29;
+            this.rbNewCustomBool.TabStop = true;
+            this.rbNewCustomBool.Text = "New Customer";
+            this.rbNewCustomBool.UseVisualStyleBackColor = true;
+            this.rbNewCustomBool.CheckedChanged += new System.EventHandler(this.rbNewCustomBool_CheckedChanged);
+            // 
+            // txtCustID
+            // 
+            this.txtCustID.Location = new System.Drawing.Point(122, 359);
+            this.txtCustID.Name = "txtCustID";
+            this.txtCustID.Size = new System.Drawing.Size(100, 20);
+            this.txtCustID.TabIndex = 30;
             // 
             // AddInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 405);
-            this.Controls.Add(this.cbNewCustomer);
-            this.Controls.Add(this.txtCustomerID);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(399, 464);
+            this.Controls.Add(this.txtCustID);
+            this.Controls.Add(this.rbNewCustomBool);
+            this.Controls.Add(this.rbCustID);
+            this.Controls.Add(this.cbTradeIn);
             this.Controls.Add(this.ddVehicleCondition);
             this.Controls.Add(this.txtVehicleColor);
             this.Controls.Add(this.ddVehicleYear);
@@ -257,6 +275,7 @@
             this.Name = "AddInventory";
             this.Text = "Add Vehicle";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.AddInventory_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,8 +297,9 @@
         private System.Windows.Forms.DomainUpDown ddVehicleYear;
         private System.Windows.Forms.TextBox txtVehicleColor;
         private System.Windows.Forms.DomainUpDown ddVehicleCondition;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCustomerID;
-        private System.Windows.Forms.CheckBox cbNewCustomer;
+        private System.Windows.Forms.CheckBox cbTradeIn;
+        private System.Windows.Forms.RadioButton rbCustID;
+        private System.Windows.Forms.RadioButton rbNewCustomBool;
+        private System.Windows.Forms.TextBox txtCustID;
     }
 }

@@ -41,7 +41,6 @@
             this.txtDOB = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
-            this.txtState = new System.Windows.Forms.DomainUpDown();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.ddVehicle = new System.Windows.Forms.DomainUpDown();
@@ -49,6 +48,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtZip = new System.Windows.Forms.TextBox();
+            this.ddState = new System.Windows.Forms.DomainUpDown();
+            this.txtState = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -157,66 +158,6 @@
             this.txtCity.Size = new System.Drawing.Size(163, 20);
             this.txtCity.TabIndex = 13;
             // 
-            // txtState
-            // 
-            this.txtState.AllowDrop = true;
-            this.txtState.Items.Add("AL");
-            this.txtState.Items.Add("AK");
-            this.txtState.Items.Add("AZ");
-            this.txtState.Items.Add("AR");
-            this.txtState.Items.Add("CA");
-            this.txtState.Items.Add("CO");
-            this.txtState.Items.Add("CT");
-            this.txtState.Items.Add("DE");
-            this.txtState.Items.Add("DC");
-            this.txtState.Items.Add("FL");
-            this.txtState.Items.Add("GA");
-            this.txtState.Items.Add("HI");
-            this.txtState.Items.Add("ID");
-            this.txtState.Items.Add("IL");
-            this.txtState.Items.Add("IN");
-            this.txtState.Items.Add("IA");
-            this.txtState.Items.Add("KS");
-            this.txtState.Items.Add("KY");
-            this.txtState.Items.Add("LA");
-            this.txtState.Items.Add("ME");
-            this.txtState.Items.Add("MD");
-            this.txtState.Items.Add("MA");
-            this.txtState.Items.Add("MI");
-            this.txtState.Items.Add("MN");
-            this.txtState.Items.Add("MS");
-            this.txtState.Items.Add("MO");
-            this.txtState.Items.Add("MT");
-            this.txtState.Items.Add("NE");
-            this.txtState.Items.Add("NV");
-            this.txtState.Items.Add("NH");
-            this.txtState.Items.Add("NJ");
-            this.txtState.Items.Add("NM");
-            this.txtState.Items.Add("NY");
-            this.txtState.Items.Add("NC");
-            this.txtState.Items.Add("ND");
-            this.txtState.Items.Add("OH");
-            this.txtState.Items.Add("OK");
-            this.txtState.Items.Add("OR");
-            this.txtState.Items.Add("PA");
-            this.txtState.Items.Add("RI");
-            this.txtState.Items.Add("SC");
-            this.txtState.Items.Add("SD");
-            this.txtState.Items.Add("TN");
-            this.txtState.Items.Add("TX");
-            this.txtState.Items.Add("UT");
-            this.txtState.Items.Add("VT");
-            this.txtState.Items.Add("VA");
-            this.txtState.Items.Add("WA");
-            this.txtState.Items.Add("WV");
-            this.txtState.Items.Add("WI");
-            this.txtState.Items.Add("WY");
-            this.txtState.Location = new System.Drawing.Point(346, 209);
-            this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(40, 20);
-            this.txtState.TabIndex = 14;
-            this.txtState.UseWaitCursor = true;
-            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(82, 302);
@@ -277,11 +218,81 @@
             this.txtZip.Size = new System.Drawing.Size(64, 20);
             this.txtZip.TabIndex = 21;
             // 
+            // ddState
+            // 
+            this.ddState.AllowDrop = true;
+            this.ddState.Items.Add("AL");
+            this.ddState.Items.Add("AK");
+            this.ddState.Items.Add("AZ");
+            this.ddState.Items.Add("AR");
+            this.ddState.Items.Add("CA");
+            this.ddState.Items.Add("CO");
+            this.ddState.Items.Add("CT");
+            this.ddState.Items.Add("DE");
+            this.ddState.Items.Add("DC");
+            this.ddState.Items.Add("FL");
+            this.ddState.Items.Add("GA");
+            this.ddState.Items.Add("HI");
+            this.ddState.Items.Add("ID");
+            this.ddState.Items.Add("IL");
+            this.ddState.Items.Add("IN");
+            this.ddState.Items.Add("IA");
+            this.ddState.Items.Add("KS");
+            this.ddState.Items.Add("KY");
+            this.ddState.Items.Add("LA");
+            this.ddState.Items.Add("ME");
+            this.ddState.Items.Add("MD");
+            this.ddState.Items.Add("MA");
+            this.ddState.Items.Add("MI");
+            this.ddState.Items.Add("MN");
+            this.ddState.Items.Add("MS");
+            this.ddState.Items.Add("MO");
+            this.ddState.Items.Add("MT");
+            this.ddState.Items.Add("NE");
+            this.ddState.Items.Add("NV");
+            this.ddState.Items.Add("NH");
+            this.ddState.Items.Add("NJ");
+            this.ddState.Items.Add("NM");
+            this.ddState.Items.Add("NY");
+            this.ddState.Items.Add("NC");
+            this.ddState.Items.Add("ND");
+            this.ddState.Items.Add("OH");
+            this.ddState.Items.Add("OK");
+            this.ddState.Items.Add("OR");
+            this.ddState.Items.Add("PA");
+            this.ddState.Items.Add("RI");
+            this.ddState.Items.Add("SC");
+            this.ddState.Items.Add("SD");
+            this.ddState.Items.Add("TN");
+            this.ddState.Items.Add("TX");
+            this.ddState.Items.Add("UT");
+            this.ddState.Items.Add("VT");
+            this.ddState.Items.Add("VA");
+            this.ddState.Items.Add("WA");
+            this.ddState.Items.Add("WV");
+            this.ddState.Items.Add("WI");
+            this.ddState.Items.Add("WY");
+            this.ddState.Location = new System.Drawing.Point(337, 87);
+            this.ddState.Name = "ddState";
+            this.ddState.Size = new System.Drawing.Size(42, 20);
+            this.ddState.TabIndex = 22;
+            this.ddState.SelectedItemChanged += new System.EventHandler(this.ddState_SelectedItemChanged);
+            this.ddState.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ddState_MouseDown);
+            // 
+            // txtState
+            // 
+            this.txtState.Location = new System.Drawing.Point(346, 204);
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(33, 20);
+            this.txtState.TabIndex = 23;
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 372);
+            this.ClientSize = new System.Drawing.Size(436, 442);
+            this.Controls.Add(this.txtState);
+            this.Controls.Add(this.ddState);
             this.Controls.Add(this.txtZip);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -289,7 +300,6 @@
             this.Controls.Add(this.ddVehicle);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.txtState);
             this.Controls.Add(this.txtCity);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtDOB);
@@ -306,6 +316,7 @@
             this.Name = "AddCustomer";
             this.Text = "Add Customer";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.AddCustomer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,7 +337,6 @@
         private System.Windows.Forms.TextBox txtDOB;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtCity;
-        private System.Windows.Forms.DomainUpDown txtState;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DomainUpDown ddVehicle;
@@ -334,5 +344,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtZip;
+        private System.Windows.Forms.DomainUpDown ddState;
+        private System.Windows.Forms.TextBox txtState;
     }
 }

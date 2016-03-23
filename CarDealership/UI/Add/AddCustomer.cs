@@ -50,7 +50,12 @@ namespace CarDealership
                 }
             }
            
-            String addCustomerSr = "INSERT INTO CUSTOMER VALUES('"+txtCusID.Text+"','"+txtCusFirstName.Text+"','"+txtCusLastName.Text+"','"+txtDOB.Text+"','"+txtPhone.Text+"','"+txtAddress.Text+"','"+txtCity.Text+"','"+txtState.Text+"','"+txtZip.Text+"')";
+            String addCustomerSr = "INSERT INTO CUSTOMER VALUES('"+txtCusID.Text+"','"+txtCusFirstName.Text
+                                                                +"','"+txtCusLastName.Text+"','"+txtDOB.Text
+                                                                +"','"+txtPhone.Text+"','"+txtAddress.Text
+                                                                +"','"+txtCity.Text+"','"+txtState.Text
+                                                                +"','"+txtZip.Text+"')";
+
             MessageBox.Show(addCustomerSr);
             MySqlCommand addCustomerSQL = new MySqlCommand(addCustomerSr, conn);
             addCustomerSQL.ExecuteNonQuery();
@@ -61,8 +66,26 @@ namespace CarDealership
             txtCusLastName.Clear();
             txtDOB.Clear();
             txtPhone.Clear();
-            txtState.Text = "";
+            ddState.Text = "";
             txtZip.Clear();
+            txtState.Clear();
+
+
+        
+        }
+
+        private void AddCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ddState_SelectedItemChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ddState_MouseDown(object sender, MouseEventArgs e)
+        {
             
         }
     }

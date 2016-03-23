@@ -1,6 +1,6 @@
 ﻿namespace CarDealership
 {
-    partial class CustomerTemplate1
+    partial class editCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -231,7 +231,7 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // CustomerTemplate1
+            // editCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -252,9 +252,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "CustomerTemplate1";
+            this.Name = "editCustomer";
             this.Text = "Edit Customer";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.CustomerTemplate1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
