@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CarDealership
 {
-    public partial class editCustomer : Form
+    public partial class EditCustomer : Form
     {
-        public editCustomer()
+        public EditCustomer()
         {
             InitializeComponent();
         }

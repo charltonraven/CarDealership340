@@ -130,10 +130,55 @@ namespace CarDealership
         {
 
         }
+   
+        
 
         private void findToolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership;uid=root;Password=Raven47946$;";
+            MySqlConnection conn = new MySqlConnection(myConnString);
 
+            try
+            {
+                conn.Open();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 0:
+                        MessageBox.Show("Cannot connect to server. ");
+                        break;
+                    case 1045:
+                        MessageBox.Show("Invalid Username/Password, Please try again");
+                        break;
+                }
+            }
+
+            if (tabTables.SelectedIndex == 0)
+            {
+                MessageBox.Show("Your are on the Customer's Table");
+                FindCustomer FindCustomer = new FindCustomer();
+                FindCustomer.Show();
+
+                
+            }
+            if (tabTables.SelectedIndex == 1)
+            {
+                MessageBox.Show("Your are on the Inventory's Table");
+                FindInventory FindInventory = new FindInventory();
+                FindInventory.Show();
+               
+
+            }
+            if (tabTables.SelectedIndex == 2)
+            {
+                MessageBox.Show("Your are on the Employee's Table");
+                FindEmployee FindEmployee = new FindEmployee();
+                FindEmployee.Show();
+            }
+
+            conn.Close();
         }
 
         private void findCustomerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -157,6 +202,53 @@ namespace CarDealership
         private void editStrip_Click(object sender, EventArgs e)
         {
 
+            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership;uid=root;Password=Raven47946$;";
+            MySqlConnection conn = new MySqlConnection(myConnString);
+
+            try
+            {
+                conn.Open();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 0:
+                        MessageBox.Show("Cannot connect to server. ");
+                        break;
+                    case 1045:
+                        MessageBox.Show("Invalid Username/Password, Please try again");
+                        break;
+                }
+            }
+
+            if (tabTables.SelectedIndex == 0)
+            {
+                MessageBox.Show("Your are on the Customer's Table");
+                EditCustomer EditCustomer = new EditCustomer();
+                EditCustomer.Show();
+               
+
+
+            }
+            if (tabTables.SelectedIndex == 1)
+            {
+                MessageBox.Show("Your are on the Inventory's Table");
+                EditCustomer InventoryCustomer = new EditCustomer();
+                InventoryCustomer.Show();
+               
+
+
+            }
+            if (tabTables.SelectedIndex == 2)
+            {
+                MessageBox.Show("Your are on the Employee's Table");
+                EditCustomer EditEmployee = new EditCustomer();
+                EditEmployee.Show();
+               
+            }
+
+            conn.Close();
         }
 
         private void process1_Exited(object sender, EventArgs e)
@@ -221,6 +313,52 @@ namespace CarDealership
         {
             RefreshTables();
         
+        }
+
+        private void stripAddCustomer_Click(object sender, EventArgs e)
+        {
+            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership;uid=root;Password=Raven47946$;";
+            MySqlConnection conn = new MySqlConnection(myConnString);
+
+            try
+            {
+                conn.Open();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 0:
+                        MessageBox.Show("Cannot connect to server. ");
+                        break;
+                    case 1045:
+                        MessageBox.Show("Invalid Username/Password, Please try again");
+                        break;
+                }
+            }
+
+            if (tabTables.SelectedIndex == 0)
+            {
+                MessageBox.Show("Your are on the Customer's Table");
+                AddCustomer AddCustomer = new AddCustomer();
+                AddCustomer.Show();
+
+
+            }
+            if (tabTables.SelectedIndex == 1)
+            {
+                MessageBox.Show("Your are on the Inventory's Table");
+                AddInventory AddInventory = new AddInventory();
+                AddInventory.Show();
+            }
+            if (tabTables.SelectedIndex == 2)
+            {
+                MessageBox.Show("Your are on the Employee's Table");
+                AddEmployee AddEmployee = new AddEmployee();
+                AddEmployee.Show();
+            }
+
+            conn.Close();
         }
     }
 }
