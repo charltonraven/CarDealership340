@@ -1,0 +1,80 @@
+CREATE TABLE customer (
+CustomerID INT NOT NULL AUTO_INCREMENT,
+CusFirstName VARCHAR(15) NOT NULL,
+CusLastName VARCHAR(15) NOT NULL,
+CusDOB DATE,
+CusPhone VARCHAR(12),
+CusAddress VARCHAR(30),
+City VARCHAR(25),
+State VARCHAR(2),
+ZipCode VARCHAR(5),
+PRIMARY KEY (CustomerID)
+);
+ALTER TABLE CUSTOMER AUTO_INCREMENT=4000;
+
+INSERT INTO customer VALUES 
+(CustomerID,'Kanye','West','1960-02-26','843-335-8958','Haha Drive','Florence','SC','29101'),
+(CustomerID,'David','Hodge','1960-02-26','555-555-5555','blahblahblah','Kingstreet','SC','29101'),
+(CustomerID,'Charlton','Williams','1992-08-24','843-383-7050','396 South 4th Street','McBee','SC','29101'),
+(CustomerID,'John','Doe','1999-08-23','843-383-5555','123 Sesame st','Florence','SC','29550'),
+(CustomerID,'Test','Test','1966-05-06','569-123-7896','South Hoe Street','McBee','SD','29101'),
+(CustomerID,'Dylan','Leon','1992-11-26','843-335-4544','Haaaa Road','McBee','SC','29101'),
+(CustomerID,'Billy','Bob','1982-02-05','843-565-8969','blah blah','McBee','SC','65665'),
+(CustomerID,'john','joe','1111-11-11','1111111111','1111 one dr.','111 1111','oo','111'),
+(CustomerID,'Keri','Hilson','1961-02-26','843-335-8958','Class Sucks kidding','Florence','SC','29101'),
+(CustomerID,'NeYo','Long','1989-02-26','843-555-0212','Love this class','McBee','SC','29101'),
+(CustomerID,'Taylor','Swift','1916-02-26','843-666-8958','Rao Rocks','Hartsville','SC','29101'),
+(CustomerID,'Jesse','Hicks','1995-10-25','845-352-8958','Goradia Awesome','Charleston','SC','29101'),
+(CustomerID,'Charlton','Williams','1992-08-24','843-124-8958','blah mammoth','Columbia','SC','29101');
+
+CREATE TABLE employee (
+EmployeeID INT NOT NULL AUTO_INCREMENT,
+EmployeeFirstName VARCHAR(15) NOT NULL,
+EmployeeLastName VARCHAR(15) NOT NULL,
+HireDate DATE,
+Salary DECIMAL(4,2) NOT NULL,
+Position VARCHAR(10) NOT NULL,
+Password VARCHAR(20),
+PRIMARY KEY (EmployeeID)
+);
+ALTER TABLE EMPLOYEE AUTO_INCREMENT=4000;
+INSERT INTO employee VALUES 
+(EmployeeID,'Charlton','Williams','1960-02-26',25.00,'Manager','Raven47946$');
+CREATE TABLE credit_Card(
+CardNumber VARCHAR(16) NOT NULL,
+NameOnCard VARCHAR(15) NOT NULL,
+CVC VARCHAR(5) NOT NULL,
+ExpirationDate VARCHAR(5) NOT NULL,
+PIN DECIMAL(4),
+CustomerID INT NOT NULL,
+PRIMARY KEY (CardNumber)
+FOREIGN KEY fk_CustomerCard(CustomerID )
+REFERENCES customer(CustomerID)
+ON UPDATE CASCADE
+);
+CREATE TABLE inventory(
+VINnumber VARCHAR(17) NOT NULL,
+Year DECIMAL(4) NOT NULL,
+Make VARCHAR(10) NOT NULL,
+Model VARCHAR(20) NOT NULL,
+Quality VARCHAR(10) NOT NULL,
+Color VARCHAR(10) NOT NULL,
+CustomerID INT,
+INDEX Customer_TradeIn (CustomerID),
+FOREIGN KEY (CustomerID)
+REFERENCES customer(CustomerID)
+ON UPDATE CASCADE
+);
+ALTER TABLE inventory
+ADD PRIMARY KEY(VINnumber);
+INSERT INTO inventory VALUES 
+('JH4TB2H26CC000000','2016','Chevrolet','Camaro','Used','White/Pink',4012),
+('WAUFFAFM3CA000000','2010','Ford','F-150','Used','Black',4010),
+('QWAFQZFMDCE123456','1969','Dodge','Charger','Used','Cherry Red',NULL),
+('ASLDFJALSDF478554','1996','Buick','Lacrosse','Used','Cream',NULL),
+('ASDFJASLDFD873737','2017','Cadillac','CTS','New','White', 4011),
+('WAUFFAFM3CA356564','2017','Audi','Q7','New','Red',NULL),
+('ASLDFJASLDD545451','1990','Chrysler','Prowler','Used','Rusty Blue',NULL),
+('SLDJFALSLDS652521','2000','Bugatti','EB 18/4 Veyron','Used','Navy Blue',NULL),
+('MONEYMONEYS789216','2008','Mitibushi','Galant','Used','Red',NULL),
+('GIVEMEGOODE875215','1988','Cheveorlet','Impala','Used','black',4002);

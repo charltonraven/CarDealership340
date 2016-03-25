@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.CarMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.stripAddCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.editStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.findStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.printStrip = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,7 +66,6 @@
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblPosition = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.stripAddCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.CarMenuStrip.SuspendLayout();
             this.tabTables.SuspendLayout();
             this.tabCustomer.SuspendLayout();
@@ -107,6 +107,13 @@
             this.fileMenuStrip.Name = "fileMenuStrip";
             this.fileMenuStrip.Size = new System.Drawing.Size(46, 25);
             this.fileMenuStrip.Text = "File";
+            // 
+            // stripAddCustomer
+            // 
+            this.stripAddCustomer.Name = "stripAddCustomer";
+            this.stripAddCustomer.Size = new System.Drawing.Size(161, 26);
+            this.stripAddCustomer.Text = "Add";
+            this.stripAddCustomer.Click += new System.EventHandler(this.stripAddCustomer_Click);
             // 
             // editStrip
             // 
@@ -299,9 +306,9 @@
             // dgCustomer
             // 
             this.dgCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCustomer.Location = new System.Drawing.Point(23, 18);
+            this.dgCustomer.Location = new System.Drawing.Point(1, 1);
             this.dgCustomer.Name = "dgCustomer";
-            this.dgCustomer.Size = new System.Drawing.Size(739, 242);
+            this.dgCustomer.Size = new System.Drawing.Size(761, 259);
             this.dgCustomer.TabIndex = 0;
             this.dgCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -361,13 +368,6 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // stripAddCustomer
-            // 
-            this.stripAddCustomer.Name = "stripAddCustomer";
-            this.stripAddCustomer.Size = new System.Drawing.Size(161, 26);
-            this.stripAddCustomer.Text = "Add";
-            this.stripAddCustomer.Click += new System.EventHandler(this.stripAddCustomer_Click);
             // 
             // CarDealership
             // 

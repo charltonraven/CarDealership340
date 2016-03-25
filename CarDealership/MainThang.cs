@@ -234,8 +234,8 @@ namespace CarDealership
             if (tabTables.SelectedIndex == 1)
             {
                 MessageBox.Show("Your are on the Inventory's Table");
-                EditCustomer InventoryCustomer = new EditCustomer();
-                InventoryCustomer.Show();
+                EditInventory EditInventory= new EditInventory();
+                EditInventory.Show();
                
 
 

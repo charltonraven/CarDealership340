@@ -30,5 +30,10 @@ namespace CarDealership
 
 
         }
+        public Employee(Char EmployeeID, char Password)
+        {
+
+        }
+
     }
 }
