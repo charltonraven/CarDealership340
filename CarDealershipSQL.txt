@@ -11,7 +11,6 @@ ZipCode VARCHAR(5),
 PRIMARY KEY (CustomerID)
 );
 ALTER TABLE CUSTOMER AUTO_INCREMENT=4000;
-
 INSERT INTO customer VALUES 
 (CustomerID,'Kanye','West','1960-02-26','843-335-8958','Haha Drive','Florence','SC','29101'),
 (CustomerID,'David','Hodge','1960-02-26','555-555-5555','blahblahblah','Kingstreet','SC','29101'),
@@ -26,7 +25,6 @@ INSERT INTO customer VALUES
 (CustomerID,'Taylor','Swift','1916-02-26','843-666-8958','Rao Rocks','Hartsville','SC','29101'),
 (CustomerID,'Jesse','Hicks','1995-10-25','845-352-8958','Goradia Awesome','Charleston','SC','29101'),
 (CustomerID,'Charlton','Williams','1992-08-24','843-124-8958','blah mammoth','Columbia','SC','29101');
-
 CREATE TABLE employee (
 EmployeeID INT NOT NULL AUTO_INCREMENT,
 EmployeeFirstName VARCHAR(15) NOT NULL,
@@ -37,7 +35,7 @@ Position VARCHAR(10) NOT NULL,
 Password VARCHAR(20),
 PRIMARY KEY (EmployeeID)
 );
-ALTER TABLE EMPLOYEE AUTO_INCREMENT=4000;
+ALTER TABLE EMPLOYEE AUTO_INCREMENT=63530;
 INSERT INTO employee VALUES 
 (EmployeeID,'Charlton','Williams','1960-02-26',25.00,'Manager','Raven47946$');
 CREATE TABLE credit_Card(
@@ -47,11 +45,12 @@ CVC VARCHAR(5) NOT NULL,
 ExpirationDate VARCHAR(5) NOT NULL,
 PIN DECIMAL(4),
 CustomerID INT NOT NULL,
-PRIMARY KEY (CardNumber)
 FOREIGN KEY fk_CustomerCard(CustomerID )
 REFERENCES customer(CustomerID)
 ON UPDATE CASCADE
 );
+ALTER TABLE credit_card
+ADD PRIMARY KEY(CardNumber);
 CREATE TABLE inventory(
 VINnumber VARCHAR(17) NOT NULL,
 Year DECIMAL(4) NOT NULL,
