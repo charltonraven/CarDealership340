@@ -53,13 +53,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DisplayC.cs">
+    <Compile Include="Control Classes\Add.cs" />
+    <Compile Include="Display\DisplayE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DisplayC.Designer.cs">
+    <Compile Include="Display\DisplayE.Designer.cs">
+      <DependentUpon>DisplayE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Display\DisplayC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Display\DisplayC.Designer.cs">
       <DependentUpon>DisplayC.cs</DependentUpon>
     </Compile>
-    <Compile Include="TableDisplay.cs" />
+    <Compile Include="Control Classes\Edit.cs" />
+    <Compile Include="Entitiy Classes\Inventory.cs" />
+    <Compile Include="Control Classes\Find.cs" />
     <Compile Include="UI\Add\AddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,7 +96,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entitiy Classes\Vehicle.cs" />
     <Compile Include="Entitiy Classes\Manager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,8 +142,10 @@
     <Compile Include="UI\Find\FindInventory.Designer.cs">
       <DependentUpon>FindInventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilities.cs" />
-    <EmbeddedResource Include="DisplayC.resx">
+    <EmbeddedResource Include="Display\DisplayE.resx">
+      <DependentUpon>DisplayE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Display\DisplayC.resx">
       <DependentUpon>DisplayC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Add\AddEmployee.resx">
@@ -196,9 +206,7 @@
   <ItemGroup>
     <Content Include="car_dealerships_logos_4_Blm_icon.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Control Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

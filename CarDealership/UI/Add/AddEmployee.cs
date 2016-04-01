@@ -30,31 +30,34 @@ namespace CarDealership
 
         private void btnEmpAdd_Click(object sender, EventArgs e)
         {
-            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership;uid=root;Password=Raven47946$;";
-            MySqlConnection conn = new MySqlConnection(myConnString);
 
-            try
-            {
-                conn.Open();
-            }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
-            {
-                switch (ex.Number)
-                {
-                    case 0:
-                        MessageBox.Show("Cannot connect to server. ");
-                        break;
-                    case 1045:
-                        MessageBox.Show("Invalid Username/Password, Please try again");
-                        break;
-                }
-            }
+            Employee employee = new Employee(txtEmpNum.Text, txtEmpFName.Text, txtEmpLName.Text, txtEmpHireDate.Text, txtSalary.Text,txtPosition.Text, txtPassword.Text);
+            Add newEmployee = new Add(employee);
+            //String myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
+            //MySqlConnection conn = new MySqlConnection(myConnString);
 
-            String addEmployeeSr = "INSERT INTO EMPLOYEE VALUES('" + txtEmpNum.Text + "','" +txtEmpFName.Text + "','" + txtEmpLName.Text + "','" 
-                + txtEmpHireDate.Text + "','" + txtSalary.Text + "','" + txtPosition.Text + "','" + txtPassword.Text +"');";
-            MessageBox.Show(addEmployeeSr);
-            MySqlCommand addEmployeeSQL = new MySqlCommand(addEmployeeSr, conn);
-            addEmployeeSQL.ExecuteNonQuery();
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch (MySql.Data.MySqlClient.MySqlException ex)
+            //{
+            //    switch (ex.Number)
+            //    {
+            //        case 0:
+            //            MessageBox.Show("Cannot connect to server. ");
+            //            break;
+            //        case 1045:
+            //            MessageBox.Show("Invalid Username/Password, Please try again");
+            //            break;
+            //    }
+            //}
+
+            //String addEmployeeSr = "INSERT INTO EMPLOYEE VALUES('" + txtEmpNum.Text + "','" +txtEmpFName.Text + "','" + txtEmpLName.Text + "','" 
+            //    + txtEmpHireDate.Text + "','" + txtSalary.Text + "','" + txtPosition.Text + "','" + txtPassword.Text +"');";
+            //MessageBox.Show(addEmployeeSr);
+            //MySqlCommand addEmployeeSQL = new MySqlCommand(addEmployeeSr, conn);
+            //addEmployeeSQL.ExecuteNonQuery();
 
 
            
@@ -66,6 +69,12 @@ namespace CarDealership
         }
 
         private void AddEmployee_Load(object sender, EventArgs e)
+        {
+            txtEmpNum.Enabled = false;
+           
+        }
+
+        private void txtEmpNum_TextChanged(object sender, EventArgs e)
         {
 
         }

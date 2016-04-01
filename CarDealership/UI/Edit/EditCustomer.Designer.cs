@@ -35,15 +35,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.ddStates = new System.Windows.Forms.DomainUpDown();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtCusFirstName = new System.Windows.Forms.TextBox();
+            this.txtCusLastName = new System.Windows.Forms.TextBox();
+            this.txtDOB = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.txtState = new System.Windows.Forms.DomainUpDown();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lblZip = new System.Windows.Forms.Label();
+            this.txtZip = new System.Windows.Forms.TextBox();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -94,7 +98,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(298, 335);
+            this.label6.Location = new System.Drawing.Point(291, 296);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 5;
@@ -109,121 +113,122 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "City";
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(66, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtID.Location = new System.Drawing.Point(118, 70);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(66, 20);
+            this.txtID.TabIndex = 7;
             // 
-            // textBox2
+            // txtCusFirstName
             // 
-            this.textBox2.Location = new System.Drawing.Point(118, 129);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 20);
-            this.textBox2.TabIndex = 8;
+            this.txtCusFirstName.Location = new System.Drawing.Point(118, 129);
+            this.txtCusFirstName.Name = "txtCusFirstName";
+            this.txtCusFirstName.Size = new System.Drawing.Size(163, 20);
+            this.txtCusFirstName.TabIndex = 8;
             // 
-            // textBox3
+            // txtCusLastName
             // 
-            this.textBox3.Location = new System.Drawing.Point(118, 182);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(163, 20);
-            this.textBox3.TabIndex = 9;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtCusLastName.Location = new System.Drawing.Point(118, 182);
+            this.txtCusLastName.Name = "txtCusLastName";
+            this.txtCusLastName.Size = new System.Drawing.Size(163, 20);
+            this.txtCusLastName.TabIndex = 9;
+            this.txtCusLastName.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // txtDOB
             // 
-            this.textBox4.Location = new System.Drawing.Point(118, 239);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(163, 20);
-            this.textBox4.TabIndex = 10;
+            this.txtDOB.Location = new System.Drawing.Point(118, 239);
+            this.txtDOB.Name = "txtDOB";
+            this.txtDOB.Size = new System.Drawing.Size(163, 20);
+            this.txtDOB.TabIndex = 10;
             // 
-            // textBox5
+            // txtAddress
             // 
-            this.textBox5.Location = new System.Drawing.Point(118, 289);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(163, 20);
-            this.textBox5.TabIndex = 11;
+            this.txtAddress.Location = new System.Drawing.Point(118, 289);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(163, 20);
+            this.txtAddress.TabIndex = 11;
             // 
-            // textBox7
+            // txtCity
             // 
-            this.textBox7.Location = new System.Drawing.Point(118, 335);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(163, 20);
-            this.textBox7.TabIndex = 13;
+            this.txtCity.Location = new System.Drawing.Point(118, 335);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(163, 20);
+            this.txtCity.TabIndex = 13;
             // 
-            // ddStates
+            // txtState
             // 
-            this.ddStates.AllowDrop = true;
-            this.ddStates.Items.Add("AL");
-            this.ddStates.Items.Add("AK");
-            this.ddStates.Items.Add("AZ");
-            this.ddStates.Items.Add("AR");
-            this.ddStates.Items.Add("CA");
-            this.ddStates.Items.Add("CO");
-            this.ddStates.Items.Add("CT");
-            this.ddStates.Items.Add("DE");
-            this.ddStates.Items.Add("DC");
-            this.ddStates.Items.Add("FL");
-            this.ddStates.Items.Add("GA");
-            this.ddStates.Items.Add("HI");
-            this.ddStates.Items.Add("ID");
-            this.ddStates.Items.Add("IL");
-            this.ddStates.Items.Add("IN");
-            this.ddStates.Items.Add("IA");
-            this.ddStates.Items.Add("KS");
-            this.ddStates.Items.Add("KY");
-            this.ddStates.Items.Add("LA");
-            this.ddStates.Items.Add("ME");
-            this.ddStates.Items.Add("MD");
-            this.ddStates.Items.Add("MA");
-            this.ddStates.Items.Add("MI");
-            this.ddStates.Items.Add("MN");
-            this.ddStates.Items.Add("MS");
-            this.ddStates.Items.Add("MO");
-            this.ddStates.Items.Add("MT");
-            this.ddStates.Items.Add("NE");
-            this.ddStates.Items.Add("NV");
-            this.ddStates.Items.Add("NH");
-            this.ddStates.Items.Add("NJ");
-            this.ddStates.Items.Add("NM");
-            this.ddStates.Items.Add("NY");
-            this.ddStates.Items.Add("NC");
-            this.ddStates.Items.Add("ND");
-            this.ddStates.Items.Add("OH");
-            this.ddStates.Items.Add("OK");
-            this.ddStates.Items.Add("OR");
-            this.ddStates.Items.Add("PA");
-            this.ddStates.Items.Add("RI");
-            this.ddStates.Items.Add("SC");
-            this.ddStates.Items.Add("SD");
-            this.ddStates.Items.Add("TN");
-            this.ddStates.Items.Add("TX");
-            this.ddStates.Items.Add("UT");
-            this.ddStates.Items.Add("VT");
-            this.ddStates.Items.Add("VA");
-            this.ddStates.Items.Add("WA");
-            this.ddStates.Items.Add("WV");
-            this.ddStates.Items.Add("WI");
-            this.ddStates.Items.Add("WY");
-            this.ddStates.Location = new System.Drawing.Point(336, 335);
-            this.ddStates.Name = "ddStates";
-            this.ddStates.Size = new System.Drawing.Size(40, 20);
-            this.ddStates.TabIndex = 14;
-            this.ddStates.UseWaitCursor = true;
+            this.txtState.AllowDrop = true;
+            this.txtState.Items.Add("AL");
+            this.txtState.Items.Add("AK");
+            this.txtState.Items.Add("AZ");
+            this.txtState.Items.Add("AR");
+            this.txtState.Items.Add("CA");
+            this.txtState.Items.Add("CO");
+            this.txtState.Items.Add("CT");
+            this.txtState.Items.Add("DE");
+            this.txtState.Items.Add("DC");
+            this.txtState.Items.Add("FL");
+            this.txtState.Items.Add("GA");
+            this.txtState.Items.Add("HI");
+            this.txtState.Items.Add("ID");
+            this.txtState.Items.Add("IL");
+            this.txtState.Items.Add("IN");
+            this.txtState.Items.Add("IA");
+            this.txtState.Items.Add("KS");
+            this.txtState.Items.Add("KY");
+            this.txtState.Items.Add("LA");
+            this.txtState.Items.Add("ME");
+            this.txtState.Items.Add("MD");
+            this.txtState.Items.Add("MA");
+            this.txtState.Items.Add("MI");
+            this.txtState.Items.Add("MN");
+            this.txtState.Items.Add("MS");
+            this.txtState.Items.Add("MO");
+            this.txtState.Items.Add("MT");
+            this.txtState.Items.Add("NE");
+            this.txtState.Items.Add("NV");
+            this.txtState.Items.Add("NH");
+            this.txtState.Items.Add("NJ");
+            this.txtState.Items.Add("NM");
+            this.txtState.Items.Add("NY");
+            this.txtState.Items.Add("NC");
+            this.txtState.Items.Add("ND");
+            this.txtState.Items.Add("OH");
+            this.txtState.Items.Add("OK");
+            this.txtState.Items.Add("OR");
+            this.txtState.Items.Add("PA");
+            this.txtState.Items.Add("RI");
+            this.txtState.Items.Add("SC");
+            this.txtState.Items.Add("SD");
+            this.txtState.Items.Add("TN");
+            this.txtState.Items.Add("TX");
+            this.txtState.Items.Add("UT");
+            this.txtState.Items.Add("VT");
+            this.txtState.Items.Add("VA");
+            this.txtState.Items.Add("WA");
+            this.txtState.Items.Add("WV");
+            this.txtState.Items.Add("WI");
+            this.txtState.Items.Add("WY");
+            this.txtState.Location = new System.Drawing.Point(344, 294);
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(40, 20);
+            this.txtState.TabIndex = 14;
+            this.txtState.UseWaitCursor = true;
             // 
-            // btnAdd
+            // btnEdit
             // 
-            this.btnAdd.Location = new System.Drawing.Point(97, 370);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 15;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnEdit.Location = new System.Drawing.Point(69, 422);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 15;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(255, 370);
+            this.btnCancel.Location = new System.Drawing.Point(237, 422);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 16;
@@ -231,20 +236,56 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lblZip
+            // 
+            this.lblZip.AutoSize = true;
+            this.lblZip.Location = new System.Drawing.Point(292, 342);
+            this.lblZip.Name = "lblZip";
+            this.lblZip.Size = new System.Drawing.Size(50, 13);
+            this.lblZip.TabIndex = 17;
+            this.lblZip.Text = "Zip Code";
+            // 
+            // txtZip
+            // 
+            this.txtZip.Location = new System.Drawing.Point(344, 335);
+            this.txtZip.Name = "txtZip";
+            this.txtZip.Size = new System.Drawing.Size(100, 20);
+            this.txtZip.TabIndex = 18;
+            // 
+            // lblPhone
+            // 
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Location = new System.Drawing.Point(292, 70);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(38, 13);
+            this.lblPhone.TabIndex = 19;
+            this.lblPhone.Text = "Phone";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(354, 63);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(100, 20);
+            this.txtPhone.TabIndex = 20;
+            // 
             // EditCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 405);
+            this.ClientSize = new System.Drawing.Size(466, 457);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.lblPhone);
+            this.Controls.Add(this.txtZip);
+            this.Controls.Add(this.lblZip);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.ddStates);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.txtState);
+            this.Controls.Add(this.txtCity);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtDOB);
+            this.Controls.Add(this.txtCusLastName);
+            this.Controls.Add(this.txtCusFirstName);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -270,14 +311,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DomainUpDown ddStates;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtCusFirstName;
+        private System.Windows.Forms.TextBox txtCusLastName;
+        private System.Windows.Forms.TextBox txtDOB;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.DomainUpDown txtState;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lblZip;
+        private System.Windows.Forms.TextBox txtZip;
+        private System.Windows.Forms.Label lblPhone;
+        private System.Windows.Forms.TextBox txtPhone;
     }
 }

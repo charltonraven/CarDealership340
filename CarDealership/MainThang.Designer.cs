@@ -164,6 +164,7 @@
             this.customerStrip.Name = "customerStrip";
             this.customerStrip.Size = new System.Drawing.Size(148, 26);
             this.customerStrip.Text = "Customer";
+            this.customerStrip.Click += new System.EventHandler(this.customerStrip_Click);
             // 
             // employeeStrip
             // 
@@ -310,7 +311,9 @@
             this.dgCustomer.Name = "dgCustomer";
             this.dgCustomer.Size = new System.Drawing.Size(761, 259);
             this.dgCustomer.TabIndex = 0;
+            this.dgCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCustomer_CellClick);
             this.dgCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.dgCustomer.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCustomer_CellDoubleClick);
             // 
             // tabInventory
             // 
@@ -331,6 +334,7 @@
             this.dgInventory.Name = "dgInventory";
             this.dgInventory.Size = new System.Drawing.Size(679, 259);
             this.dgInventory.TabIndex = 0;
+            this.dgInventory.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventory_CellDoubleClick);
             // 
             // tabEmployee
             // 
@@ -350,6 +354,7 @@
             this.dgEmp.Name = "dgEmp";
             this.dgEmp.Size = new System.Drawing.Size(754, 251);
             this.dgEmp.TabIndex = 0;
+            this.dgEmp.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgEmp_CellDoubleClick);
             // 
             // lblPosition
             // 

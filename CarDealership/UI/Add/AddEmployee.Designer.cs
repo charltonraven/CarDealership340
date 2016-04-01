@@ -106,6 +106,7 @@
             this.txtEmpNum.Name = "txtEmpNum";
             this.txtEmpNum.Size = new System.Drawing.Size(66, 20);
             this.txtEmpNum.TabIndex = 7;
+            this.txtEmpNum.TextChanged += new System.EventHandler(this.txtEmpNum_TextChanged);
             // 
             // txtEmpFName
             // 

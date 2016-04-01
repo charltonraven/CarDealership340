@@ -43,12 +43,10 @@
             this.txtCity = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.ddVehicle = new System.Windows.Forms.DomainUpDown();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtZip = new System.Windows.Forms.TextBox();
-            this.ddState = new System.Windows.Forms.DomainUpDown();
             this.txtState = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -178,14 +176,6 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // ddVehicle
-            // 
-            this.ddVehicle.Location = new System.Drawing.Point(320, 137);
-            this.ddVehicle.Name = "ddVehicle";
-            this.ddVehicle.Size = new System.Drawing.Size(120, 20);
-            this.ddVehicle.TabIndex = 17;
-            this.ddVehicle.Text = "domainUpDown1";
-            // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(118, 166);
@@ -218,67 +208,6 @@
             this.txtZip.Size = new System.Drawing.Size(64, 20);
             this.txtZip.TabIndex = 21;
             // 
-            // ddState
-            // 
-            this.ddState.AllowDrop = true;
-            this.ddState.Items.Add("AL");
-            this.ddState.Items.Add("AK");
-            this.ddState.Items.Add("AZ");
-            this.ddState.Items.Add("AR");
-            this.ddState.Items.Add("CA");
-            this.ddState.Items.Add("CO");
-            this.ddState.Items.Add("CT");
-            this.ddState.Items.Add("DE");
-            this.ddState.Items.Add("DC");
-            this.ddState.Items.Add("FL");
-            this.ddState.Items.Add("GA");
-            this.ddState.Items.Add("HI");
-            this.ddState.Items.Add("ID");
-            this.ddState.Items.Add("IL");
-            this.ddState.Items.Add("IN");
-            this.ddState.Items.Add("IA");
-            this.ddState.Items.Add("KS");
-            this.ddState.Items.Add("KY");
-            this.ddState.Items.Add("LA");
-            this.ddState.Items.Add("ME");
-            this.ddState.Items.Add("MD");
-            this.ddState.Items.Add("MA");
-            this.ddState.Items.Add("MI");
-            this.ddState.Items.Add("MN");
-            this.ddState.Items.Add("MS");
-            this.ddState.Items.Add("MO");
-            this.ddState.Items.Add("MT");
-            this.ddState.Items.Add("NE");
-            this.ddState.Items.Add("NV");
-            this.ddState.Items.Add("NH");
-            this.ddState.Items.Add("NJ");
-            this.ddState.Items.Add("NM");
-            this.ddState.Items.Add("NY");
-            this.ddState.Items.Add("NC");
-            this.ddState.Items.Add("ND");
-            this.ddState.Items.Add("OH");
-            this.ddState.Items.Add("OK");
-            this.ddState.Items.Add("OR");
-            this.ddState.Items.Add("PA");
-            this.ddState.Items.Add("RI");
-            this.ddState.Items.Add("SC");
-            this.ddState.Items.Add("SD");
-            this.ddState.Items.Add("TN");
-            this.ddState.Items.Add("TX");
-            this.ddState.Items.Add("UT");
-            this.ddState.Items.Add("VT");
-            this.ddState.Items.Add("VA");
-            this.ddState.Items.Add("WA");
-            this.ddState.Items.Add("WV");
-            this.ddState.Items.Add("WI");
-            this.ddState.Items.Add("WY");
-            this.ddState.Location = new System.Drawing.Point(337, 87);
-            this.ddState.Name = "ddState";
-            this.ddState.Size = new System.Drawing.Size(42, 20);
-            this.ddState.TabIndex = 22;
-            this.ddState.SelectedItemChanged += new System.EventHandler(this.ddState_SelectedItemChanged);
-            this.ddState.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ddState_MouseDown);
-            // 
             // txtState
             // 
             this.txtState.Location = new System.Drawing.Point(346, 204);
@@ -290,14 +219,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 442);
+            this.ClientSize = new System.Drawing.Size(436, 349);
             this.Controls.Add(this.txtState);
-            this.Controls.Add(this.ddState);
             this.Controls.Add(this.txtZip);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.ddVehicle);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtCity);
@@ -339,12 +266,10 @@
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.DomainUpDown ddVehicle;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtZip;
-        private System.Windows.Forms.DomainUpDown ddState;
         private System.Windows.Forms.TextBox txtState;
     }
 }

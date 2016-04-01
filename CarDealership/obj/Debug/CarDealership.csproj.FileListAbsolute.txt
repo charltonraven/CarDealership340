@@ -20,5 +20,6 @@ C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealershi
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\bin\Debug\Microsoft.Office.Tools.Outlook.v4.0.Utilities.xml
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.DisplayC.resources
-C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.csprojResolveAssemblyReference.cache
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.editCustomer.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.csprojResolveAssemblyReference.cache
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.DisplayE.resources

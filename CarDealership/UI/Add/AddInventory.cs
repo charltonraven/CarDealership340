@@ -31,57 +31,58 @@ namespace CarDealership
         private void btnVehAdd_Click(object sender, EventArgs e)
         {
 
+            Inventory inventory = new Inventory(txtVehicleID.Text, ddVehicleYear.Text, ddVehicleMake.Text, ddVehicleModel.Text, ddVehicleCondition.Text, txtVehicleColor.Text, txtCustID.Text);
+            Add addNewInventory = new Add(inventory);
 
-
-            if (rbNewCustomBool.Checked)
-            {
-                //AddCustomer NewCustomerVehicle = new AddCustomer();
-                //NewCustomerVehicle.Show();
-                Customer c = new Customer(new AddCustomer());
+            //if (rbNewCustomBool.Checked)
+            //{
+            //    //AddCustomer NewCustomerVehicle = new AddCustomer();
+            //    //NewCustomerVehicle.Show();
+            //    Customer c = new Customer(new AddCustomer());
                 
-                this.Hide();
+            //    this.Hide();
 
 
-            }
-            //=------------------------------------------------------------------------------
-            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership;uid=root;Password=Raven47946$;";
-            MySqlConnection conn = new MySqlConnection(myConnString);
+            //}
+            ////=------------------------------------------------------------------------------
+            //String myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
+            //MySqlConnection conn = new MySqlConnection(myConnString);
 
-            try
-            {
-                conn.Open();
-            }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
-            {
-                switch (ex.Number)
-                {
-                    case 0:
-                        MessageBox.Show("Cannot connect to server. ");
-                        break;
-                    case 1045:
-                        MessageBox.Show("Invalid Username/Password, Please try again");
-                        break;
-                }
-            }
-            if (rbNewCustomBool.Checked)
-            {
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch (MySql.Data.MySqlClient.MySqlException ex)
+            //{
+            //    switch (ex.Number)
+            //    {
+            //        case 0:
+            //            MessageBox.Show("Cannot connect to server. ");
+            //            break;
+            //        case 1045:
+            //            MessageBox.Show("Invalid Username/Password, Please try again");
+            //            break;
+            //    }
+            //}
+            //if (rbNewCustomBool.Checked)
+            //{
                 
-                Customer c = new Customer(new AddCustomer());
-                this.Hide();
+            //    Customer c = new Customer(new AddCustomer());
+            //    this.Hide();
 
 
-            }
-            String addVehicleSr = "INSERT INTO Vehicle VALUES('" + txtVehicleID.Text +"','" + ddVehicleYear.Text+ 
-                "','" + ddVehicleMake.Text + "','" + ddVehicleModel.Text + "','" 
-                + ddVehicleCondition.Text+ "','" + txtVehicleColor.Text + "')";
-            MessageBox.Show(addVehicleSr);
+            //}
+            //String addVehicleSr = "INSERT INTO Vehicle VALUES('" + txtVehicleID.Text +"','" + ddVehicleYear.Text+ 
+            //    "','" + ddVehicleMake.Text + "','" + ddVehicleModel.Text + "','" 
+            //    + ddVehicleCondition.Text+ "','" + txtVehicleColor.Text + "')";
+            //MessageBox.Show(addVehicleSr);
 
-            MySqlCommand addVehicleSQL = new MySqlCommand(addVehicleSr, conn);
-
-
+            //MySqlCommand addVehicleSQL = new MySqlCommand(addVehicleSr, conn);
 
 
-            addVehicleSQL.ExecuteNonQuery();
+
+
+            //addVehicleSQL.ExecuteNonQuery();
 
 
 
@@ -129,6 +130,11 @@ namespace CarDealership
             {
                 txtCustID.Enabled = true;
             }
+        }
+
+        private void txtCustID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

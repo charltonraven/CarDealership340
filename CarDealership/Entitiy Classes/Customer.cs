@@ -25,10 +25,10 @@ namespace CarDealership
            
 
 
-     public Customer(String CustomerID, String CusFirstName, String CusLastName, String CusDOB, String CusPhone,
-         String CusAddress, String CusCity, String CusState, String CusZipCode, double SaleAmount)
+     public Customer(String CusFirstName, String CusLastName, String CusDOB, String CusPhone,
+         String CusAddress, String CusCity, String CusState, String CusZipCode)//SALE AMOUNT WAS IN HERE
      {
-         this.CustomerID = CustomerID;
+         
          this.CusFirstName = CusFirstName;
          this.CusLastName = CusLastName;
          this.CusDOB = CusDOB;
@@ -37,7 +37,7 @@ namespace CarDealership
          this.CusCity = CusCity;
          this.CusState = CusState;
          this.CusZipCode = CusZipCode;
-         CheckSaleCoupon(SaleAmount);
+        // CheckSaleCoupon(SaleAmount);
 
 
      }

@@ -33,7 +33,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.btnVehCommit = new System.Windows.Forms.Button();
             this.btnVehCancel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -93,12 +93,12 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Year";
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(66, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtID.Location = new System.Drawing.Point(118, 46);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(66, 20);
+            this.txtID.TabIndex = 7;
             // 
             // btnVehCommit
             // 
@@ -246,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 405);
+            this.ClientSize = new System.Drawing.Size(364, 398);
             this.Controls.Add(this.cbOnLot);
             this.Controls.Add(this.cbSold);
             this.Controls.Add(this.txtCustomerID);
@@ -259,7 +259,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnVehCancel);
             this.Controls.Add(this.btnVehCommit);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -268,6 +268,7 @@
             this.Name = "EditInventory";
             this.Text = "Edit Vehicle";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.EditInventory_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,7 +281,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnVehCommit;
         private System.Windows.Forms.Button btnVehCancel;
         private System.Windows.Forms.Label label3;

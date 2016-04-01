@@ -248,6 +248,7 @@
             this.txtCustID.Name = "txtCustID";
             this.txtCustID.Size = new System.Drawing.Size(100, 20);
             this.txtCustID.TabIndex = 30;
+            this.txtCustID.TextChanged += new System.EventHandler(this.txtCustID_TextChanged);
             // 
             // AddInventory
             // 

@@ -40,7 +40,7 @@ namespace CarDealership
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership;uid=root;Password=Raven47946$;";
+            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
             MySqlConnection conn = new MySqlConnection(myConnString);
 
             try

@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarDealership
 {
-    class Utilities
+    class Find
     {
-        public void RefreshTables(){
-
-
-        }
     }
 }

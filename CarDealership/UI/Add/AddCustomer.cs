@@ -30,35 +30,9 @@ namespace CarDealership
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership;uid=root;Password=Raven47946$;";
-            MySqlConnection conn = new MySqlConnection(myConnString);
+          Customer customer = new Customer(txtCusFirstName.Text,txtCusLastName.Text,txtDOB.Text,txtPhone.Text,txtAddress.Text,txtCity.Text,txtState.Text,txtZip.Text);
+          Add AddNewCustomer = new Add(customer);
             
-            try
-            {
-                conn.Open();
-            }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
-            {
-                switch (ex.Number)
-                {
-                    case 0:
-                        MessageBox.Show("Cannot connect to server. ");
-                        break;
-                    case 1045:
-                        MessageBox.Show("Invalid Username/Password, Please try again");
-                        break;
-                }
-            }
-           
-            String addCustomerSr = "INSERT INTO CUSTOMER VALUES('"+txtCusID.Text+"','"+txtCusFirstName.Text
-                                                                +"','"+txtCusLastName.Text+"','"+txtDOB.Text
-                                                                +"','"+txtPhone.Text+"','"+txtAddress.Text
-                                                                +"','"+txtCity.Text+"','"+txtState.Text
-                                                                +"','"+txtZip.Text+"')";
-
-            MessageBox.Show(addCustomerSr);
-            MySqlCommand addCustomerSQL = new MySqlCommand(addCustomerSr, conn);
-            addCustomerSQL.ExecuteNonQuery();
             txtAddress.Clear();
             txtCity.Clear();
             txtCusFirstName.Clear();
@@ -66,7 +40,7 @@ namespace CarDealership
             txtCusLastName.Clear();
             txtDOB.Clear();
             txtPhone.Clear();
-            ddState.Text = "";
+            txtState.Text = "";
             txtZip.Clear();
             txtState.Clear();
 
@@ -76,7 +50,7 @@ namespace CarDealership
 
         private void AddCustomer_Load(object sender, EventArgs e)
         {
-
+            txtCusID.Enabled = false;
         }
 
         private void ddState_SelectedItemChanged(object sender, EventArgs e)

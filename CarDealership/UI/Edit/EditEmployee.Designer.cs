@@ -37,12 +37,14 @@
             this.txtEmpNum = new System.Windows.Forms.TextBox();
             this.txtEmpFName = new System.Windows.Forms.TextBox();
             this.txtEmpLName = new System.Windows.Forms.TextBox();
-            this.txtEmpDOB = new System.Windows.Forms.TextBox();
+            this.txtEmpHD = new System.Windows.Forms.TextBox();
             this.btnEmpCommit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtEmpAddress = new System.Windows.Forms.TextBox();
-            this.txtEmpCity = new System.Windows.Forms.TextBox();
+            this.txtEmployeeSalary = new System.Windows.Forms.TextBox();
+            this.txtPosition = new System.Windows.Forms.TextBox();
             this.btnCusDelete = new System.Windows.Forms.Button();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -121,25 +123,26 @@
             this.txtEmpLName.TabIndex = 9;
             this.txtEmpLName.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // txtEmpDOB
+            // txtEmpHD
             // 
-            this.txtEmpDOB.Location = new System.Drawing.Point(134, 239);
-            this.txtEmpDOB.Name = "txtEmpDOB";
-            this.txtEmpDOB.Size = new System.Drawing.Size(163, 20);
-            this.txtEmpDOB.TabIndex = 10;
+            this.txtEmpHD.Location = new System.Drawing.Point(134, 239);
+            this.txtEmpHD.Name = "txtEmpHD";
+            this.txtEmpHD.Size = new System.Drawing.Size(163, 20);
+            this.txtEmpHD.TabIndex = 10;
             // 
             // btnEmpCommit
             // 
-            this.btnEmpCommit.Location = new System.Drawing.Point(39, 370);
+            this.btnEmpCommit.Location = new System.Drawing.Point(47, 405);
             this.btnEmpCommit.Name = "btnEmpCommit";
             this.btnEmpCommit.Size = new System.Drawing.Size(75, 23);
             this.btnEmpCommit.TabIndex = 15;
             this.btnEmpCommit.Text = "Commit";
             this.btnEmpCommit.UseVisualStyleBackColor = true;
+            this.btnEmpCommit.Click += new System.EventHandler(this.btnEmpCommit_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(192, 370);
+            this.btnCancel.Location = new System.Drawing.Point(190, 405);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 16;
@@ -147,40 +150,58 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txtEmpAddress
+            // txtEmployeeSalary
             // 
-            this.txtEmpAddress.Location = new System.Drawing.Point(134, 289);
-            this.txtEmpAddress.Name = "txtEmpAddress";
-            this.txtEmpAddress.Size = new System.Drawing.Size(66, 20);
-            this.txtEmpAddress.TabIndex = 11;
+            this.txtEmployeeSalary.Location = new System.Drawing.Point(134, 289);
+            this.txtEmployeeSalary.Name = "txtEmployeeSalary";
+            this.txtEmployeeSalary.Size = new System.Drawing.Size(66, 20);
+            this.txtEmployeeSalary.TabIndex = 11;
             // 
-            // txtEmpCity
+            // txtPosition
             // 
-            this.txtEmpCity.Location = new System.Drawing.Point(134, 335);
-            this.txtEmpCity.Name = "txtEmpCity";
-            this.txtEmpCity.Size = new System.Drawing.Size(163, 20);
-            this.txtEmpCity.TabIndex = 13;
+            this.txtPosition.Location = new System.Drawing.Point(134, 335);
+            this.txtPosition.Name = "txtPosition";
+            this.txtPosition.Size = new System.Drawing.Size(163, 20);
+            this.txtPosition.TabIndex = 13;
             // 
             // btnCusDelete
             // 
-            this.btnCusDelete.Location = new System.Drawing.Point(347, 370);
+            this.btnCusDelete.Location = new System.Drawing.Point(343, 405);
             this.btnCusDelete.Name = "btnCusDelete";
             this.btnCusDelete.Size = new System.Drawing.Size(75, 23);
             this.btnCusDelete.TabIndex = 17;
             this.btnCusDelete.Text = "Delete";
             this.btnCusDelete.UseVisualStyleBackColor = true;
             // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(70, 377);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(53, 13);
+            this.lblPassword.TabIndex = 18;
+            this.lblPassword.Text = "Password";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(134, 377);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(163, 20);
+            this.txtPassword.TabIndex = 19;
+            // 
             // EditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 405);
+            this.ClientSize = new System.Drawing.Size(466, 465);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.btnCusDelete);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEmpCommit);
-            this.Controls.Add(this.txtEmpCity);
-            this.Controls.Add(this.txtEmpAddress);
-            this.Controls.Add(this.txtEmpDOB);
+            this.Controls.Add(this.txtPosition);
+            this.Controls.Add(this.txtEmployeeSalary);
+            this.Controls.Add(this.txtEmpHD);
             this.Controls.Add(this.txtEmpLName);
             this.Controls.Add(this.txtEmpFName);
             this.Controls.Add(this.txtEmpNum);
@@ -193,6 +214,7 @@
             this.Name = "EditEmployee";
             this.Text = "Edit Employee";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.EditEmployee_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,11 +231,13 @@
         private System.Windows.Forms.TextBox txtEmpNum;
         private System.Windows.Forms.TextBox txtEmpFName;
         private System.Windows.Forms.TextBox txtEmpLName;
-        private System.Windows.Forms.TextBox txtEmpDOB;
+        private System.Windows.Forms.TextBox txtEmpHD;
         private System.Windows.Forms.Button btnEmpCommit;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox txtEmpAddress;
-        private System.Windows.Forms.TextBox txtEmpCity;
+        private System.Windows.Forms.TextBox txtEmployeeSalary;
+        private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.Button btnCusDelete;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }

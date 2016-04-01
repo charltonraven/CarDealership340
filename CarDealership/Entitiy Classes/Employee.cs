@@ -8,18 +8,19 @@ namespace CarDealership
 {
     class Employee
     {
-        public char EmployeeID;
-        public char EmployeeFirstName;
-        public char EmployeeLastName;
-        public DateTime HireDate;
-        public char Salary;
-        public char Position;
+        public String EmployeeID;
+        public String EmployeeFirstName;
+        public String EmployeeLastName;
+        public String HireDate;
+        public String Salary;
+        public String Position;
+        public String Password;
         
 
 
 
-        public Employee(char EmployeeID, char EmployeeFirstName, char EmployeeLastName,
-            DateTime HireDate, char Salary, char Position)
+        public Employee(String EmployeeID, String EmployeeFirstName, String EmployeeLastName,
+            String HireDate, String Salary, String Position,String password)
         {
             this.EmployeeID = EmployeeID;
             this.EmployeeFirstName = EmployeeFirstName;
@@ -27,10 +28,21 @@ namespace CarDealership
             this.HireDate = HireDate;
             this.Salary = Salary;
             this.Position = Position;
+            this.Password = password;
 
 
         }
-        public Employee(Char EmployeeID, char Password)
+        public Employee(String EmployeeID, String EmployeeFirstName, String EmployeeLastName,
+            String HireDate, String Salary, String Position)
+        {
+            this.EmployeeID = EmployeeID;
+            this.EmployeeFirstName = EmployeeFirstName;
+            this.EmployeeLastName = EmployeeLastName;
+            this.HireDate = HireDate;
+            this.Salary = Salary;
+            this.Position = Position;
+        }
+        public Employee(String EmployeeID, String Password)
         {
 
         }

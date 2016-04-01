@@ -16,6 +16,17 @@ namespace CarDealership
         {
             InitializeComponent();
         }
+        public EditInventory(String ID, String year, String make, String model, String condition, String color){
+            InitializeComponent();
+            txtID.Text = ID;
+            ddYear.Text = year;
+            ddMake.Text = make;
+            ddModel.Text = model;
+            ddCondition.Text = condition;
+            txtColor.Text = color;
+
+
+        }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
@@ -25,6 +36,11 @@ namespace CarDealership
         private void btnVehCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void EditInventory_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

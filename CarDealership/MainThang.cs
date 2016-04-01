@@ -17,16 +17,16 @@ namespace CarDealership
     {
         public CarDealership()
         {
-            
+
 
             InitializeComponent();
-           
+
 
         }
         public void RefreshTables()
         {
 
-            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership;uid=root;Password=Raven47946$;";
+            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
             MySqlConnection conn = new MySqlConnection(myConnString);
 
             try
@@ -69,13 +69,13 @@ namespace CarDealership
             dgCustomer.TopLeftHeaderCell.Style.ForeColor =
             System.Drawing.Color.DeepPink;
             ////Inventory
-            String ShowAllInventory = "Select * from Vehicle;";
+            String ShowAllInventory = "Select * from Inventory;";
             MySqlCommand ShowAllInventorySQL = new MySqlCommand(ShowAllInventory, conn);
             MySqlDataAdapter MyAdapterInv = new MySqlDataAdapter();
             MyAdapterInv.SelectCommand = ShowAllInventorySQL;
             MyAdapterInv.Fill(iTable);
             dgInventory.DataSource = iTable;
-           
+
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace CarDealership
         {
 
             RefreshTables();
-           
+
 
 
             //Make The Employee tab not show up if it is a sales employee.
@@ -102,7 +102,7 @@ namespace CarDealership
                 TabPage DeleteEmployeeTab = tabTables.SelectedTab;
                 tabTables.TabPages.Remove(DeleteEmployeeTab);
 
-    
+
 
             }
             tabTables.SelectTab(tabCustomer);
@@ -130,12 +130,12 @@ namespace CarDealership
         {
 
         }
-   
-        
+
+
 
         private void findToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership;uid=root;Password=Raven47946$;";
+            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
             MySqlConnection conn = new MySqlConnection(myConnString);
 
             try
@@ -161,14 +161,14 @@ namespace CarDealership
                 FindCustomer FindCustomer = new FindCustomer();
                 FindCustomer.Show();
 
-                
+
             }
             if (tabTables.SelectedIndex == 1)
             {
                 MessageBox.Show("Your are on the Inventory's Table");
                 FindInventory FindInventory = new FindInventory();
                 FindInventory.Show();
-               
+
 
             }
             if (tabTables.SelectedIndex == 2)
@@ -202,7 +202,7 @@ namespace CarDealership
         private void editStrip_Click(object sender, EventArgs e)
         {
 
-            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership;uid=root;Password=Raven47946$;";
+            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
             MySqlConnection conn = new MySqlConnection(myConnString);
 
             try
@@ -224,28 +224,28 @@ namespace CarDealership
 
             if (tabTables.SelectedIndex == 0)
             {
-                MessageBox.Show("Your are on the Customer's Table");
-                EditCustomer EditCustomer = new EditCustomer();
-                EditCustomer.Show();
-               
+              //  MessageBox.Show("Your are on the Customer's Table");
+                FindCustomer FindCustomer = new FindCustomer();
+                FindCustomer.Show();
+
 
 
             }
             if (tabTables.SelectedIndex == 1)
             {
-                MessageBox.Show("Your are on the Inventory's Table");
-                EditInventory EditInventory= new EditInventory();
+              //  MessageBox.Show("Your are on the Inventory's Table");
+                EditInventory EditInventory = new EditInventory();
                 EditInventory.Show();
-               
+
 
 
             }
             if (tabTables.SelectedIndex == 2)
             {
-                MessageBox.Show("Your are on the Employee's Table");
-                EditCustomer EditEmployee = new EditCustomer();
+              //  MessageBox.Show("Your are on the Employee's Table");
+                FindEmployee EditEmployee = new FindEmployee();
                 EditEmployee.Show();
-               
+
             }
 
             conn.Close();
@@ -291,7 +291,7 @@ namespace CarDealership
 
         private void tabCustomer_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void tabCustomer_BindingContextChanged(object sender, EventArgs e)
@@ -301,7 +301,7 @@ namespace CarDealership
 
         private void tabCustomer_DragOver(object sender, DragEventArgs e)
         {
-         
+
         }
 
         private void refreshStrip_Click(object sender, EventArgs e)
@@ -312,12 +312,12 @@ namespace CarDealership
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             RefreshTables();
-        
+
         }
 
         private void stripAddCustomer_Click(object sender, EventArgs e)
         {
-            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership;uid=root;Password=Raven47946$;";
+            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
             MySqlConnection conn = new MySqlConnection(myConnString);
 
             try
@@ -359,6 +359,105 @@ namespace CarDealership
             }
 
             conn.Close();
+        }
+
+        private void customerStrip_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //if (dgCustomer.MultiSelect == true)
+            //{
+            //    MessageBox.Show("Multiple is selected");
+            //    //}
+            // String famous = dgCustomer.Rows[1].Cells.ToString
+            Point pt = dgCustomer.PointToClient(MousePosition);
+            DataGridView.HitTestInfo hti = dgCustomer.HitTest(pt.X, pt.Y);
+            if (hti.Type == DataGridViewHitTestType.Cell)
+            {
+                dgCustomer.ClearSelection();
+                dgCustomer.CurrentCell = dgCustomer.Rows[hti.RowIndex].Cells[hti.ColumnIndex];
+                dgCustomer.Rows[hti.RowIndex].Selected = true;
+            }
+
+
+
+        }
+
+        private void dgCustomer_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //  
+            Point pt = dgCustomer.PointToClient(MousePosition);
+            DataGridView.HitTestInfo hti = dgCustomer.HitTest(pt.X, pt.Y);
+            if (hti.Type == DataGridViewHitTestType.Cell)
+            {
+                dgCustomer.ClearSelection();
+                dgCustomer.CurrentCell = dgCustomer.Rows[hti.RowIndex].Cells[hti.ColumnIndex];
+                dgCustomer.Rows[hti.RowIndex].Selected = true;
+
+                String ID = dgCustomer.Rows[hti.RowIndex].Cells[0].Value.ToString();
+                MessageBox.Show(ID);
+                String First = dgCustomer.Rows[hti.RowIndex].Cells[1].Value.ToString();
+                String Last = dgCustomer.Rows[hti.RowIndex].Cells[2].Value.ToString();
+                String DOB = dgCustomer.Rows[hti.RowIndex].Cells[3].Value.ToString();
+                String Phone = dgCustomer.Rows[hti.RowIndex].Cells[4].Value.ToString();
+                String Address = dgCustomer.Rows[hti.RowIndex].Cells[5].Value.ToString();
+                String City = dgCustomer.Rows[hti.RowIndex].Cells[6].Value.ToString();
+                String State = dgCustomer.Rows[hti.RowIndex].Cells[7].Value.ToString();
+                String Zip = dgCustomer.Rows[hti.RowIndex].Cells[8].Value.ToString();
+                EditCustomer ec = new EditCustomer(ID, First, Last, Phone, DOB, Address, City, State, Zip);
+                ec.Show();
+            }
+
+
+
+        }
+
+        private void dgEmp_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Point pt = dgEmp.PointToClient(MousePosition);
+            DataGridView.HitTestInfo hti = dgEmp.HitTest(pt.X, pt.Y);
+            if (hti.Type == DataGridViewHitTestType.Cell)
+            {
+                dgEmp.ClearSelection();
+                dgEmp.CurrentCell = dgEmp.Rows[hti.RowIndex].Cells[hti.ColumnIndex];
+                dgEmp.Rows[hti.RowIndex].Selected = true;
+
+                String ID = dgEmp.Rows[hti.RowIndex].Cells[0].Value.ToString();
+                MessageBox.Show(ID);
+                String EmpFirst = dgEmp.Rows[hti.RowIndex].Cells[1].Value.ToString();
+                String EmpLast = dgEmp.Rows[hti.RowIndex].Cells[2].Value.ToString();
+                String EmpHD = dgEmp.Rows[hti.RowIndex].Cells[3].Value.ToString();
+                String Salary = dgEmp.Rows[hti.RowIndex].Cells[4].Value.ToString();
+                String Position = dgEmp.Rows[hti.RowIndex].Cells[5].Value.ToString();
+                EditEmployee EE = new EditEmployee(ID, EmpFirst, EmpLast, EmpHD, Salary, Position);
+                EE.Show();
+            }
+        }
+
+        private void dgInventory_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Point pt = dgInventory.PointToClient(MousePosition);
+            DataGridView.HitTestInfo hti = dgInventory.HitTest(pt.X, pt.Y);
+            if (hti.Type == DataGridViewHitTestType.Cell)
+            {
+                dgInventory.ClearSelection();
+                dgInventory.CurrentCell = dgInventory.Rows[hti.RowIndex].Cells[hti.ColumnIndex];
+                dgInventory.Rows[hti.RowIndex].Selected = true;
+
+                String ID = dgInventory.Rows[hti.RowIndex].Cells[0].Value.ToString();
+                MessageBox.Show(ID);
+                String year = dgInventory.Rows[hti.RowIndex].Cells[1].Value.ToString();
+                String make = dgInventory.Rows[hti.RowIndex].Cells[2].Value.ToString();
+                String model = dgInventory.Rows[hti.RowIndex].Cells[3].Value.ToString();
+                String condition = dgInventory.Rows[hti.RowIndex].Cells[4].Value.ToString();
+                String color = dgInventory.Rows[hti.RowIndex].Cells[5].Value.ToString();
+                EditInventory EE = new EditInventory(ID, year, make, model, condition, color);
+                EE.Show();
+            }
+
         }
     }
 }

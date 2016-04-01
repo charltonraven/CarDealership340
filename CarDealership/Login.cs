@@ -15,7 +15,7 @@ namespace CarDealership
 {
     public partial class Login : Form
     {
-        public String myConString = "SERVER=localhost;Port=3306;Database=carDealership;uid=root;Password=Raven47946$;";
+        public String myConString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
         public static String Username;
         public static String Password;
         public static String Position = "";
