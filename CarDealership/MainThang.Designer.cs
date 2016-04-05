@@ -1,6 +1,6 @@
 ﻿namespace CarDealership
 {
-    partial class CarDealership
+    partial class Main_Page
     {
         /// <summary>
         /// Required designer variable.
@@ -107,6 +107,7 @@
             this.fileMenuStrip.Name = "fileMenuStrip";
             this.fileMenuStrip.Size = new System.Drawing.Size(46, 25);
             this.fileMenuStrip.Text = "File";
+            this.fileMenuStrip.Click += new System.EventHandler(this.fileMenuStrip_Click);
             // 
             // stripAddCustomer
             // 
@@ -374,7 +375,7 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // CarDealership
+            // Main_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -384,7 +385,7 @@
             this.Controls.Add(this.tabTables);
             this.Controls.Add(this.CarMenuStrip);
             this.MainMenuStrip = this.CarMenuStrip;
-            this.Name = "CarDealership";
+            this.Name = "Main_Page";
             this.Text = "Car Dealership";
             this.Load += new System.EventHandler(this.CarDealership_Load);
             this.CarMenuStrip.ResumeLayout(false);

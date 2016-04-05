@@ -65,8 +65,10 @@ namespace CarDealership
             MessageBox.Show(FindCusStatement);
             FindCustomerSQL = new MySqlCommand(FindCusStatement, conn);
             MyAdapter.SelectCommand = FindCustomerSQL;
-            DisplayC DisplayCustomer = new DisplayC();
-            DisplayCustomer.Show();
+           // DisplayC DisplayCustomer = new DisplayC();
+           // DisplayCustomer.Show();
+            Display DisplayFound = new Display();
+            DisplayFound.Show();
             this.Hide();
 
 
@@ -76,6 +78,7 @@ namespace CarDealership
             txtCustomerID.Clear();
             txtFirstName.Clear();
             txtLastName.Clear();
+            this.Close();
         }
 
         private void FindCustomer_Load(object sender, EventArgs e)

@@ -162,14 +162,14 @@
             this.txtPosition.Location = new System.Drawing.Point(134, 335);
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(163, 20);
-            this.txtPosition.TabIndex = 13;
+            this.txtPosition.TabIndex = 12;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(134, 377);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(163, 20);
-            this.txtPassword.TabIndex = 17;
+            this.txtPassword.TabIndex = 13;
             this.txtPassword.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label6

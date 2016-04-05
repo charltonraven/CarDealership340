@@ -118,21 +118,21 @@
             this.txtCusID.Location = new System.Drawing.Point(118, 25);
             this.txtCusID.Name = "txtCusID";
             this.txtCusID.Size = new System.Drawing.Size(66, 20);
-            this.txtCusID.TabIndex = 7;
+            this.txtCusID.TabIndex = 0;
             // 
             // txtCusFirstName
             // 
             this.txtCusFirstName.Location = new System.Drawing.Point(118, 64);
             this.txtCusFirstName.Name = "txtCusFirstName";
             this.txtCusFirstName.Size = new System.Drawing.Size(163, 20);
-            this.txtCusFirstName.TabIndex = 8;
+            this.txtCusFirstName.TabIndex = 1;
             // 
             // txtCusLastName
             // 
             this.txtCusLastName.Location = new System.Drawing.Point(118, 96);
             this.txtCusLastName.Name = "txtCusLastName";
             this.txtCusLastName.Size = new System.Drawing.Size(163, 20);
-            this.txtCusLastName.TabIndex = 9;
+            this.txtCusLastName.TabIndex = 2;
             this.txtCusLastName.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtDOB
@@ -140,21 +140,21 @@
             this.txtDOB.Location = new System.Drawing.Point(118, 129);
             this.txtDOB.Name = "txtDOB";
             this.txtDOB.Size = new System.Drawing.Size(163, 20);
-            this.txtDOB.TabIndex = 10;
+            this.txtDOB.TabIndex = 3;
             // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(118, 204);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(163, 20);
-            this.txtAddress.TabIndex = 11;
+            this.txtAddress.TabIndex = 5;
             // 
             // txtCity
             // 
             this.txtCity.Location = new System.Drawing.Point(118, 240);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(163, 20);
-            this.txtCity.TabIndex = 13;
+            this.txtCity.TabIndex = 6;
             // 
             // btnAdd
             // 
@@ -181,7 +181,7 @@
             this.txtPhone.Location = new System.Drawing.Point(118, 166);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(163, 20);
-            this.txtPhone.TabIndex = 18;
+            this.txtPhone.TabIndex = 4;
             // 
             // label8
             // 
@@ -206,14 +206,14 @@
             this.txtZip.Location = new System.Drawing.Point(346, 236);
             this.txtZip.Name = "txtZip";
             this.txtZip.Size = new System.Drawing.Size(64, 20);
-            this.txtZip.TabIndex = 21;
+            this.txtZip.TabIndex = 8;
             // 
             // txtState
             // 
             this.txtState.Location = new System.Drawing.Point(346, 204);
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(33, 20);
-            this.txtState.TabIndex = 23;
+            this.txtState.TabIndex = 7;
             // 
             // AddCustomer
             // 

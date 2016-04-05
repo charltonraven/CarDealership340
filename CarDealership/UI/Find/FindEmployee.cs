@@ -51,8 +51,10 @@ namespace CarDealership
             MessageBox.Show(FindEmployeeSr);
             FindEmployeeSQL = new MySqlCommand(FindEmployeeSr, conn);
             MyAdapter.SelectCommand = FindEmployeeSQL;
-            DisplayE DisplayEmployee = new DisplayE();
-            DisplayEmployee.Show();
+           // DisplayE DisplayEmployee = new DisplayE();
+            //DisplayEmployee.Show();
+            Display DisplayFound = new Display();
+            DisplayFound.Show();
             this.Hide();
 
 
@@ -63,6 +65,7 @@ namespace CarDealership
            txtEmpLName.Clear();
             txtEmpNum.Clear();
             txtPosition.Clear();
+            this.Close();
         }
 
       

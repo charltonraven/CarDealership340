@@ -13,9 +13,10 @@ using MySql.Data.MySqlClient;
 
 namespace CarDealership
 {
-    public partial class CarDealership : Form
+    public partial class Main_Page : Form
     {
-        public CarDealership()
+        public static String SelectedTable;
+        public Main_Page()
         {
 
 
@@ -176,9 +177,11 @@ namespace CarDealership
                 MessageBox.Show("Your are on the Employee's Table");
                 FindEmployee FindEmployee = new FindEmployee();
                 FindEmployee.Show();
+                
             }
 
             conn.Close();
+            
         }
 
         private void findCustomerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -225,6 +228,7 @@ namespace CarDealership
             if (tabTables.SelectedIndex == 0)
             {
               //  MessageBox.Show("Your are on the Customer's Table");
+                SelectedTable = "Customer";
                 FindCustomer FindCustomer = new FindCustomer();
                 FindCustomer.Show();
 
@@ -233,15 +237,17 @@ namespace CarDealership
             }
             if (tabTables.SelectedIndex == 1)
             {
+                SelectedTable = "Inventory";
               //  MessageBox.Show("Your are on the Inventory's Table");
-                EditInventory EditInventory = new EditInventory();
-                EditInventory.Show();
+                FindInventory FindInventory = new FindInventory();
+                FindInventory.Show();
 
 
 
             }
             if (tabTables.SelectedIndex == 2)
             {
+                SelectedTable = "Employee";
               //  MessageBox.Show("Your are on the Employee's Table");
                 FindEmployee EditEmployee = new FindEmployee();
                 EditEmployee.Show();
@@ -457,6 +463,11 @@ namespace CarDealership
                 EditInventory EE = new EditInventory(ID, year, make, model, condition, color);
                 EE.Show();
             }
+
+        }
+
+        private void fileMenuStrip_Click(object sender, EventArgs e)
+        {
 
         }
     }

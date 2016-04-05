@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblVin = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnVehAdd = new System.Windows.Forms.Button();
+            this.txtVin = new System.Windows.Forms.TextBox();
+            this.btnFindInventory = new System.Windows.Forms.Button();
             this.btnVehCancel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.ddMake = new System.Windows.Forms.DomainUpDown();
@@ -46,14 +46,14 @@
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // lblVin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "VehicleID";
+            this.lblVin.AutoSize = true;
+            this.lblVin.Location = new System.Drawing.Point(44, 46);
+            this.lblVin.Name = "lblVin";
+            this.lblVin.Size = new System.Drawing.Size(65, 13);
+            this.lblVin.TabIndex = 0;
+            this.lblVin.Text = "VIN Number";
             // 
             // label2
             // 
@@ -91,21 +91,22 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Year";
             // 
-            // textBox1
+            // txtVin
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(66, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtVin.Location = new System.Drawing.Point(118, 46);
+            this.txtVin.Name = "txtVin";
+            this.txtVin.Size = new System.Drawing.Size(66, 20);
+            this.txtVin.TabIndex = 7;
             // 
-            // btnVehAdd
+            // btnFindInventory
             // 
-            this.btnVehAdd.Location = new System.Drawing.Point(47, 370);
-            this.btnVehAdd.Name = "btnVehAdd";
-            this.btnVehAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnVehAdd.TabIndex = 15;
-            this.btnVehAdd.Text = "Add";
-            this.btnVehAdd.UseVisualStyleBackColor = true;
+            this.btnFindInventory.Location = new System.Drawing.Point(47, 370);
+            this.btnFindInventory.Name = "btnFindInventory";
+            this.btnFindInventory.Size = new System.Drawing.Size(75, 23);
+            this.btnFindInventory.TabIndex = 15;
+            this.btnFindInventory.Text = "Find";
+            this.btnFindInventory.UseVisualStyleBackColor = true;
+            this.btnFindInventory.Click += new System.EventHandler(this.btnVehAdd_Click);
             // 
             // btnVehCancel
             // 
@@ -234,16 +235,17 @@
             this.Controls.Add(this.ddMake);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnVehCancel);
-            this.Controls.Add(this.btnVehAdd);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnFindInventory);
+            this.Controls.Add(this.txtVin);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblVin);
             this.Name = "FindInventory";
             this.Text = "Find Customer";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.FindInventory_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,13 +253,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblVin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnVehAdd;
+        private System.Windows.Forms.TextBox txtVin;
+        private System.Windows.Forms.Button btnFindInventory;
         private System.Windows.Forms.Button btnVehCancel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DomainUpDown ddMake;

@@ -67,7 +67,7 @@ namespace CarDealership
                             Login.Position = MyReader.GetString(0);
                         }
                         this.Hide();
-                        CarDealership OpenMain = new CarDealership();
+                        Main_Page OpenMain = new Main_Page();
                         OpenMain.Show();
 
                     }
@@ -122,6 +122,11 @@ namespace CarDealership
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -16,7 +16,7 @@ namespace CarDealership
         {
             InitializeComponent();
         }
-        public EditInventory(String ID, String year, String make, String model, String condition, String color){
+        public EditInventory(String ID, String year, String make, String model, String condition, String color,String CustomerID){
             InitializeComponent();
             txtID.Text = ID;
             ddYear.Text = year;
@@ -24,6 +24,20 @@ namespace CarDealership
             ddModel.Text = model;
             ddCondition.Text = condition;
             txtColor.Text = color;
+            txtCustomerID.Text = CustomerID;
+
+
+        }
+        public EditInventory(String ID, String year, String make, String model, String condition, String color)
+        {
+            InitializeComponent();
+            txtID.Text = ID;
+            ddYear.Text = year;
+            ddMake.Text = make;
+            ddModel.Text = model;
+            ddCondition.Text = condition;
+            txtColor.Text = color;
+           
 
 
         }
