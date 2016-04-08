@@ -19,6 +19,7 @@ namespace CarDealership
         public static String Username;
         public static String Password;
         public static String Position = "";
+        public static String EmployeeID;
         
        
 
@@ -58,17 +59,20 @@ namespace CarDealership
                     if (count == 1)
                     {
                         MyReader.Close();
-                        String Position = "Select Position from Employee where  employeeID='" + txtID.Text + "';";
+                        String Position = "Select EmployeeID, EmployeeFirstName, EmployeeLastName, Position from Employee where  employeeID='" + txtID.Text + "';";
                         MySqlCommand PositionWindow = new MySqlCommand(Position, conn);
                         MyReader = PositionWindow.ExecuteReader();
                         count = 0;
                         while (MyReader.Read())
                         {
-                            Login.Position = MyReader.GetString(0);
+                            EmployeeID = MyReader.GetString(0);
+                            Username = MyReader.GetString(1)+" "+MyReader.GetString(2);
+                            Login.Position = MyReader.GetString(3);
                         }
                         this.Hide();
                         Main_Page OpenMain = new Main_Page();
                         OpenMain.Show();
+                        this.Hide();
 
                     }
                     else if (count == 0)

@@ -42,8 +42,6 @@
             this.btnEmpCancel = new System.Windows.Forms.Button();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.txtPosition = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -132,7 +130,7 @@
             // 
             // btnEmpAdd
             // 
-            this.btnEmpAdd.Location = new System.Drawing.Point(73, 403);
+            this.btnEmpAdd.Location = new System.Drawing.Point(73, 381);
             this.btnEmpAdd.Name = "btnEmpAdd";
             this.btnEmpAdd.Size = new System.Drawing.Size(75, 23);
             this.btnEmpAdd.TabIndex = 15;
@@ -142,7 +140,7 @@
             // 
             // btnEmpCancel
             // 
-            this.btnEmpCancel.Location = new System.Drawing.Point(262, 403);
+            this.btnEmpCancel.Location = new System.Drawing.Point(262, 381);
             this.btnEmpCancel.Name = "btnEmpCancel";
             this.btnEmpCancel.Size = new System.Drawing.Size(75, 23);
             this.btnEmpCancel.TabIndex = 16;
@@ -164,30 +162,11 @@
             this.txtPosition.Size = new System.Drawing.Size(163, 20);
             this.txtPosition.TabIndex = 12;
             // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(134, 377);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(163, 20);
-            this.txtPassword.TabIndex = 13;
-            this.txtPassword.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(79, 380);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Password";
-            // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 456);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnEmpCancel);
             this.Controls.Add(this.btnEmpAdd);
             this.Controls.Add(this.txtPosition);
@@ -227,7 +206,5 @@
         private System.Windows.Forms.Button btnEmpCancel;
         private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.TextBox txtPosition;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label label6;
     }
 }

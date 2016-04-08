@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Runtime.InteropServices;
+
+
 
 
 
@@ -15,6 +18,10 @@ namespace CarDealership
 {
     public partial class Main_Page : Form
     {
+        [DllImport("user32.dll")]
+        public static extern int ExitWindowsEx(int uFlags, int dwReason);
+
+
         public static String SelectedTable;
         public Main_Page()
         {
@@ -91,7 +98,10 @@ namespace CarDealership
 
         private void CarDealership_Load(object sender, EventArgs e)
         {
-
+            lblUsername.Text = Login.Username;
+            lblPosition.Text = Login.Position;
+            
+            
             RefreshTables();
 
 
@@ -107,7 +117,7 @@ namespace CarDealership
 
             }
             tabTables.SelectTab(tabCustomer);
-            lblPosition.Text = Login.Position;
+            
 
 
         }
@@ -469,6 +479,32 @@ namespace CarDealership
         private void fileMenuStrip_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddCustomer addCustomer = new AddCustomer();
+            addCustomer.Show();
+        }
+
+        private void displayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisplayI I = new DisplayI();
+            I.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+
+            Login LogOff = new Login();
+            LogOff.Show();
+            this.Close();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePassword changepassword = new ChangePassword();
+            changepassword.Show();
         }
     }
 }

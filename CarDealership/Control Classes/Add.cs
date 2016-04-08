@@ -34,10 +34,12 @@ namespace CarDealership
         }
        public Add(Employee E)
         {
+            DateTime PutInDateFormat = DateTime.Parse(E.HireDate);
+            String DateFormatted = PutInDateFormat.ToString("yyyy-MM-dd");
             
             MySqlConnection conn = new MySqlConnection(myConnString);
 
-
+            String DefaultPassword = "ChangePassword";
             conn.Open();
             if (E.EmployeeID == "" || E.EmployeeID == null)
             {
@@ -45,7 +47,7 @@ namespace CarDealership
             }
 
             String addEmployeeSr = "INSERT INTO EMPLOYEE VALUES(" + E.EmployeeID + ",'" + E.EmployeeFirstName + "','" + E.EmployeeLastName + "','"
-                + E.HireDate + "','" + E.Salary + "','" + E.Position + "','NULL');";
+                + DateFormatted + "','" + E.Salary + "','" + E.Position + "','" + DefaultPassword + "');";
             MySqlCommand addEmployeeSQL = new MySqlCommand(addEmployeeSr, conn);
             addEmployeeSQL.ExecuteNonQuery();
 

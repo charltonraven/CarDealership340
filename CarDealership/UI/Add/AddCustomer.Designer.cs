@@ -48,6 +48,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtZip = new System.Windows.Forms.TextBox();
             this.txtState = new System.Windows.Forms.TextBox();
+            this.cbExisting = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -215,11 +216,23 @@
             this.txtState.Size = new System.Drawing.Size(33, 20);
             this.txtState.TabIndex = 7;
             // 
+            // cbExisting
+            // 
+            this.cbExisting.AutoSize = true;
+            this.cbExisting.Location = new System.Drawing.Point(201, 28);
+            this.cbExisting.Name = "cbExisting";
+            this.cbExisting.Size = new System.Drawing.Size(111, 17);
+            this.cbExisting.TabIndex = 21;
+            this.cbExisting.Text = "Exisiting Customer";
+            this.cbExisting.UseVisualStyleBackColor = true;
+            this.cbExisting.CheckedChanged += new System.EventHandler(this.cbExisting_CheckedChanged);
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 349);
+            this.Controls.Add(this.cbExisting);
             this.Controls.Add(this.txtState);
             this.Controls.Add(this.txtZip);
             this.Controls.Add(this.label9);
@@ -271,5 +284,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtZip;
         private System.Windows.Forms.TextBox txtState;
+        private System.Windows.Forms.CheckBox cbExisting;
     }
 }

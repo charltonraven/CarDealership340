@@ -25,3 +25,4 @@ C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealershi
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.DisplayI.resources
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.Display.resources
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.Main_Page.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.ChangePassword.resources

@@ -37,16 +37,8 @@
             this.printStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customerStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.employeeStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.vehicleStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.purchaseVehicleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.onLotToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.offLotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.purchasedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.displayToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.templatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +46,7 @@
             this.addCustomerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addEmployeeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addInventoryTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.displayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabTables = new System.Windows.Forms.TabControl();
             this.tabCustomer = new System.Windows.Forms.TabPage();
             this.dgCustomer = new System.Windows.Forms.DataGridView();
@@ -66,6 +59,8 @@
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblPosition = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.CarMenuStrip.SuspendLayout();
             this.tabTables.SuspendLayout();
             this.tabCustomer.SuspendLayout();
@@ -81,6 +76,7 @@
             // 
             // CarMenuStrip
             // 
+            this.CarMenuStrip.BackColor = System.Drawing.SystemColors.Window;
             this.CarMenuStrip.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CarMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenuStrip,
@@ -102,7 +98,8 @@
             this.findStrip,
             this.printStrip,
             this.deleteStrip,
-            this.refreshStrip});
+            this.refreshStrip,
+            this.changePasswordToolStripMenuItem});
             this.fileMenuStrip.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileMenuStrip.Name = "fileMenuStrip";
             this.fileMenuStrip.Size = new System.Drawing.Size(46, 25);
@@ -112,116 +109,57 @@
             // stripAddCustomer
             // 
             this.stripAddCustomer.Name = "stripAddCustomer";
-            this.stripAddCustomer.Size = new System.Drawing.Size(161, 26);
+            this.stripAddCustomer.Size = new System.Drawing.Size(203, 26);
             this.stripAddCustomer.Text = "Add";
             this.stripAddCustomer.Click += new System.EventHandler(this.stripAddCustomer_Click);
             // 
             // editStrip
             // 
             this.editStrip.Name = "editStrip";
-            this.editStrip.Size = new System.Drawing.Size(161, 26);
-            this.editStrip.Text = "Edit";
+            this.editStrip.Size = new System.Drawing.Size(203, 26);
+            this.editStrip.Text = "Find/Edit";
             this.editStrip.Click += new System.EventHandler(this.editStrip_Click);
             // 
             // findStrip
             // 
             this.findStrip.Name = "findStrip";
-            this.findStrip.Size = new System.Drawing.Size(161, 26);
+            this.findStrip.Size = new System.Drawing.Size(203, 26);
             this.findStrip.Text = "Find";
             this.findStrip.Click += new System.EventHandler(this.findToolStripMenuItem2_Click);
             // 
             // printStrip
             // 
             this.printStrip.Name = "printStrip";
-            this.printStrip.Size = new System.Drawing.Size(161, 26);
+            this.printStrip.Size = new System.Drawing.Size(203, 26);
             this.printStrip.Text = "Print";
             // 
             // deleteStrip
             // 
             this.deleteStrip.Name = "deleteStrip";
-            this.deleteStrip.Size = new System.Drawing.Size(161, 26);
+            this.deleteStrip.Size = new System.Drawing.Size(203, 26);
             this.deleteStrip.Text = "Delete";
             // 
             // refreshStrip
             // 
             this.refreshStrip.Name = "refreshStrip";
-            this.refreshStrip.Size = new System.Drawing.Size(161, 26);
+            this.refreshStrip.Size = new System.Drawing.Size(203, 26);
             this.refreshStrip.Text = "Refresh List";
             this.refreshStrip.Click += new System.EventHandler(this.refreshStrip_Click);
             // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
+            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            // 
             // viewToolStripMenuItem
             // 
-            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.customerStrip,
-            this.employeeStrip,
-            this.vehicleStrip});
             this.viewToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(86, 25);
-            this.viewToolStripMenuItem.Text = "Database";
-            // 
-            // customerStrip
-            // 
-            this.customerStrip.Name = "customerStrip";
-            this.customerStrip.Size = new System.Drawing.Size(148, 26);
-            this.customerStrip.Text = "Customer";
-            this.customerStrip.Click += new System.EventHandler(this.customerStrip_Click);
-            // 
-            // employeeStrip
-            // 
-            this.employeeStrip.Name = "employeeStrip";
-            this.employeeStrip.Size = new System.Drawing.Size(148, 26);
-            this.employeeStrip.Text = "Employee";
-            // 
-            // vehicleStrip
-            // 
-            this.vehicleStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.purchaseVehicleToolStripMenuItem,
-            this.displayToolStripMenuItem1});
-            this.vehicleStrip.Name = "vehicleStrip";
-            this.vehicleStrip.Size = new System.Drawing.Size(148, 26);
-            this.vehicleStrip.Text = "Vehicle";
-            // 
-            // purchaseVehicleToolStripMenuItem
-            // 
-            this.purchaseVehicleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.onLotToolStripMenuItem1,
-            this.offLotToolStripMenuItem,
-            this.purchasedToolStripMenuItem,
-            this.allToolStripMenuItem});
-            this.purchaseVehicleToolStripMenuItem.Name = "purchaseVehicleToolStripMenuItem";
-            this.purchaseVehicleToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.purchaseVehicleToolStripMenuItem.Text = "Display";
-            // 
-            // onLotToolStripMenuItem1
-            // 
-            this.onLotToolStripMenuItem1.Name = "onLotToolStripMenuItem1";
-            this.onLotToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
-            this.onLotToolStripMenuItem1.Text = "On lot";
-            // 
-            // offLotToolStripMenuItem
-            // 
-            this.offLotToolStripMenuItem.Name = "offLotToolStripMenuItem";
-            this.offLotToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.offLotToolStripMenuItem.Text = "Off Lot";
-            // 
-            // purchasedToolStripMenuItem
-            // 
-            this.purchasedToolStripMenuItem.Name = "purchasedToolStripMenuItem";
-            this.purchasedToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.purchasedToolStripMenuItem.Text = "Purchased";
-            // 
-            // allToolStripMenuItem
-            // 
-            this.allToolStripMenuItem.Name = "allToolStripMenuItem";
-            this.allToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.allToolStripMenuItem.Text = "All";
-            // 
-            // displayToolStripMenuItem1
-            // 
-            this.displayToolStripMenuItem1.Name = "displayToolStripMenuItem1";
-            this.displayToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
-            this.displayToolStripMenuItem1.Text = "Purchased Vehicles";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(127, 25);
+            this.viewToolStripMenuItem.Text = "Make Purchase";
+            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
             // 
             // templatesToolStripMenuItem
             // 
@@ -231,7 +169,8 @@
             this.findInventoryToolStripMenuItem,
             this.addCustomerTestToolStripMenuItem,
             this.addEmployeeTestToolStripMenuItem,
-            this.addInventoryTestToolStripMenuItem});
+            this.addInventoryTestToolStripMenuItem,
+            this.displayToolStripMenuItem});
             this.templatesToolStripMenuItem.Name = "templatesToolStripMenuItem";
             this.templatesToolStripMenuItem.Size = new System.Drawing.Size(73, 25);
             this.templatesToolStripMenuItem.Text = "Templates";
@@ -278,6 +217,13 @@
             this.addInventoryTestToolStripMenuItem.Text = "Add Inventory Test";
             this.addInventoryTestToolStripMenuItem.Click += new System.EventHandler(this.addInventoryTestToolStripMenuItem_Click);
             // 
+            // displayToolStripMenuItem
+            // 
+            this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
+            this.displayToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.displayToolStripMenuItem.Text = "Display";
+            this.displayToolStripMenuItem.Click += new System.EventHandler(this.displayToolStripMenuItem_Click);
+            // 
             // tabTables
             // 
             this.tabTables.Controls.Add(this.tabCustomer);
@@ -308,7 +254,7 @@
             // dgCustomer
             // 
             this.dgCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCustomer.Location = new System.Drawing.Point(1, 1);
+            this.dgCustomer.Location = new System.Drawing.Point(-2, 1);
             this.dgCustomer.Name = "dgCustomer";
             this.dgCustomer.Size = new System.Drawing.Size(761, 259);
             this.dgCustomer.TabIndex = 0;
@@ -360,10 +306,11 @@
             // lblPosition
             // 
             this.lblPosition.AutoSize = true;
-            this.lblPosition.Location = new System.Drawing.Point(750, 334);
+            this.lblPosition.Location = new System.Drawing.Point(760, 330);
             this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(0, 13);
+            this.lblPosition.Size = new System.Drawing.Size(44, 13);
             this.lblPosition.TabIndex = 2;
+            this.lblPosition.Text = "Position";
             // 
             // btnRefresh
             // 
@@ -375,13 +322,36 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.SystemColors.Window;
+            this.lblUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblUsername.Location = new System.Drawing.Point(654, 11);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(60, 13);
+            this.lblUsername.TabIndex = 4;
+            this.lblUsername.Text = "User Name";
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(754, 1);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // Main_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 356);
-            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblPosition);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.tabTables);
             this.Controls.Add(this.CarMenuStrip);
             this.MainMenuStrip = this.CarMenuStrip;
@@ -415,19 +385,10 @@
         private System.Windows.Forms.ToolStripMenuItem deleteStrip;
         private System.Windows.Forms.ToolStripMenuItem refreshStrip;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem customerStrip;
-        private System.Windows.Forms.ToolStripMenuItem employeeStrip;
-        private System.Windows.Forms.ToolStripMenuItem vehicleStrip;
-        private System.Windows.Forms.ToolStripMenuItem purchaseVehicleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem onLotToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem offLotToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem purchasedToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem displayToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem templatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem findCustomerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem findEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem findInventoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem allToolStripMenuItem;
         private System.Windows.Forms.TabControl tabTables;
         private System.Windows.Forms.TabPage tabCustomer;
         private System.Windows.Forms.TabPage tabInventory;
@@ -455,6 +416,10 @@
         private System.Windows.Forms.DataGridView dgEmp;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.ToolStripMenuItem stripAddCustomer;
+        private System.Windows.Forms.ToolStripMenuItem displayToolStripMenuItem;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
        // private cardealershipDataSetTestAgainTableAdapters.customerTableAdapter customerTableAdapter1;
 
     }

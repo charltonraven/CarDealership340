@@ -97,7 +97,7 @@
             // 
             this.txtID.Location = new System.Drawing.Point(118, 46);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(66, 20);
+            this.txtID.Size = new System.Drawing.Size(139, 20);
             this.txtID.TabIndex = 7;
             // 
             // btnVehCommit

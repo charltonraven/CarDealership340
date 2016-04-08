@@ -31,8 +31,9 @@ namespace CarDealership
         private void btnEmpAdd_Click(object sender, EventArgs e)
         {
 
-            Employee employee = new Employee(txtEmpNum.Text, txtEmpFName.Text, txtEmpLName.Text, txtEmpHireDate.Text, txtSalary.Text,txtPosition.Text, txtPassword.Text);
+            Employee employee = new Employee(txtEmpNum.Text, txtEmpFName.Text, txtEmpLName.Text, txtEmpHireDate.Text, txtSalary.Text,txtPosition.Text);
             Add newEmployee = new Add(employee);
+            this.Close();
             //String myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
             //MySqlConnection conn = new MySqlConnection(myConnString);
 

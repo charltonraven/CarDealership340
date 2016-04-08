@@ -21,25 +21,7 @@ namespace CarDealership
         private void dgDisplay_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            Point pt = dgDisplay.PointToClient(MousePosition);
-            DataGridView.HitTestInfo hti = dgDisplay.HitTest(pt.X, pt.Y);
-            if (hti.Type == DataGridViewHitTestType.Cell)
-            {
-                dgDisplay.ClearSelection();
-                dgDisplay.CurrentCell = dgDisplay.Rows[hti.RowIndex].Cells[hti.ColumnIndex];
-                dgDisplay.Rows[hti.RowIndex].Selected = true;
-
-                String VINnumber = dgDisplay.Rows[hti.RowIndex].Cells[0].Value.ToString();
-                String Year = dgDisplay.Rows[hti.RowIndex].Cells[1].Value.ToString();
-                String Make = dgDisplay.Rows[hti.RowIndex].Cells[2].Value.ToString();
-                String Model = dgDisplay.Rows[hti.RowIndex].Cells[3].Value.ToString();
-                String Quality = dgDisplay.Rows[hti.RowIndex].Cells[4].Value.ToString();
-                String Color = dgDisplay.Rows[hti.RowIndex].Cells[5].Value.ToString();
-                String CustomerID = dgDisplay.Rows[hti.RowIndex].Cells[6].Value.ToString();
-                EditInventory ei = new EditInventory(VINnumber, Year, Make, Model, Quality, Color, CustomerID);
-                ei.Show();
-                this.Close();
-            }
+       
         }
 
         private void DisplayI_Load(object sender, EventArgs e)
@@ -47,10 +29,63 @@ namespace CarDealership
             String myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
             MySqlConnection conn = new MySqlConnection(myConnString);
             conn.Open();
-            FindInventory.FindInventorySQL = new MySqlCommand(FindInventory.FindInventoryStatement, conn);
-            FindInventory.MyAdapter.SelectCommand = FindInventory.FindInventorySQL;
-            FindInventory.MyAdapter.Fill(FindInventory.dTable);
-            dgDisplay.DataSource = FindInventory.dTable;
+
+
+
+            DataGridViewCheckBoxColumn column = new DataGridViewCheckBoxColumn();
+            column.HeaderText = "Purchase Vehicles";
+            column.Name = "colPuchaseVehicles";
+         
+
+            DataTable dTable=new DataTable();
+            MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+
+            dgDisplay.Columns.Insert(0, column);
+            String FindInventorySR = "Select * from Inventory Where CustomerID IS NULL;";
+            MySqlCommand NotPurchased = new MySqlCommand(FindInventorySR, conn);
+            MyAdapter.SelectCommand = NotPurchased;
+            MyAdapter.Fill(dTable);
+            dgDisplay.DataSource = dTable;
+      
+            
+
+        }
+
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+            List<DataGridViewRow> CheckedColumns = new List<DataGridViewRow>();
+            int i = 1;
+            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
+            MySqlConnection conn = new MySqlConnection(myConnString);
+            conn.Open();
+
+            foreach (DataGridViewRow row in dgDisplay.Rows)
+            {
+                
+                DataGridViewCheckBoxCell chk = row.Cells[0] as DataGridViewCheckBoxCell;
+                if (Convert.ToBoolean(chk.Value) == true)
+                {
+                    String VINnumber = row.Cells[1].Value.ToString();
+
+                    String Statement = "UPDATE INVENTORY SET CustomerID=" + AddCustomer.CustomerID + " where VINnumber='" + VINnumber+"';";
+                    MySqlCommand UpdateInventory = new MySqlCommand(Statement, conn);
+                    UpdateInventory.ExecuteNonQuery();
+
+                 
+
+                }
+                i++;
+            }
+
+            this.Close();
+            conn.Close();
+            
+        }
+
+        private void dgDisplay_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+           
+            
         }
     }
 }

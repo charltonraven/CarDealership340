@@ -29,23 +29,36 @@
         private void InitializeComponent()
         {
             this.dgDisplay = new System.Windows.Forms.DataGridView();
+            this.btnPurchase = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgDisplay)).BeginInit();
             this.SuspendLayout();
             // 
             // dgDisplay
             // 
             this.dgDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDisplay.Location = new System.Drawing.Point(5, 3);
+            this.dgDisplay.Location = new System.Drawing.Point(0, 2);
             this.dgDisplay.Name = "dgDisplay";
-            this.dgDisplay.Size = new System.Drawing.Size(762, 152);
+            this.dgDisplay.Size = new System.Drawing.Size(753, 270);
             this.dgDisplay.TabIndex = 0;
             this.dgDisplay.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDisplay_CellContentClick);
+            this.dgDisplay.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDisplay_CellValueChanged);
+            // 
+            // btnPurchase
+            // 
+            this.btnPurchase.Location = new System.Drawing.Point(12, 278);
+            this.btnPurchase.Name = "btnPurchase";
+            this.btnPurchase.Size = new System.Drawing.Size(75, 23);
+            this.btnPurchase.TabIndex = 1;
+            this.btnPurchase.Text = "Purchase";
+            this.btnPurchase.UseVisualStyleBackColor = true;
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // DisplayI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 159);
+            this.ClientSize = new System.Drawing.Size(755, 304);
+            this.Controls.Add(this.btnPurchase);
             this.Controls.Add(this.dgDisplay);
             this.Name = "DisplayI";
             this.Text = "DisplayI";
@@ -58,5 +71,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgDisplay;
+        private System.Windows.Forms.Button btnPurchase;
     }
 }
