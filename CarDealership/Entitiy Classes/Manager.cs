@@ -1,37 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarDealership
 {
-    class Manager
+    internal class Manager
     {
-        public char EmployeeID;
         public char EmployeeFirstName;
+        public char EmployeeID;
         public char EmployeeLastName;
         public DateTime HireDate;
+        public string Password;
+        public string Position = "Manager";
         public char Salary;
-        public String Position = "Manager";
-        public String Password;
 
 
-         public Manager(char EmployeeID, char EmployeeFirstName, char EmployeeLastName,
-            DateTime HireDate, char Salary, String Password)
+        public Manager(char EmployeeID, char EmployeeFirstName, char EmployeeLastName,
+            DateTime HireDate, char Salary, string Password)
         {
             this.EmployeeID = EmployeeID;
             this.EmployeeFirstName = EmployeeFirstName;
             this.EmployeeLastName = EmployeeLastName;
             this.HireDate = HireDate;
             this.Salary = Salary;
-            this.Position="Manager";
+            Position = "Manager";
             this.Password = Password;
-            
-
-
         }
     }
-
-
 }

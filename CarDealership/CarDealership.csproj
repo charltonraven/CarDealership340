@@ -57,40 +57,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChangePassword.cs">
+    <Compile Include="AddC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChangePassword.Designer.cs">
+    <Compile Include="AddC.Designer.cs">
+      <DependentUpon>AddC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Display\DisplayInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Display\DisplayInvoices.Designer.cs">
+      <DependentUpon>DisplayInvoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entitiy Classes\Bluebook.cs" />
+    <Compile Include="UI\General\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\General\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Control Classes\Add.cs" />
-    <Compile Include="Display.cs">
+    <Compile Include="Display\Display.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Display.Designer.cs">
+    <Compile Include="Display\Display.Designer.cs">
       <DependentUpon>Display.cs</DependentUpon>
     </Compile>
-    <Compile Include="Display\DisplayI.cs">
+    <Compile Include="Display\DisplayToSale.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Display\DisplayI.Designer.cs">
-      <DependentUpon>DisplayI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Display\DisplayE.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Display\DisplayE.Designer.cs">
-      <DependentUpon>DisplayE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Display\DisplayC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Display\DisplayC.Designer.cs">
-      <DependentUpon>DisplayC.cs</DependentUpon>
+    <Compile Include="Display\DisplayToSale.Designer.cs">
+      <DependentUpon>DisplayToSale.cs</DependentUpon>
     </Compile>
     <Compile Include="Control Classes\Edit.cs" />
     <Compile Include="Entitiy Classes\Inventory.cs" />
     <Compile Include="Control Classes\Find.cs" />
+    <Compile Include="Entitiy Classes\Invoices.cs" />
+    <Compile Include="UI\General\Purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\General\Purchase.Designer.cs">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\General\TradeIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\General\TradeIn.Designer.cs">
+      <DependentUpon>TradeIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Add\AddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,16 +120,16 @@
     <Compile Include="Entitiy Classes\CreditCard.cs" />
     <Compile Include="Entitiy Classes\Customer.cs" />
     <Compile Include="Entitiy Classes\Employee.cs" />
-    <Compile Include="MainThang.cs">
+    <Compile Include="UI\General\MainThang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainThang.Designer.cs">
+    <Compile Include="UI\General\MainThang.Designer.cs">
       <DependentUpon>MainThang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="UI\General\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="UI\General\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Entitiy Classes\Manager.cs" />
@@ -164,20 +178,32 @@
     <Compile Include="UI\Find\FindInventory.Designer.cs">
       <DependentUpon>FindInventory.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ChangePassword.resx">
+    <Compile Include="UI\General\WeeklySales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\General\WeeklySales.Designer.cs">
+      <DependentUpon>WeeklySales.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddC.resx">
+      <DependentUpon>AddC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\General\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Display.resx">
+    <EmbeddedResource Include="Display\Display.resx">
       <DependentUpon>Display.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Display\DisplayI.resx">
-      <DependentUpon>DisplayI.cs</DependentUpon>
+    <EmbeddedResource Include="Display\DisplayInvoices.resx">
+      <DependentUpon>DisplayInvoices.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Display\DisplayE.resx">
-      <DependentUpon>DisplayE.cs</DependentUpon>
+    <EmbeddedResource Include="Display\DisplayToSale.resx">
+      <DependentUpon>DisplayToSale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Display\DisplayC.resx">
-      <DependentUpon>DisplayC.cs</DependentUpon>
+    <EmbeddedResource Include="UI\General\Purchase.resx">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\General\TradeIn.resx">
+      <DependentUpon>TradeIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Add\AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
@@ -185,10 +211,10 @@
     <EmbeddedResource Include="UI\Add\AddInventory.resx">
       <DependentUpon>AddInventory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="UI\General\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainThang.resx">
+    <EmbeddedResource Include="UI\General\MainThang.resx">
       <DependentUpon>MainThang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -220,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Find\FindInventory.resx">
       <DependentUpon>FindInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\General\WeeklySales.resx">
+      <DependentUpon>WeeklySales.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

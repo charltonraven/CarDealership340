@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -16,8 +10,8 @@ namespace CarDealership
         public static DataTable dTable = new DataTable();
         public static MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
         public static MySqlCommand FindInventorySQL;
-        public static String FindInventoryStatement;
-   
+        public static string FindInventoryStatement;
+
         public FindInventory()
         {
             InitializeComponent();
@@ -25,7 +19,6 @@ namespace CarDealership
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void btnVehCancel_Click(object sender, EventArgs e)
@@ -35,45 +28,64 @@ namespace CarDealership
 
         private void FindInventory_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnVehAdd_Click(object sender, EventArgs e)
         {
-            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
-            MySqlConnection conn = new MySqlConnection(myConnString);
 
-            try
-            {
+            //Had to make a connection to the database directly inorder to make this work
+            //That is the only way that we found to do it.
+
+            //Creates connection
+       
+            var myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
+            var conn = new MySqlConnection(myConnString);
+
+            
                 conn.Open();
-            }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
+            
+            
+            
+            //If we are adding a new vehicle the damange will be 0
+            if (cbQuality.Text == "New")
             {
-                switch (ex.Number)
-                {
-                    case 0:
-                        MessageBox.Show("Cannot connect to server. ");
-                        break;
-                    case 1045:
-                        MessageBox.Show("Invalid Username/Password, Please try again");
-                        break;
-                }
+                cbDamaged.Text = "0";
             }
 
-            FindInventoryStatement = "Select * from INVENTORY Where CustomerID='" + txtCustomerID.Text + "' OR VINnumber='" + txtVin.Text +
-                "' OR Year='" + ddYear.Text + "' OR Model='" + ddModel.Text + "' OR Make='"+ddMake.Text+"'OR Quality='"+ddCondition.Text+"' OR Color='"+txtColor.Text+"';";
+            //uses the String Statement and the SQL command hold and execute for the Find Customer
+            //which is then accessed by the Display form
+            FindInventoryStatement = "Select * from INVENTORY Where CustomerID='" + txtCustomerID.Text +
+                                     "' OR VINnumber='" + txtVin.Text +
+                                     "' OR Year='" + txtYear.Text + "' OR Model='" + txtModel.Text + "' OR Make='" +
+                                    cbMake.Text + "' OR Color='" + txtColor.Text +
+                                     "' OR  Quality='" + cbQuality.Text + "' AND Damaged="+cbDamaged.Text+";";
 
             FindInventorySQL = new MySqlCommand(FindInventoryStatement, conn);
             MyAdapter.SelectCommand = FindInventorySQL;
-           // DisplayI DisplayInventory = new DisplayI();
-           // DisplayInventory.Show();
-            Display DisplayFound = new Display();
+            //Opens Display Form
+            var DisplayFound = new Display();
             DisplayFound.Show();
-            this.Hide();
+            Hide();
 
 
-            this.Close();
+            Close();
+        }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbQuality_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbQuality.Text == "New")
+            {
+                cbDamaged.Enabled = false;
+            }
+            else if (cbQuality.Text == "Used")
+            {
+                cbDamaged.Enabled = true;
+            }
         }
     }
 }

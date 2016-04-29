@@ -142,11 +142,11 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(190, 405);
+            this.btnCancel.Location = new System.Drawing.Point(389, 405);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 16;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Close";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -166,12 +166,13 @@
             // 
             // btnCusDelete
             // 
-            this.btnCusDelete.Location = new System.Drawing.Point(343, 405);
+            this.btnCusDelete.Location = new System.Drawing.Point(222, 405);
             this.btnCusDelete.Name = "btnCusDelete";
             this.btnCusDelete.Size = new System.Drawing.Size(75, 23);
             this.btnCusDelete.TabIndex = 17;
             this.btnCusDelete.Text = "Delete";
             this.btnCusDelete.UseVisualStyleBackColor = true;
+            this.btnCusDelete.Click += new System.EventHandler(this.btnCusDelete_Click);
             // 
             // lblPassword
             // 
@@ -186,6 +187,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(134, 377);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(163, 20);
             this.txtPassword.TabIndex = 19;
             // 

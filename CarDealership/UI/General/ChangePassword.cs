@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -13,7 +6,8 @@ namespace CarDealership
 {
     public partial class ChangePassword : Form
     {
-        private static int i = 0;
+        private static int i;
+
         public ChangePassword()
         {
             InitializeComponent();
@@ -21,18 +15,19 @@ namespace CarDealership
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
-            MySqlConnection conn = new MySqlConnection(myConnString);
+            var myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
+            var conn = new MySqlConnection(myConnString);
 
             conn.Open();
 
-            String password = "Select Password FROM EMPLOYEE Where EmployeeID=" + Login.EmployeeID + " AND BINARY Password='" + txtCurrentPassword.Text + "';";
+            String password = "Select Password FROM EMPLOYEE Where EmployeeID=" + Login.EmployeeID +
+                           " AND BINARY Password='" + txtCurrentPassword.Text + "';";
             MySqlDataReader MyReader;
-            MySqlCommand PasswordMatch = new MySqlCommand(password, conn);
+            var PasswordMatch = new MySqlCommand(password, conn);
             MyReader = PasswordMatch.ExecuteReader();
 
-          
-            int count = 0;
+
+            var count = 0;
 
             if (i <= 3)
             {
@@ -45,19 +40,17 @@ namespace CarDealership
                 if (count == 1)
                 {
                     MyReader.Close();
-                    String UpdatePassword = "UPDATE EMPLOYEE SET Password='" + txtNewPassword.Text + "' where EmployeeID=" + Login.EmployeeID + ";";
-                    MySqlCommand UpdatePasswordSQL = new MySqlCommand(UpdatePassword, conn);
-                    UpdatePasswordSQL.ExecuteNonQuery();
+                    Edit ChangePassword=new Edit();
+                    ChangePassword.ChangePassword(txtNewPassword.Text);
                     MessageBox.Show("Password Changed");
-                    this.Close();
+                    Close();
                 }
                 else
                 {
                     if (i == 3)
                     {
-
                         MessageBox.Show("Too Many Tries, Goodbye");
-                        this.Close();
+                        Close();
                     }
                     else if (i < 3)
                     {
@@ -65,11 +58,8 @@ namespace CarDealership
                         txtCurrentPassword.Clear();
                         txtNewPassword.Clear();
                     }
-                    
                 }
             }
-           
-
-        }
         }
     }
+}

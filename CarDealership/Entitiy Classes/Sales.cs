@@ -1,35 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarDealership
 {
-    class Sales
+    internal class Sales
     {
+        private double commission;
+        public char EmployeeFirstName;
 
         public char EmployeeID;
-        public char EmployeeFirstName;
         public char EmployeeLastName;
         public DateTime HireDate;
+        public string Position = "Sales";
         public char Salary;
-        public String Position = "Sales";
-        private double commission;
-        private double amountOfSales;
-
-        public double AmountOfSales
-        {
-            get {
-                return amountOfSales;
-            }
-            set {
-                amountOfSales = value;
-            }
-        }
 
 
-         public Sales(char EmployeeID, char EmployeeFirstName, char EmployeeLastName,
+        public Sales(char EmployeeID, char EmployeeFirstName, char EmployeeLastName,
             DateTime HireDate, char Salary)
         {
             this.EmployeeID = EmployeeID;
@@ -37,31 +22,32 @@ namespace CarDealership
             this.EmployeeLastName = EmployeeLastName;
             this.HireDate = HireDate;
             this.Salary = Salary;
-            amountOfSales = 0;
-            
+            AmountOfSales = 0;
         }
-         public void addSales(double newSaleAmount)
-         {
-             amountOfSales += newSaleAmount;
 
-             reCalculateCommission();
-         }
-         public void reCalculateCommission()
-         {
-             if (amountOfSales > 200000)
-             {
-                 commission = amountOfSales * .1;
-             }
-             else if (amountOfSales > 100000)
-             {
-                 commission = amountOfSales * .07;
-             }
-             else
-             {
-                 commission = amountOfSales * .05;
-             }
-         }
+        public double AmountOfSales { get; set; }
 
+        public void addSales(double newSaleAmount)
+        {
+            AmountOfSales += newSaleAmount;
 
+            reCalculateCommission();
+        }
+
+        public void reCalculateCommission()
+        {
+            if (AmountOfSales > 200000)
+            {
+                commission = AmountOfSales*.1;
+            }
+            else if (AmountOfSales > 100000)
+            {
+                commission = AmountOfSales*.07;
+            }
+            else
+            {
+                commission = AmountOfSales*.05;
+            }
+        }
     }
 }

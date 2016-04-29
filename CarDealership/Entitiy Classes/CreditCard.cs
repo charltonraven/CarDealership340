@@ -1,36 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CarDealership
 {
-    class CreditCard
+    //Entity Class to create Credit Objects for Purchasing purposes
+    internal class CreditCard
     {
-        public char CardID;
-        public char CardNumber;
-        public char NameOnCard;
-        public char CVC;
-        public char ExpirationDate;
-        public char PIN;
+        public String CardID;
+        public String CardNumber;
+        public String CVV;
+        public String ExpirationDate;
+        public String NameOnCard;
+        public String CustomerID;
+      
 
 
-
-
-        public CreditCard(char CardID, char CardNumber, char NameOnCard,char CVC, char ExpirationDate,
-            char PIN)
+        public CreditCard(String CardNumber, String NameOnCard, String CVV, String ExpirationDate,String CustomerID)
         {
-            this.CardID = CardID;
+        
             this.CardNumber = CardNumber;
             this.NameOnCard = NameOnCard;
-            this.CVC = CVC;
+            this.CVV = CVV;
             this.ExpirationDate = ExpirationDate;
-            this.PIN = PIN;
-
+            this.CustomerID = CustomerID;
         }
+        public CreditCard()
+        {
 
+         
+        }
     }
-
-    }
-
+}

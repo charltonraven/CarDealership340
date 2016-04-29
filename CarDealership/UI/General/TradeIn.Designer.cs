@@ -1,6 +1,6 @@
 ﻿namespace CarDealership
 {
-    partial class AddInventory
+    partial class TradeIn
     {
         /// <summary>
         /// Required designer variable.
@@ -37,26 +37,26 @@
             this.btnVehCancel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtVehicleColor = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbMake = new System.Windows.Forms.ComboBox();
-            this.txtModel = new System.Windows.Forms.TextBox();
             this.txtYear = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ddMake = new System.Windows.Forms.ComboBox();
+            this.cbDamaged = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 46);
+            this.label1.Location = new System.Drawing.Point(28, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "VehicleID";
+            this.label1.Text = "VIN Number";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 140);
+            this.label2.Location = new System.Drawing.Point(59, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 1;
@@ -65,7 +65,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 188);
+            this.label4.Location = new System.Drawing.Point(59, 190);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 3;
@@ -74,7 +74,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(42, 90);
+            this.label7.Location = new System.Drawing.Point(59, 101);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(29, 13);
             this.label7.TabIndex = 6;
@@ -82,15 +82,14 @@
             // 
             // txtVehicleID
             // 
-            this.txtVehicleID.Location = new System.Drawing.Point(118, 46);
+            this.txtVehicleID.Location = new System.Drawing.Point(109, 46);
             this.txtVehicleID.Name = "txtVehicleID";
-            this.txtVehicleID.Size = new System.Drawing.Size(136, 20);
+            this.txtVehicleID.Size = new System.Drawing.Size(137, 20);
             this.txtVehicleID.TabIndex = 7;
-            this.txtVehicleID.TextChanged += new System.EventHandler(this.txtVehicleID_TextChanged);
             // 
             // btnVehAdd
             // 
-            this.btnVehAdd.Location = new System.Drawing.Point(22, 350);
+            this.btnVehAdd.Location = new System.Drawing.Point(18, 342);
             this.btnVehAdd.Name = "btnVehAdd";
             this.btnVehAdd.Size = new System.Drawing.Size(75, 23);
             this.btnVehAdd.TabIndex = 15;
@@ -100,18 +99,18 @@
             // 
             // btnVehCancel
             // 
-            this.btnVehCancel.Location = new System.Drawing.Point(249, 350);
+            this.btnVehCancel.Location = new System.Drawing.Point(195, 342);
             this.btnVehCancel.Name = "btnVehCancel";
             this.btnVehCancel.Size = new System.Drawing.Size(75, 23);
             this.btnVehCancel.TabIndex = 16;
-            this.btnVehCancel.Text = "Close";
+            this.btnVehCancel.Text = "Cancel";
             this.btnVehCancel.UseVisualStyleBackColor = true;
             this.btnVehCancel.Click += new System.EventHandler(this.btnVehCancel_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 249);
+            this.label3.Location = new System.Drawing.Point(54, 274);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 17;
@@ -119,31 +118,38 @@
             // 
             // txtVehicleColor
             // 
-            this.txtVehicleColor.Location = new System.Drawing.Point(118, 242);
+            this.txtVehicleColor.Location = new System.Drawing.Point(109, 267);
             this.txtVehicleColor.Name = "txtVehicleColor";
             this.txtVehicleColor.Size = new System.Drawing.Size(120, 20);
             this.txtVehicleColor.TabIndex = 21;
             // 
-            // txtPrice
+            // txtYear
             // 
-            this.txtPrice.Location = new System.Drawing.Point(118, 296);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(120, 20);
-            this.txtPrice.TabIndex = 23;
+            this.txtYear.Location = new System.Drawing.Point(109, 94);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(100, 20);
+            this.txtYear.TabIndex = 32;
             // 
-            // label6
+            // txtModel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(40, 303);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Price";
+            this.txtModel.Location = new System.Drawing.Point(109, 183);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(100, 20);
+            this.txtModel.TabIndex = 34;
             // 
-            // cbMake
+            // label8
             // 
-            this.cbMake.FormattingEnabled = true;
-            this.cbMake.Items.AddRange(new object[] {
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(10, 235);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 13);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Damaged Scale";
+            // 
+            // ddMake
+            // 
+            this.ddMake.FormattingEnabled = true;
+            this.ddMake.Items.AddRange(new object[] {
             "Audi",
             "BMW",
             "Bugatti",
@@ -157,35 +163,34 @@
             "Mitsubishi",
             "Nissan",
             "Toyota"});
-            this.cbMake.Location = new System.Drawing.Point(118, 132);
-            this.cbMake.Name = "cbMake";
-            this.cbMake.Size = new System.Drawing.Size(121, 21);
-            this.cbMake.TabIndex = 25;
+            this.ddMake.Location = new System.Drawing.Point(109, 138);
+            this.ddMake.Name = "ddMake";
+            this.ddMake.Size = new System.Drawing.Size(121, 21);
+            this.ddMake.TabIndex = 39;
             // 
-            // txtModel
+            // cbDamaged
             // 
-            this.txtModel.Location = new System.Drawing.Point(118, 188);
-            this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(121, 20);
-            this.txtModel.TabIndex = 26;
+            this.cbDamaged.FormattingEnabled = true;
+            this.cbDamaged.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cbDamaged.Location = new System.Drawing.Point(109, 227);
+            this.cbDamaged.Name = "cbDamaged";
+            this.cbDamaged.Size = new System.Drawing.Size(31, 21);
+            this.cbDamaged.TabIndex = 40;
             // 
-            // txtYear
-            // 
-            this.txtYear.Location = new System.Drawing.Point(118, 87);
-            this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(136, 20);
-            this.txtYear.TabIndex = 27;
-            // 
-            // AddInventory
+            // TradeIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 407);
-            this.Controls.Add(this.txtYear);
+            this.ClientSize = new System.Drawing.Size(347, 460);
+            this.Controls.Add(this.cbDamaged);
+            this.Controls.Add(this.ddMake);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.txtModel);
-            this.Controls.Add(this.cbMake);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtYear);
             this.Controls.Add(this.txtVehicleColor);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnVehCancel);
@@ -195,8 +200,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AddInventory";
-            this.Text = "Add Vehicle";
+            this.Name = "TradeIn";
+            this.Text = "Trade-In";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.AddInventory_Load);
             this.ResumeLayout(false);
@@ -215,10 +220,10 @@
         private System.Windows.Forms.Button btnVehCancel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtVehicleColor;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbMake;
-        private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox ddMake;
+        private System.Windows.Forms.ComboBox cbDamaged;
     }
 }

@@ -33,20 +33,10 @@
             this.fileMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.stripAddCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.editStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.findStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.printStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.templatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.findCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.findEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.findInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addCustomerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addEmployeeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addInventoryTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.displayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabTables = new System.Windows.Forms.TabControl();
             this.tabCustomer = new System.Windows.Forms.TabPage();
             this.dgCustomer = new System.Windows.Forms.DataGridView();
@@ -80,8 +70,7 @@
             this.CarMenuStrip.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CarMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenuStrip,
-            this.viewToolStripMenuItem,
-            this.templatesToolStripMenuItem});
+            this.viewToolStripMenuItem});
             this.CarMenuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.CarMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.CarMenuStrip.Name = "CarMenuStrip";
@@ -95,9 +84,7 @@
             this.fileMenuStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stripAddCustomer,
             this.editStrip,
-            this.findStrip,
             this.printStrip,
-            this.deleteStrip,
             this.refreshStrip,
             this.changePasswordToolStripMenuItem});
             this.fileMenuStrip.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,24 +107,11 @@
             this.editStrip.Text = "Find/Edit";
             this.editStrip.Click += new System.EventHandler(this.editStrip_Click);
             // 
-            // findStrip
-            // 
-            this.findStrip.Name = "findStrip";
-            this.findStrip.Size = new System.Drawing.Size(203, 26);
-            this.findStrip.Text = "Find";
-            this.findStrip.Click += new System.EventHandler(this.findToolStripMenuItem2_Click);
-            // 
             // printStrip
             // 
             this.printStrip.Name = "printStrip";
             this.printStrip.Size = new System.Drawing.Size(203, 26);
             this.printStrip.Text = "Print";
-            // 
-            // deleteStrip
-            // 
-            this.deleteStrip.Name = "deleteStrip";
-            this.deleteStrip.Size = new System.Drawing.Size(203, 26);
-            this.deleteStrip.Text = "Delete";
             // 
             // refreshStrip
             // 
@@ -160,69 +134,6 @@
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(127, 25);
             this.viewToolStripMenuItem.Text = "Make Purchase";
             this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
-            // 
-            // templatesToolStripMenuItem
-            // 
-            this.templatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.findCustomerToolStripMenuItem,
-            this.findEmployeeToolStripMenuItem,
-            this.findInventoryToolStripMenuItem,
-            this.addCustomerTestToolStripMenuItem,
-            this.addEmployeeTestToolStripMenuItem,
-            this.addInventoryTestToolStripMenuItem,
-            this.displayToolStripMenuItem});
-            this.templatesToolStripMenuItem.Name = "templatesToolStripMenuItem";
-            this.templatesToolStripMenuItem.Size = new System.Drawing.Size(73, 25);
-            this.templatesToolStripMenuItem.Text = "Templates";
-            // 
-            // findCustomerToolStripMenuItem
-            // 
-            this.findCustomerToolStripMenuItem.Name = "findCustomerToolStripMenuItem";
-            this.findCustomerToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.findCustomerToolStripMenuItem.Text = "Find Customer";
-            this.findCustomerToolStripMenuItem.Click += new System.EventHandler(this.findCustomerToolStripMenuItem_Click);
-            // 
-            // findEmployeeToolStripMenuItem
-            // 
-            this.findEmployeeToolStripMenuItem.Name = "findEmployeeToolStripMenuItem";
-            this.findEmployeeToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.findEmployeeToolStripMenuItem.Text = "Find Employee";
-            this.findEmployeeToolStripMenuItem.Click += new System.EventHandler(this.findEmployeeToolStripMenuItem_Click);
-            // 
-            // findInventoryToolStripMenuItem
-            // 
-            this.findInventoryToolStripMenuItem.Name = "findInventoryToolStripMenuItem";
-            this.findInventoryToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.findInventoryToolStripMenuItem.Text = "Find Inventory";
-            this.findInventoryToolStripMenuItem.Click += new System.EventHandler(this.findInventoryToolStripMenuItem_Click);
-            // 
-            // addCustomerTestToolStripMenuItem
-            // 
-            this.addCustomerTestToolStripMenuItem.Name = "addCustomerTestToolStripMenuItem";
-            this.addCustomerTestToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.addCustomerTestToolStripMenuItem.Text = "Add Customer Test";
-            this.addCustomerTestToolStripMenuItem.Click += new System.EventHandler(this.addCustomerTestToolStripMenuItem_Click);
-            // 
-            // addEmployeeTestToolStripMenuItem
-            // 
-            this.addEmployeeTestToolStripMenuItem.Name = "addEmployeeTestToolStripMenuItem";
-            this.addEmployeeTestToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.addEmployeeTestToolStripMenuItem.Text = "Add Employee Test";
-            this.addEmployeeTestToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeTestToolStripMenuItem_Click);
-            // 
-            // addInventoryTestToolStripMenuItem
-            // 
-            this.addInventoryTestToolStripMenuItem.Name = "addInventoryTestToolStripMenuItem";
-            this.addInventoryTestToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.addInventoryTestToolStripMenuItem.Text = "Add Inventory Test";
-            this.addInventoryTestToolStripMenuItem.Click += new System.EventHandler(this.addInventoryTestToolStripMenuItem_Click);
-            // 
-            // displayToolStripMenuItem
-            // 
-            this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
-            this.displayToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.displayToolStripMenuItem.Text = "Display";
-            this.displayToolStripMenuItem.Click += new System.EventHandler(this.displayToolStripMenuItem_Click);
             // 
             // tabTables
             // 
@@ -254,9 +165,9 @@
             // dgCustomer
             // 
             this.dgCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCustomer.Location = new System.Drawing.Point(-2, 1);
+            this.dgCustomer.Location = new System.Drawing.Point(-18, 1);
             this.dgCustomer.Name = "dgCustomer";
-            this.dgCustomer.Size = new System.Drawing.Size(761, 259);
+            this.dgCustomer.Size = new System.Drawing.Size(784, 259);
             this.dgCustomer.TabIndex = 0;
             this.dgCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCustomer_CellClick);
             this.dgCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
@@ -279,7 +190,7 @@
             this.dgInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgInventory.Location = new System.Drawing.Point(-2, -2);
             this.dgInventory.Name = "dgInventory";
-            this.dgInventory.Size = new System.Drawing.Size(679, 259);
+            this.dgInventory.Size = new System.Drawing.Size(764, 259);
             this.dgInventory.TabIndex = 0;
             this.dgInventory.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventory_CellDoubleClick);
             // 
@@ -380,15 +291,9 @@
         private System.Windows.Forms.MenuStrip CarMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem editStrip;
-        private System.Windows.Forms.ToolStripMenuItem findStrip;
         private System.Windows.Forms.ToolStripMenuItem printStrip;
-        private System.Windows.Forms.ToolStripMenuItem deleteStrip;
         private System.Windows.Forms.ToolStripMenuItem refreshStrip;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem templatesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem findCustomerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem findEmployeeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem findInventoryToolStripMenuItem;
         private System.Windows.Forms.TabControl tabTables;
         private System.Windows.Forms.TabPage tabCustomer;
         private System.Windows.Forms.TabPage tabInventory;
@@ -409,14 +314,10 @@
       //  private System.Windows.Forms.DataGridViewTextBoxColumn positionDataGridViewTextBoxColumn;
        // private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label lblPosition;
-        private System.Windows.Forms.ToolStripMenuItem addCustomerTestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addEmployeeTestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addInventoryTestToolStripMenuItem;
         private System.Windows.Forms.DataGridView dgCustomer;
         private System.Windows.Forms.DataGridView dgEmp;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.ToolStripMenuItem stripAddCustomer;
-        private System.Windows.Forms.ToolStripMenuItem displayToolStripMenuItem;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;

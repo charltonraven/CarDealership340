@@ -18,11 +18,14 @@ C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealershi
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\bin\Debug\Microsoft.Office.Tools.Outlook.v4.0.Utilities.xml
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
-C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.DisplayC.resources
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.editCustomer.resources
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.csprojResolveAssemblyReference.cache
-C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.DisplayE.resources
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.DisplayI.resources
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.Display.resources
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.Main_Page.resources
 C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.ChangePassword.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.TradeIn.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.Purchase.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.DisplayInvoices.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.WeeklySales.resources
+C:\Users\IAMCHARLS\Desktop\CarDealership(340)\Project\CarDealership\CarDealership\obj\Debug\CarDealership.AddC.resources

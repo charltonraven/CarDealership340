@@ -1,83 +1,69 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using System.Threading;
-
 
 namespace CarDealership
 {
     public partial class Login : Form
     {
-        public String myConString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
-        public static String Username;
-        public static String Password;
-        public static String Position = "";
-        public static String EmployeeID;
-        
-       
+        public static string Username;
+        public static string Password;
+        public static string Position = "";
+        public static string EmployeeID;
+        public string myConString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
+
 
         public Login()
         {
-
             InitializeComponent();
-
-
-
         }
 
         private void Login_Click(object sender, EventArgs e)
         {
-            int i = 1;
+            var i = 1;
             //Try Catch for checking the connections of the database
             try
             {
-                MySqlConnection conn = new MySqlConnection(myConString);
+                var conn = new MySqlConnection(myConString);
                 //  conn.ConnectionString = myConString;
                 conn.Open();
-              
+
                 try
                 {
                     //Using the BINARY keyword with the password makes it case sensitive when (by default) mysql is not case sensitive.
-                    String SelectCommand = "Select * from Employee where BINARY employeeID='" + txtID.Text + "' And BINARY password='" + txtPassword.Text + "'";
+                    var SelectCommand = "Select * from Employee where BINARY employeeID='" + txtID.Text +
+                                        "' And BINARY password='" + txtPassword.Text + "'";
                     MySqlDataReader MyReader;
-                    MySqlCommand Match = new MySqlCommand(SelectCommand, conn);
+                    var Match = new MySqlCommand(SelectCommand, conn);
                     MyReader = Match.ExecuteReader();
-                    int count = 0;
+                    var count = 0;
 
                     while (MyReader.Read())
                     {
-
                         count++;
                     }
                     if (count == 1)
                     {
                         MyReader.Close();
-                        String Position = "Select EmployeeID, EmployeeFirstName, EmployeeLastName, Position from Employee where  employeeID='" + txtID.Text + "';";
-                        MySqlCommand PositionWindow = new MySqlCommand(Position, conn);
+                        var Position =
+                            "Select EmployeeID, EmployeeFirstName, EmployeeLastName, Position from Employee where  employeeID='" +
+                            txtID.Text + "';";
+                        var PositionWindow = new MySqlCommand(Position, conn);
                         MyReader = PositionWindow.ExecuteReader();
                         count = 0;
                         while (MyReader.Read())
                         {
                             EmployeeID = MyReader.GetString(0);
-                            Username = MyReader.GetString(1)+" "+MyReader.GetString(2);
+                            Username = MyReader.GetString(1) + " " + MyReader.GetString(2);
                             Login.Position = MyReader.GetString(3);
                         }
-                        this.Hide();
-                        Main_Page OpenMain = new Main_Page();
+                        Hide();
+                        var OpenMain = new Main_Page();
                         OpenMain.Show();
-                        this.Hide();
-
+                        Hide();
                     }
                     else if (count == 0)
                     {
-
                         MessageBox.Show("Incorrect Password, Try Again !");
                         txtID.Text = "";
                         txtPassword.Text = "";
@@ -88,9 +74,8 @@ namespace CarDealership
                 {
                     MessageBox.Show(ex.Message);
                 }
-
             }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
+            catch (MySqlException ex)
             {
                 switch (ex.Number)
                 {
@@ -107,17 +92,10 @@ namespace CarDealership
             {
                 MessageBox.Show("You ran out of tries");
             }
-            
-
-            
-
-
-
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -127,12 +105,10 @@ namespace CarDealership
 
         private void txtID_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-
         }
     }
 }

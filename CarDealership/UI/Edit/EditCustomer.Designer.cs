@@ -43,11 +43,12 @@
             this.txtCity = new System.Windows.Forms.TextBox();
             this.txtState = new System.Windows.Forms.DomainUpDown();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.lblZip = new System.Windows.Forms.Label();
             this.txtZip = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -80,7 +81,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 239);
+            this.label4.Location = new System.Drawing.Point(45, 294);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 13);
             this.label4.TabIndex = 3;
@@ -89,7 +90,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(45, 289);
+            this.label5.Location = new System.Drawing.Point(45, 335);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 4;
@@ -98,7 +99,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(291, 296);
+            this.label6.Location = new System.Drawing.Point(291, 335);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 5;
@@ -107,7 +108,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(45, 342);
+            this.label7.Location = new System.Drawing.Point(45, 370);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(24, 13);
             this.label7.TabIndex = 6;
@@ -137,21 +138,21 @@
             // 
             // txtDOB
             // 
-            this.txtDOB.Location = new System.Drawing.Point(118, 239);
+            this.txtDOB.Location = new System.Drawing.Point(118, 287);
             this.txtDOB.Name = "txtDOB";
             this.txtDOB.Size = new System.Drawing.Size(163, 20);
             this.txtDOB.TabIndex = 10;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(118, 289);
+            this.txtAddress.Location = new System.Drawing.Point(118, 328);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(163, 20);
             this.txtAddress.TabIndex = 11;
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(118, 335);
+            this.txtCity.Location = new System.Drawing.Point(118, 367);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(163, 20);
             this.txtCity.TabIndex = 13;
@@ -210,7 +211,7 @@
             this.txtState.Items.Add("WV");
             this.txtState.Items.Add("WI");
             this.txtState.Items.Add("WY");
-            this.txtState.Location = new System.Drawing.Point(344, 294);
+            this.txtState.Location = new System.Drawing.Point(344, 328);
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(40, 20);
             this.txtState.TabIndex = 14;
@@ -226,20 +227,20 @@
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btnCancel
+            // btnClose
             // 
-            this.btnCancel.Location = new System.Drawing.Point(237, 422);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 16;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnClose.Location = new System.Drawing.Point(322, 422);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 16;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblZip
             // 
             this.lblZip.AutoSize = true;
-            this.lblZip.Location = new System.Drawing.Point(292, 342);
+            this.lblZip.Location = new System.Drawing.Point(291, 370);
             this.lblZip.Name = "lblZip";
             this.lblZip.Size = new System.Drawing.Size(50, 13);
             this.lblZip.TabIndex = 17;
@@ -247,7 +248,7 @@
             // 
             // txtZip
             // 
-            this.txtZip.Location = new System.Drawing.Point(344, 335);
+            this.txtZip.Location = new System.Drawing.Point(344, 367);
             this.txtZip.Name = "txtZip";
             this.txtZip.Size = new System.Drawing.Size(100, 20);
             this.txtZip.TabIndex = 18;
@@ -255,7 +256,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(292, 70);
+            this.lblPhone.Location = new System.Drawing.Point(45, 243);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(38, 13);
             this.lblPhone.TabIndex = 19;
@@ -263,21 +264,32 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(354, 63);
+            this.txtPhone.Location = new System.Drawing.Point(118, 236);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(100, 20);
             this.txtPhone.TabIndex = 20;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(206, 422);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 21;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // EditCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 457);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.txtZip);
             this.Controls.Add(this.lblZip);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.txtState);
             this.Controls.Add(this.txtCity);
@@ -319,10 +331,11 @@
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.DomainUpDown txtState;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblZip;
         private System.Windows.Forms.TextBox txtZip;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

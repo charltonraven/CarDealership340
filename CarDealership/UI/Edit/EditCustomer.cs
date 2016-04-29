@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using System.Globalization;
-using System.Threading;
+
 namespace CarDealership
 {
     public partial class EditCustomer : Form
@@ -17,9 +10,10 @@ namespace CarDealership
         public EditCustomer()
         {
             InitializeComponent();
-
         }
-        public EditCustomer(String CustomerID, String FirstName, String LastName,String Phone, String DOB, String Address, String City, String State, String ZipCode)
+
+        public EditCustomer(string CustomerID, string FirstName, string LastName, string Phone, string DOB,
+            string Address, string City, string State, string ZipCode)
         {
             InitializeComponent();
             txtID.Text = CustomerID;
@@ -32,9 +26,9 @@ namespace CarDealership
             txtState.Text = State;
             txtZip.Text = ZipCode;
         }
+
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -46,43 +40,34 @@ namespace CarDealership
         {
             txtDOB.Enabled = false;
             txtID.Enabled = false;
-
         }
+
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            String myConnString = "SERVER=localhost;Port=3306;Database=carDealership2;uid=root;Password=Raven47946$;";
-            MySqlConnection conn = new MySqlConnection(myConnString);
-
-            DateTime PutInDateFormat = DateTime.Parse(txtDOB.Text);
-            String DateFormatted = PutInDateFormat.ToString("yyyy-MM-dd");
-            try
-            {
-                conn.Open();
-            }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
-            {
-                switch (ex.Number)
-                {
-                    case 0:
-                        MessageBox.Show("Cannot connect to server. ");
-                        break;
-                    case 1045:
-                        MessageBox.Show("Invalid Username/Password, Please try again");
-                        break;
-                }
-            }
 
 
 
-            String DeleteCustomerSr = "DELETE FROM CUSTOMER WHERE CustomerID=" + txtID.Text + ";";
-            MySqlCommand deleteCustomerSQL = new MySqlCommand(DeleteCustomerSr, conn);
-            deleteCustomerSQL.ExecuteNonQuery();
+         
+            //Formatts the date so it could be add to the Database easier
+            var PutInDateFormat = DateTime.Parse(txtDOB.Text);
+            var DateFormatted = PutInDateFormat.ToString("yyyy-MM-dd");
+    
+            //Creates a Customer Object
+            var customer = new Customer(txtID.Text, txtCusFirstName.Text, txtCusLastName.Text, DateFormatted,
+                txtPhone.Text, txtAddress.Text, txtCity.Text, txtState.Text, txtZip.Text);
+            //Creats an edit control object to Edit the Customer Object above
+            var EditExisitingCustomer = new Edit();
+            EditExisitingCustomer.EditCustomer(customer);
 
-            Customer customer = new Customer(txtID.Text, txtCusFirstName.Text, txtCusLastName.Text, DateFormatted, txtPhone.Text, txtAddress.Text, txtCity.Text, txtState.Text, txtZip.Text);
-            Edit EditExisitingCustomer = new Edit(customer);
+            Close();
+        }
 
-            this.Close();
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Customer DeleteCustomer=new Customer(txtID.Text);
+            Edit Delete=new Edit();
+            Delete.DeleteCustomer(DeleteCustomer);
         }
     }
 }

@@ -31,19 +31,21 @@
             this.lblVin = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblQuality = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtVin = new System.Windows.Forms.TextBox();
             this.btnFindInventory = new System.Windows.Forms.Button();
             this.btnVehCancel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.ddMake = new System.Windows.Forms.DomainUpDown();
-            this.ddModel = new System.Windows.Forms.DomainUpDown();
-            this.ddYear = new System.Windows.Forms.DomainUpDown();
             this.txtColor = new System.Windows.Forms.TextBox();
-            this.ddCondition = new System.Windows.Forms.DomainUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.cbMake = new System.Windows.Forms.ComboBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.cbQuality = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbDamaged = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblVin
@@ -73,14 +75,14 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Model";
             // 
-            // label5
+            // lblQuality
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(42, 236);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = " Condition";
+            this.lblQuality.AutoSize = true;
+            this.lblQuality.Location = new System.Drawing.Point(42, 236);
+            this.lblQuality.Name = "lblQuality";
+            this.lblQuality.Size = new System.Drawing.Size(39, 13);
+            this.lblQuality.TabIndex = 4;
+            this.lblQuality.Text = "Quality";
             // 
             // label7
             // 
@@ -93,9 +95,9 @@
             // 
             // txtVin
             // 
-            this.txtVin.Location = new System.Drawing.Point(118, 46);
+            this.txtVin.Location = new System.Drawing.Point(118, 39);
             this.txtVin.Name = "txtVin";
-            this.txtVin.Size = new System.Drawing.Size(66, 20);
+            this.txtVin.Size = new System.Drawing.Size(139, 20);
             this.txtVin.TabIndex = 7;
             // 
             // btnFindInventory
@@ -127,83 +129,12 @@
             this.label3.TabIndex = 17;
             this.label3.Text = " Color";
             // 
-            // ddMake
-            // 
-            this.ddMake.Items.Add("Audi");
-            this.ddMake.Items.Add("Chevrolet");
-            this.ddMake.Items.Add("Ford");
-            this.ddMake.Items.Add("Bugatti");
-            this.ddMake.Items.Add("BMW");
-            this.ddMake.Items.Add("GMC");
-            this.ddMake.Items.Add("Toyota");
-            this.ddMake.Items.Add("Chrysler");
-            this.ddMake.Items.Add("Dodge");
-            this.ddMake.Items.Add("BuickKia");
-            this.ddMake.Items.Add("Land Rover");
-            this.ddMake.Items.Add("Honda");
-            this.ddMake.Location = new System.Drawing.Point(118, 133);
-            this.ddMake.Name = "ddMake";
-            this.ddMake.Size = new System.Drawing.Size(120, 20);
-            this.ddMake.TabIndex = 18;
-            // 
-            // ddModel
-            // 
-            this.ddModel.Items.Add("Blah");
-            this.ddModel.Items.Add("Blah");
-            this.ddModel.Items.Add("Blah");
-            this.ddModel.Items.Add("Blah");
-            this.ddModel.Items.Add("Blah");
-            this.ddModel.Items.Add("Blah");
-            this.ddModel.Items.Add("What !");
-            this.ddModel.Items.Add("Blah");
-            this.ddModel.Items.Add("Blah");
-            this.ddModel.Items.Add("Blah");
-            this.ddModel.Items.Add("Blah");
-            this.ddModel.Location = new System.Drawing.Point(118, 186);
-            this.ddModel.Name = "ddModel";
-            this.ddModel.Size = new System.Drawing.Size(120, 20);
-            this.ddModel.TabIndex = 19;
-            // 
-            // ddYear
-            // 
-            this.ddYear.Location = new System.Drawing.Point(118, 83);
-            this.ddYear.Name = "ddYear";
-            this.ddYear.Size = new System.Drawing.Size(120, 20);
-            this.ddYear.TabIndex = 20;
-            // 
             // txtColor
             // 
             this.txtColor.Location = new System.Drawing.Point(118, 282);
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(120, 20);
             this.txtColor.TabIndex = 21;
-            // 
-            // ddCondition
-            // 
-            this.ddCondition.AllowDrop = true;
-            this.ddCondition.Items.Add("2017");
-            this.ddCondition.Items.Add("2016");
-            this.ddCondition.Items.Add("2015");
-            this.ddCondition.Items.Add("2014");
-            this.ddCondition.Items.Add("2013");
-            this.ddCondition.Items.Add("2012");
-            this.ddCondition.Items.Add("2011");
-            this.ddCondition.Items.Add("2010");
-            this.ddCondition.Items.Add("2009");
-            this.ddCondition.Items.Add("2008");
-            this.ddCondition.Items.Add("2007");
-            this.ddCondition.Items.Add("2006");
-            this.ddCondition.Items.Add("2005");
-            this.ddCondition.Items.Add("2004");
-            this.ddCondition.Items.Add("2003");
-            this.ddCondition.Items.Add("2002");
-            this.ddCondition.Items.Add("2001");
-            this.ddCondition.Items.Add("2000");
-            this.ddCondition.Items.Add("1999");
-            this.ddCondition.Location = new System.Drawing.Point(118, 236);
-            this.ddCondition.Name = "ddCondition";
-            this.ddCondition.Size = new System.Drawing.Size(120, 20);
-            this.ddCondition.TabIndex = 22;
             // 
             // label6
             // 
@@ -221,29 +152,103 @@
             this.txtCustomerID.Size = new System.Drawing.Size(120, 20);
             this.txtCustomerID.TabIndex = 24;
             // 
+            // txtYear
+            // 
+            this.txtYear.Location = new System.Drawing.Point(118, 83);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(100, 20);
+            this.txtYear.TabIndex = 25;
+            this.txtYear.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // cbMake
+            // 
+            this.cbMake.FormattingEnabled = true;
+            this.cbMake.Items.AddRange(new object[] {
+            "Audi",
+            "BMW",
+            "Bugatti",
+            "Buick",
+            "Cadillac",
+            "Cheverolet",
+            "Dodge",
+            "Ford",
+            "GMC",
+            "Mercedes",
+            "Mitsubishi",
+            "Nissan",
+            "Toyota"});
+            this.cbMake.Location = new System.Drawing.Point(117, 132);
+            this.cbMake.Name = "cbMake";
+            this.cbMake.Size = new System.Drawing.Size(121, 21);
+            this.cbMake.TabIndex = 26;
+            // 
+            // txtModel
+            // 
+            this.txtModel.Location = new System.Drawing.Point(118, 181);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(100, 20);
+            this.txtModel.TabIndex = 27;
+            // 
+            // cbQuality
+            // 
+            this.cbQuality.FormattingEnabled = true;
+            this.cbQuality.Items.AddRange(new object[] {
+            "New",
+            "Used"});
+            this.cbQuality.Location = new System.Drawing.Point(118, 228);
+            this.cbQuality.Name = "cbQuality";
+            this.cbQuality.Size = new System.Drawing.Size(53, 21);
+            this.cbQuality.TabIndex = 28;
+            this.cbQuality.SelectedIndexChanged += new System.EventHandler(this.cbQuality_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(185, 236);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Damaged";
+            // 
+            // cbDamaged
+            // 
+            this.cbDamaged.FormattingEnabled = true;
+            this.cbDamaged.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cbDamaged.Location = new System.Drawing.Point(244, 233);
+            this.cbDamaged.Name = "cbDamaged";
+            this.cbDamaged.Size = new System.Drawing.Size(45, 21);
+            this.cbDamaged.TabIndex = 30;
+            // 
             // FindInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 405);
+            this.Controls.Add(this.cbDamaged);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbQuality);
+            this.Controls.Add(this.txtModel);
+            this.Controls.Add(this.cbMake);
+            this.Controls.Add(this.txtYear);
             this.Controls.Add(this.txtCustomerID);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.ddCondition);
             this.Controls.Add(this.txtColor);
-            this.Controls.Add(this.ddYear);
-            this.Controls.Add(this.ddModel);
-            this.Controls.Add(this.ddMake);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnVehCancel);
             this.Controls.Add(this.btnFindInventory);
             this.Controls.Add(this.txtVin);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblQuality);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblVin);
             this.Name = "FindInventory";
-            this.Text = "Find Customer";
+            this.Text = "Find Inventory";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FindInventory_Load);
             this.ResumeLayout(false);
@@ -256,18 +261,20 @@
         private System.Windows.Forms.Label lblVin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblQuality;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtVin;
         private System.Windows.Forms.Button btnFindInventory;
         private System.Windows.Forms.Button btnVehCancel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DomainUpDown ddMake;
-        private System.Windows.Forms.DomainUpDown ddModel;
-        private System.Windows.Forms.DomainUpDown ddYear;
         private System.Windows.Forms.TextBox txtColor;
-        private System.Windows.Forms.DomainUpDown ddCondition;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCustomerID;
+        private System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.ComboBox cbMake;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.ComboBox cbQuality;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbDamaged;
     }
 }

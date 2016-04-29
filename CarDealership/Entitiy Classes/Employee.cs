@@ -1,26 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarDealership
 {
-    class Employee
+    internal class Employee
     {
-        public String EmployeeID;
-        public String EmployeeFirstName;
-        public String EmployeeLastName;
-        public String HireDate;
-        public String Salary;
-        public String Position;
-        public String Password;
-        
+        //Creates Employee Objects to hold various information about the Employee
+        public string EmployeeFirstName;
+        public string EmployeeID;
+        public string EmployeeLastName;
+        public string HireDate;
+        public string Password;
+        public string Position;
+        public string Salary;
 
 
-
-        public Employee(String EmployeeID, String EmployeeFirstName, String EmployeeLastName,
-            String HireDate, String Salary, String Position,String password)
+        public Employee(string EmployeeID, string EmployeeFirstName, string EmployeeLastName,
+            string HireDate, string Salary, string Position, string password)
         {
             this.EmployeeID = EmployeeID;
             this.EmployeeFirstName = EmployeeFirstName;
@@ -28,12 +23,11 @@ namespace CarDealership
             this.HireDate = HireDate;
             this.Salary = Salary;
             this.Position = Position;
-            this.Password = password;
-
-
+            Password = password;
         }
-        public Employee(String EmployeeID, String EmployeeFirstName, String EmployeeLastName,
-            String HireDate, String Salary, String Position)
+
+        public Employee(string EmployeeID, string EmployeeFirstName, string EmployeeLastName,
+            string HireDate, string Salary, string Position)
         {
             this.EmployeeID = EmployeeID;
             this.EmployeeFirstName = EmployeeFirstName;
@@ -42,10 +36,12 @@ namespace CarDealership
             this.Salary = Salary;
             this.Position = Position;
         }
-        public Employee(String EmployeeID, String Password)
-        {
 
+        public Employee(String EmployeeID)
+        {
+            this.EmployeeID = EmployeeID;
         }
 
+       
     }
 }
